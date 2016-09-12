@@ -92,11 +92,22 @@ if(is_array($_URIS_)){
 			break;	
 	}
 	$_SERVER['_T_'] = isset($_GET['_t']) ? trim($_GET['_t']) : '';
-
-	LoaderSvc::loadSmarty()->assign('_C_',$_SERVER['_C_']);
-	LoaderSvc::loadSmarty()->assign('_A_',$_SERVER['_A_']);
-	LoaderSvc::loadSmarty()->assign('_T_',$_SERVER['_T_']);
 	unset($_URL_,$_URIS_,$_URI_);
+	
+	//no ajax 
+	if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])){
+		LoaderSvc::loadSmarty()->assign('_C_',$_SERVER['_C_']);
+		LoaderSvc::loadSmarty()->assign('_A_',$_SERVER['_A_']);
+		LoaderSvc::loadSmarty()->assign('_T_',$_SERVER['_T_']);
+	
+		//多语言处理
+		require_once ROOT_PATH.'/src/application/controller/admin/funcs.php';
+		$lang = getPreferredLanguage();
+		$lang = in_array($_COOKIE['_lang'],['zh-CN','en-US']) ? $_COOKIE['_lang'] : 'en-US';
+		$lang= 'zh-CN';
+		include ROOT_PATH.'/src/application/lang/'.$lang.'.php';
+		LoaderSvc::loadSmarty()->assign('_LANG_',$_LANG_);
+	}
 
 	$_L_F = ROOT_PATH.DIRECTORY_SEPARATOR.'src/application/controller'.DIRECTORY_SEPARATOR.APP_NAME.DIRECTORY_SEPARATOR.$_SERVER['_C_'].DIRECTORY_SEPARATOR.$_SERVER['_A_'].DIRECTORY_SEPARATOR.'index.php';
 	if(file_exists($_L_F)){
@@ -104,6 +115,8 @@ if(is_array($_URIS_)){
 	}else {
 		UtlsSvc::displayErr($_SERVER["REQUEST_URI"],404);
 	}
+	
+	
 }else{
 	die('Parse URI Fail');
 }

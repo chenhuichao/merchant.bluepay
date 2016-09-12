@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
         <meta charset="UTF-8">
-        <title>欢迎您登录代码部署系统</title>
+        <title>{$_LANG_['system.welcome']}</title>
 		<script type="text/javascript" src="{$_STATIC_}/js/cloudflare.min.js"></script>
 		<style type="text/css">.cf-hidden { display: none; } .cf-invisible { visibility: hidden; }</style>
 		<script  type="text/javascript" src="{$_STATIC_}/js/rocket.js"></script>
@@ -21,25 +21,29 @@
             <div class="login-body">
                 <div class="login-main pr">
                     <form action="/login/check/" method="post" id="login-form" class="login-form">
-                        <h3 class="welcome">代码部署系统</h3>
+                        <h3 class="welcome">{$_LANG_['system.name']}</h3>
                         <div class="check-tips"></div>
                         <div id="itemBox" class="item-box">
+                            <select id="language" style="width:290px;height:20px;margin-bottom:5px;">
+							  	<option value="en-US" {if $lang eq 'en-US'}selected="selected"{/if}>English</option>
+							  	<option value="zh-CN" {if $lang eq 'zh-CN'}selected="selected"{/if}>中文</option>
+							</select>
                             <div class="item">
                                 <i class="icon-login-user"></i>
-                                <input type="text" name="account" id="account" placeholder="请填写用户名" autocomplete="off">
+                                <input type="text" name="account" id="account" placeholder="{$_LANG_['login.tips.user']}" autocomplete="off">
                             </div>
-                            <span class="placeholder_copy placeholder_un">请填写用户名</span>
+                            <span class="placeholder_copy placeholder_un">{$_LANG_['login.tips.user']}</span>
                             <div class="item b0">
                                 <i class="icon-login-pwd"></i>
-                                <input type="password" id="password" name="password" placeholder="请填写密码" autocomplete="off" >
+                                <input type="password" id="password" name="password" placeholder="{$_LANG_['login.tips.pass']}" autocomplete="off" >
                             </div>
-                            <span class="placeholder_copy placeholder_pwd">请填写密码</span>
+                            <span class="placeholder_copy placeholder_pwd">{$_LANG_['login.tips.pass']}</span>
                             <div class="item verifycode" style="width: 170px;float: left;">
                                 <i class="icon-login-verifycode"></i>
-                                <input type="text" style="width: 100px;" name="verify" id="verify" placeholder="请填写验证码" autocomplete="off">
+                                <input type="text" style="width: 100px;" name="verify" id="verify" placeholder="{$_LANG_['login.tips.captcha']}" autocomplete="off">
                                 
                             </div>
-                            <img class="verifyimg reloadverify" alt="点击切换" src="/verify/?{$time}">
+                            <img class="verifyimg reloadverify" alt="{$_LANG_['login.tips.click']}" src="/verify/?{$time}">
                                 
                         </div>
                         <div class="login_btn_panel">
@@ -61,8 +65,10 @@
         }).on("blur","input",function(){
             $(this).closest('.item').removeClass('focus');
         });
-
-
+		
+		$('#language').change(function(){
+			window.location.href = '/login?lang='+ $(this).val();
+		});
 
 		$(function(){
 			//初始化选中用户名输入框

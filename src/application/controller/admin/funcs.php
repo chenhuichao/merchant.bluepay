@@ -106,9 +106,14 @@ function getPreferredLanguage() {
             arsort($langs, SORT_NUMERIC);
         }
     }
+    
     //extract most important (first)
     foreach ($langs as $lang => $val) {break;}
+    return in_array($lang,array('zh-CN','en-US','id-ID')) ? $lang : 'en-US';
+    
+    /*
     //if complex language simplify it
     if (stristr($lang,"-")) {$tmp = explode("-",$lang); $lang = $tmp[0]; }
     return $lang;
+    */
 }

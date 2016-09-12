@@ -2,24 +2,28 @@
     <!-- 头部 -->
     <div class="header">
         <!-- Logo -->
-        <span class="logo">代码部署系统</span>
+        <span class="logo"><label style="font-size:20px;">{$_LANG_['system.name']}
+        </label>
+			  
+        </span>
         <!-- /Logo -->
-
+      
         <!-- 主导航 -->
         <ul class="main-nav">
-            <li class="current"><a href="">内容</a></li>
+            <li class="current"><a href="">{$_LANG_['framework.content']}</a></li>
         </ul>
 
-
+		
         <!-- 用户栏 -->
         <div class="user-bar">
             <a href="javascript:;" class="user-entrance"><i class="icon-user"></i></a>
             <ul class="nav-list user-menu hidden">
-                <li class="manager">您好，<em title="{$session.name}">{$session.name}</em></li>
-                <li><a href="/userinfo">修改密码</a></li>
-                <li><a href="/login/?type=logout">退出</a></li>
+                <li class="manager">{$_LANG_['framework.top.hello']} <em title="{$session.name}">{$session.name}</em></li>
+                <li><a href="/userinfo">{$_LANG_['framework.top.resetpass']}</a></li>
+                <li><a href="/login/?type=logout">{$_LANG_['framework.top.logout']} </a></li>
             </ul>
         </div>
+        
     </div>
     <!-- /头部 -->
 
