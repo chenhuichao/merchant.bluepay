@@ -58,6 +58,12 @@ if($uid && LoaderSvc::loadSess()->get('APP_NAME') == APP_NAME){
 		LoaderSvc::loadSmarty()->assign('uid',$uid);
 		LoaderSvc::loadSmarty()->assign('name',$name);
 		LoaderSvc::loadSmarty()->assign('session',$session);
+
+		//多语言处理
+		$lang = getPreferredLanguage();
+		$lang = in_array($lang,array('zh-CN','en-US','id-ID')) ? $lang : 'zh-CN';
+		include ROOT_PATH.'/src/application/lang/'.$lang.'.php';
+		LoaderSvc::loadSmarty()->assign('_LANG_',$_LANG_);
 	}
 
 	$auth = AdminuserSvc::auth($uid);

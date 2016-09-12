@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>代码部署系统</title>
+    <title>{$_LANG_['system.name']}</title>
     <link rel="stylesheet" type="text/css" href="{$_STATIC_}/css/bootstrap.css" media="all">
     <link rel="stylesheet" type="text/css" href="{$_STATIC_}/css/bootstrap-theme.css" media="all">
     <link rel="stylesheet" type="text/css" href="{$_STATIC_}/css/base.css" media="all">
