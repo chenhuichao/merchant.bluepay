@@ -47,7 +47,7 @@
             </tr>
 
             <tr>
-              <th class="th">{$_LANG_['merchant.index.mobile']}</th>
+              <th class="th">{$_LANG_['framework.public.mobile']}</th>
               <td>
                   <input type="text" autofocus="true" value=""  class="text" name="mobile" id="mobile">
               </td>
@@ -98,16 +98,18 @@
 				<th>{$_LANG_['merchant.index.realname']}</th>
 				<th>{$_LANG_['merchant.index.nikename']}</th>
                 <th>{$_LANG_['merchant.index.idno']}</th>
-
+                <th>{$_LANG_['merchant.index.id_pic']}</th>
                 <th>{$_LANG_['merchant.index.company_name']}</th>
                 <th>{$_LANG_['merchant.index.email']}</th>
                 <th>{$_LANG_['merchant.index.business_license_no']}</th>
+                <th>{$_LANG_['merchant.index.business_license_pic']}</th>
                 <th>{$_LANG_['merchant.index.bank_name']}</th>
                 <th>{$_LANG_['merchant.index.bank_card_no']}</th>
                 <th>{$_LANG_['merchant.index.bank_of_deposit']}</th>
                 <th>{$_LANG_['merchant.index.contact']}</th>
 
-
+                <th>POS</th>
+                <th>{$_LANG_['merchant.index.user']}</th>
 				<th>{$_LANG_['framework.public.create_time']}</th>
 				<th>{$_LANG_['framework.public.update_time']}</th>
                 <th>{$_LANG_['framework.public.action']}</th>
@@ -118,19 +120,24 @@
 			<tr id="tr_{$item.id}">
                 <input type="hidden" class="lib_id" value="{$item.id}">
 				<td>{$key+1}</td>
-				<td>{$request.TYPE_CONF[$item.type]['NAME']}</td>
+				<td>{$_LANG_[$request.TYPE_CONF[$item.type]['NAME']]}</td>
 				<td>{$item.real_name}</td>
 				<td>{$item.nick_name}</td>
                 <td>{$item.idno}</td>
+                <td>{$_LANG_['framework.public.view']}</td>
 
                 <td>{$item.company_name}</th>
                 <th>{$item.email}</td>
                 <td>{$item.business_license_no}</td>
+                <td>{$_LANG_['framework.public.view']}</td>
                 <td>{$item.bank_name}</td>
                 <td>{$item.bank_card_no}</td>
                 <td>{$item.bank_of_deposit}</td>
                 <td>{$item.contact}</td>
-
+                <td>{$_LANG_['framework.public.view']}</td>
+                <td>
+                    <a href="/user/inex/?id={$item.id}" title="{$_LANG_['framework.public.edit']}" class="btn"> {$_LANG_['merchant.index.add_user']}</a>
+                </td>
 				<td>{$item.ctime}</td>
 				<td>{$item.utime}</td>
                 <td>
