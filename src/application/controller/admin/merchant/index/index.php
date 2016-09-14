@@ -2,11 +2,12 @@
 require_once dirname(dirname(dirname(__FILE__))).'/header.php';
 
 $request = array();
-$request['id'] = RequestSvc::request('merchant_id');
+$request['id'] = RequestSvc::request('id');
 $request['id_no'] = RequestSvc::request('id_no');
 $request['mobile'] = RequestSvc::request('mobile');
 $request['real_name'] = RequestSvc::request('real_name');
 $request['business_license_no'] = RequestSvc::request('business_license_no');
+$request['type'] = RequestSvc::request('type');
 
 $results = MerchantSvc::lists($request,array('page'=>RequestSvc::request('p',1,'int'),'baseurl'=>'/merchant/?'));
 

@@ -27,6 +27,7 @@ $_LANG_['framework.public.edit'] = '编辑';
 $_LANG_['framework.public.total'] = '共';
 $_LANG_['framework.public.count'] = '条记录';
 $_LANG_['framework.public.mobile'] = '手机号码';
+$_LANG_['framework.public.view'] = '查看';
 
 $_LANG_['index.title'] = '系统主页';
 $_LANG_['index.business_contact_info'] = '业务联系人信息';
@@ -41,7 +42,8 @@ $_LANG_['merchant.index.title'] = '商户列表';
 $_LANG_['merchant.index.type'] = '商户类型'; 
 $_LANG_['merchant.index.realname'] = '姓名'; 
 $_LANG_['merchant.index.nikename'] = '昵称'; 
-$_LANG_['merchant.index.idno'] = '身份证号';  
+$_LANG_['merchant.index.idno'] = '身份证号'; 
+$_LANG_['merchant.index.id_pic'] = '手持身份证照片'; 
 $_LANG_['merchant.index.company_name'] = '企业简称'; 
 $_LANG_['merchant.index.email'] = '邮箱账号'; 
 $_LANG_['merchant.index.bank_card_no'] = '银行卡号'; 
@@ -49,8 +51,10 @@ $_LANG_['merchant.index.bank_name'] = '银行名称';
 $_LANG_['merchant.index.bank_of_deposit'] = '开户行'; 
 $_LANG_['merchant.index.contact'] = '联系人'; 
 $_LANG_['merchant.index.business_license_no'] = '营业执照号'; 
+$_LANG_['merchant.index.business_license_pic'] = '营业执照照片';
 $_LANG_['merchant.index.add_merchant'] = '新增商户'; 
-
+$_LANG_['merchant.index.user']= '子账号'; 
+$_LANG_['merchant.index.add_user'] = '新增子账号';
 
 $_LANG_['merchant.entity.type.company'] = '企业'; 
 $_LANG_['merchant.entity.type.personal'] = '个人'; 
