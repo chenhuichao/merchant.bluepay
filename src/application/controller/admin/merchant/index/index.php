@@ -10,7 +10,8 @@ $request['business_license_no'] = RequestSvc::request('business_license_no');
 
 $results = MerchantSvc::lists($request,array('page'=>RequestSvc::request('p',1,'int'),'baseurl'=>'/merchant/?'));
 
-$request['STATE_STV'] = Merchant::$STATE_CONF_STV;
+$request['STATE_CONF'] = Merchant::$STATE_CONF;
+$request['TYPE_CONF'] = Merchant::$TYPE_CONF;
 LoaderSvc::loadSmarty()->assign('request',$request);
 LoaderSvc::loadSmarty()->assign('results',$results);
 LoaderSvc::loadSmarty()->display('merchant/index.tpl');
