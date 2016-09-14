@@ -136,7 +136,7 @@
                 <td>{$item.contact}</td>
                 <td>{$_LANG_['framework.public.view']}</td>
                 <td>
-                    <a href="/user/inex/?id={$item.id}" title="{$_LANG_['framework.public.edit']}" class="btn"> {$_LANG_['merchant.index.add_user']}</a>
+                    <a href="/user/inex/?id={$item.id}" title="{$_LANG_['framework.public.view']}"> {$_LANG_['framework.public.view']}</a>
                 </td>
 				<td>{$item.ctime}</td>
 				<td>{$item.utime}</td>
