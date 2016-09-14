@@ -4,8 +4,6 @@ define('PER_PAGE',30);
 
 
 //define('WARNING_NOTIFICATION_EMAIL','');
-
-/*
 $_SERVER['MEMCACHED_SETS'] = array (
         '_' => array (
             array('localhost', 11212),
@@ -13,7 +11,7 @@ $_SERVER['MEMCACHED_SETS'] = array (
         'SESSION' => array (
             array('localhost', 11212),
         )
-);*/
+);
 /*
 $_SERVER['REDIS_SETS'] = array (
     '_' => array (

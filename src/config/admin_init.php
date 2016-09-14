@@ -106,6 +106,7 @@ if(is_array($_URIS_)){
 		$lang = in_array($_COOKIE['_lang'],['zh-CN','en-US']) ? $_COOKIE['_lang'] : 'en-US';
 		$lang= 'zh-CN';
 		include ROOT_PATH.'/src/application/lang/'.$lang.'.php';
+		LoaderSvc::loadSmarty()->assign('lang',$lang);
 		LoaderSvc::loadSmarty()->assign('_LANG_',$_LANG_);
 	}
 

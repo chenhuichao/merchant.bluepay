@@ -12,25 +12,31 @@
 				<div class="form-item">
 		            <label class="item-label">权限名</label>
 					<div class="controls">
-								<input type="text"  class="text input-large"value="{$record->name}" name="name" id="name" class="text input-large">
+								<input type="text"  class="text input-large" value="{$record->name}" name="name" id="name" class="text input-large">
 				     </div>
 		        </div>
 				<div class="form-item">
 		            <label class="item-label">映射对应的Action</label>
 					<div class="controls">
-								<input type="text"  class="text input-large"value="{$record->action}" name="action" id="action" class="text input-large">
+								<input type="text"  class="text input-large" value="{$record->action}" name="action" id="action" class="text input-large">
 				     </div>
 		        </div>
 				<div class="form-item">
 		            <label class="item-label">子菜单选项type值</label>
 					<div class="controls">
-								<input type="text"  class="text input-large"value="{$record->type}" name="type" id="type" class="text input-large">
+								<input type="text"  class="text input-large" value="{$record->type}" name="type" id="type" class="text input-large">
 				     </div>
 		        </div>
 				<div class="form-item">
 		            <label class="item-label">权限描述</label>
 					<div class="controls">
-								<input type="text"  class="text input-large"value="{$record->title}" name="title" id="title" class="text input-large">
+								<input type="text"  class="text input-large" value="{$record->title}" name="title" id="title" class="text input-large">
+				     </div>
+		        </div>
+		        <div class="form-item">
+		            <label class="item-label">权限描述(英文)</label>
+					<div class="controls">
+								<input type="text"  class="text input-large" value="{$record->title_en}" name="title_en" id="title_en" class="text input-large">
 				     </div>
 		        </div>
 				<div class="form-item">

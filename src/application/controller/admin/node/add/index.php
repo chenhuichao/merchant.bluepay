@@ -8,6 +8,7 @@ $result = NodeSvc::getByParams(array('pid'=>'0'));
 if($type == 'save'){
 	$name = trim($_POST['name']);
 	$title = $_POST['title'];
+	$title_en = $_POST['title_en'];
 	$action = trim($_POST['action']);
 	$type = trim($_POST['type']);
 	$pid = $_POST['pid'] > 0 ? intval($_POST['pid']) : 0;
@@ -24,6 +25,7 @@ if($type == 'save'){
 			'action'=>$action,
 			'type'=>$type,
 			'title'=>$title,
+		    'title_en'=>$title_en,
 			'pid'=>$pid,
 			'status'=>$status,
 			'remark'=>$remark,
@@ -32,9 +34,9 @@ if($type == 'save'){
 		);
 	
 		NodeSvc::add($params);
-	    $info = show_msg('操作成功', 'succ');
+	    $info = show_msg($_LANG_['response.message.success'], 'succ');
 	}else{
-		$info = show_msg('操作失败', 'err');
+		$info = show_msg($_LANG_['response.message.error'], 'err');
 	}
 }
 

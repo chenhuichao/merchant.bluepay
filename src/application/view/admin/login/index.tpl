@@ -48,8 +48,8 @@
                         </div>
                         <div class="login_btn_panel">
                             <button class="login-btn" type="submit">
-                                <span class="in"><i class="icon-loading"></i>登 录 中 ...</span>
-                                <span class="on">登 录</span>
+                                <span class="in"><i class="icon-loading"></i>{$_LANG_['login.tips.loading']}</span>
+                                <span class="on">{$_LANG_['login.tips.login']}</span>
                             </button>
                             
                         </div>

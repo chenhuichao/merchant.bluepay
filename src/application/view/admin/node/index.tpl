@@ -27,6 +27,7 @@
 					<th  colspan="1" rowspan="1">【动作】</th>
 					<th  colspan="1" rowspan="1">【子菜单Type值】</th>
 					<th  colspan="1" rowspan="1">描述</th>
+					<th  colspan="1" rowspan="1">英文描述</th>
 					<th  colspan="1" rowspan="1">状态</th>
 					<th  colspan="1" rowspan="1">排序</th>
 					<th  colspan="1" rowspan="1">PID</th>
@@ -50,6 +51,9 @@
 							</td>
 							<td>
 								{$item.title}
+							</td>
+							<td>
+								{$item.title_en}
 							</td>
 							<td>
 								{if $item.status=='1'}启用{else}禁用{/if}  	

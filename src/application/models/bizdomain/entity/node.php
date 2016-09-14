@@ -16,6 +16,7 @@ class Node extends Entity
 		$obj->type = $param['type'];
 		$obj->ismenu = $param['ismenu'] == 1 ? $param['ismenu'] : 0;
 		$obj->title = $param['title'];
+		$obj->title_en = $param['title_en'];
 		$obj->status = $param['status'];
 		$obj->remark = $param['remark'];
 		$obj->sort = $param['sort'];
