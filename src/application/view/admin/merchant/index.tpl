@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="table-responsive">
-		<form  class="form-horizontal" action="/lib?" method="get">
+		<form  class="form-horizontal" action="/merchant/index?" method="get">
 		<table class="table table-striped table-bordered bootstrap-datatable">
 	      <tbody>
 	        <tr>
@@ -22,18 +22,52 @@
                   </select>
 	          </td>
 
-	          <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
-	          <td>
-	          	<input type="text" class="text  datetime" value="{$request.startime}" name="startime"  /> - 
-	          	<input type="text" class="text  datetime" value="{$request.endtime}" name="endtime"  />　
-	          </td>
-  	        </tr>	          
+              <th class="th">{$_LANG_['merchant.index.realname']}</th>
+              <td>
+                  <input type="text" autofocus="true" value=""  class="text" name="real_name" id="real_name">
+              </td>
+              <th class="th">{$_LANG_['merchant.index.nickname']}</th>
+              <td>
+                  <input type="text" autofocus="true" value=""  class="text" name="nick_name" id="nick_name">
+              </td>
+  	        </tr>
             <tr>
-              <th class="th">状态</th>
+              <th class="th">{$_LANG_['merchant.index.idno']}</th>
+              <td>
+                  <input type="text" autofocus="true" value=""  class="text" name="id_no" id="id_no">
+              </td>
+              <th class="th">{$_LANG_['merchant.index.company_name']}</th>
+              <td>
+                  <input type="text" autofocus="true" value=""  class="text" name="company_name" id="company_name">
+              </td>
+              <th class="th">{$_LANG_['merchant.index.business_license_no']}</th>
+              <td>
+                  <input type="text" autofocus="true" value=""  class="text" name="business_license_no" id="business_license_no">
+              </td>
+            </tr>
+
+            <tr>
+              <th class="th">{$_LANG_['merchant.index.mobile']}</th>
+              <td>
+                  <input type="text" autofocus="true" value=""  class="text" name="mobile" id="mobile">
+              </td>
+              <th class="th">{$_LANG_['merchant.index.email']}</th>
+              <td>
+                  <input type="text" autofocus="true" value=""  class="text" name="email" id="email">
+              </td>
+
+              <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
+              <td>
+                <input type="text" class="text  datetime" value="{$request.startime}" name="startime"  /> - 
+                <input type="text" class="text  datetime" value="{$request.endtime}" name="endtime"  />　
+              </td>
+            </tr>	          
+            <tr>
+              <th class="th">{$_LANG_['framework.public.state']}</th>
 	          <td>				
                   <select  name="state" class="text">
                            <option {if $request.state eq ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
-                      {foreach from=$status item=val key=key}
+                      {foreach from=$$request.STATE_CONF item=val key=key}
                           <option value="{$key}" {if $request.state == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
                       {/foreach}
                   </select>
@@ -89,7 +123,7 @@
 				<td>{$item.nick_name}</td>
                 <td>{$item.idno}</td>
 
-                <td>{$item.company_name']}</th>
+                <td>{$item.company_name}</th>
                 <th>{$item.email}</td>
                 <td>{$item.business_license_no}</td>
                 <td>{$item.bank_name}</td>
@@ -123,7 +157,7 @@
         // 时间控件
         $(".datetime").datetimepicker({
                 format: "yyyy-mm-dd",
-                language: "zh-CN",
+                language: {$lang},
                 autoclose: true,
                 startView: 2,
                 minView:2
