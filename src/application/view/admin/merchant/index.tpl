@@ -17,7 +17,7 @@
                   <select  class="text" name="type">
                       <option {if $request.type eq ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
                       {foreach from=$request.TYPE_CONF key=key item=val}
-                          <option value="{$key}" {if $request.type == $key}selected="selected" {/if}>{$val.NAME}</option>
+                          <option value="{$key}" {if $request.type == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
                       {/foreach}
                   </select>
 	          </td>
@@ -34,7 +34,7 @@
                   <select  name="state" class="text">
                            <option {if $request.state eq ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
                       {foreach from=$status item=val key=key}
-                          <option value="{$key}" {if $request.state == $key}selected="selected" {/if}>{$val.NAME}</option>
+                          <option value="{$key}" {if $request.state == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
                       {/foreach}
                   </select>
 	          </td>

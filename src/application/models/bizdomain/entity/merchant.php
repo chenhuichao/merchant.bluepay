@@ -12,8 +12,8 @@ class Merchant extends Entity
 	);
 
 	static $TYPE_CONF = array(
-		self::TYPE_COMPANY => array('NAME'=>$_LANG_['merchant.entity.type.company']),
-		self::TYPE_PERSONAL => array('NAME'=>$_LANG_['merchant.entity.type.personal']),
+		self::TYPE_COMPANY => array('NAME'=>'merchant.entity.type.company'),
+		self::TYPE_PERSONAL => array('NAME'=>'merchant.entity.type.personal'),
 	);
 
 	static $TYPE_CONF_STV = array(
@@ -33,11 +33,11 @@ class Merchant extends Entity
 		self::STATE_INVALID,
 	);
 	static $STATE_CONF = array(
-		self::STATE_INIT => array('NAME'=>$_LANG_['merchant.entity.state.init']),
-		self::STATE_WAIT_AUDIT => array('NAME'=>$_LANG_['merchant.entity.state.wait_audit']),
-		self::STATE_REJECTED => array('NAME'=>$_LANG_['merchant.entity.state.rejected']),
-		self::STATE_VALID => array('NAME'=>$_LANG_['merchant.entity.state.valid']),
-		self::STATE_INVALID => array('NAME'=>$_LANG_['merchant.entity.state.invalid']),
+		self::STATE_INIT => array('NAME'=>'merchant.entity.state.init'),
+		self::STATE_WAIT_AUDIT => array('NAME'=>'merchant.entity.state.wait_audit'),
+		self::STATE_REJECTED => array('NAME'=>'merchant.entity.state.rejected'),
+		self::STATE_VALID => array('NAME'=>'merchant.entity.state.valid'),
+		self::STATE_INVALID => array('NAME'=>'merchant.entity.state.invalid'),
 	);
 
 	static $STATE_CONF_STV = array(
