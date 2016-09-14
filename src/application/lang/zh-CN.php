@@ -26,6 +26,7 @@ $_LANG_['framework.public.action'] = '操作';
 $_LANG_['framework.public.edit'] = '编辑';
 $_LANG_['framework.public.total'] = '共';
 $_LANG_['framework.public.count'] = '条记录';
+$_LANG_['framework.public.mobile'] = '手机号码';
 
 $_LANG_['index.title'] = '系统主页';
 $_LANG_['index.business_contact_info'] = '业务联系人信息';
@@ -49,6 +50,7 @@ $_LANG_['merchant.index.bank_of_deposit'] = '开户行';
 $_LANG_['merchant.index.contact'] = '联系人'; 
 $_LANG_['merchant.index.business_license_no'] = '营业执照号'; 
 $_LANG_['merchant.index.add_merchant'] = '新增商户'; 
+
 
 $_LANG_['merchant.entity.type.company'] = '企业'; 
 $_LANG_['merchant.entity.type.personal'] = '个人'; 
