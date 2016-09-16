@@ -14,7 +14,7 @@ if(!empty($temp)){
 $data = array(
 	'status'=>'0',
 	'data'=>array(
-		'title'=>'借款信息',
+		'title'=>'POS',
 		'content'=>$html,
 	),
 );
@@ -24,10 +24,12 @@ function getData($results){
 	$html = '<table class="table table-striped table-bordered">
 			<tbody role="alert" aria-live="polite" aria-relevant="all">';
 	foreach($results as $row){
+		$record = UserSvc::getById($row['user_id']);
 		$html .= '<tr><th>'.$_LANG_['framework.public.id'].'</th><td>'.$row['id'].'</td></tr>';
 		$html .= '<tr><th>'.$_LANG_['framework.public.sn'].'</th><td>'.$row['sn'].'</td></tr>';
 		$html .= '<tr><th>'.$_LANG_['framework.public.merchant_id'].'</th><td>'.$row['merchant_id'].'</td></tr>';
-		$html .= '<tr><th>'.$_LANG_['framework.public.user_id'].'</th><td>'.$result['user_id'].'</td></tr>';
+		$html .= '<tr><th>'.$_LANG_['framework.public.bind_user_id'].'</th><td>'.$result['user_id'].'</td></tr>';
+		$html .= '<tr><th>'.$_LANG_['framework.public.mobile'].'</th><td>'.$record->mobile.'</td></tr>';
 		$html .= '<tr><th>'.$_LANG_['framework.public.ctime'].'</th><td>'.$result['ctime'].'</td></tr>';
 	}
     $html .= '</tbody></table>';

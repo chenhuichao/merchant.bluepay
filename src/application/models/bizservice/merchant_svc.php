@@ -50,6 +50,11 @@ class MerchantSvc
 			$sql_condition[] = '`mobile` = ?';
 			$sql_param[]	 = $request['mobile'];
 		}
+		if('' != $request['type']){
+			$request_param[] = 'type=' . $request['type'];
+			$sql_condition[] = '`type` = ?';
+			$sql_param[]	 = $request['type'];
+		}
 		if('' != $request['nick_name']){
 			$request_param[] = 'nick_name=' . $request['nick_name'];
 			$sql_condition[] = '`nick_name` = ?';

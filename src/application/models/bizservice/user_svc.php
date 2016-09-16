@@ -38,10 +38,15 @@ class UserSvc
 			$sql_condition[] = '`id` = ? ';
 			$sql_param[] = $request['id'];
 		}
-		if('' != $request['passwd']){
-			$request_param[] = 'passwd=' . $request['passwd'];
-			$sql_condition[] = '`passwd` = ?';
-			$sql_param[]	 = $request['passwd'];
+		if('' != $request['is_default']){
+			$request_param[] = 'is_default=' . $request['is_default'];
+			$sql_condition[] = '`is_default` = ?';
+			$sql_param[]	 = $request['is_default'];
+		}
+		if('' != $request['merchant_id']){
+			$request_param[] = 'merchant_id=' . $request['merchant_id'];
+			$sql_condition[] = '`merchant_id` = ?';
+			$sql_param[]	 = $request['merchant_id'];
 		}
 		if('' != $request['mobile']){
 			$request_param[] = 'mobile=' . $request['mobile'];

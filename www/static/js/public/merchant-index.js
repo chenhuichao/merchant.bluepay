@@ -42,7 +42,7 @@ function goto(){
 }
 
 function getData(id){
-		var url = '/merchant/pos/?id'+id;
+		var url = '/merchant/pos/?id='+id;
 		$.get(url,function(data){
 			//alert(data.status);
 			if(data.status == '0'){

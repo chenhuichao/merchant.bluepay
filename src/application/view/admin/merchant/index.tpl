@@ -67,7 +67,7 @@
 	          <td>				
                   <select  name="state" class="text">
                            <option {if $request.state eq ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
-                      {foreach from=$request.STATE_CONF item=val key=key}
+                      {foreach from=$request.STATE_CONF key=key item=val}
                           <option value="{$key}" {if $request.state == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
                       {/foreach}
                   </select>
