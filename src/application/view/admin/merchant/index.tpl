@@ -24,36 +24,36 @@
 
               <th class="th">{$_LANG_['merchant.index.realname']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text" value="{$request.real_name}" name="real_name" id="real_name">
+                  <input type="text" autofocus="true" class="text" value="{$request.real_name}" name="real_name" id="real_name">
               </td>
               <th class="th">{$_LANG_['merchant.index.nickname']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text" value="{$request.nick_name}" name="nick_name" id="nick_name">
+                  <input type="text" autofocus="true" class="text" value="{$request.nick_name}" name="nick_name" id="nick_name">
               </td>
   	        </tr>
             <tr>
               <th class="th">{$_LANG_['merchant.index.idno']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text" value="{$request.id_no}" name="id_no" id="id_no">
+                  <input type="text" autofocus="true"class="text" value="{$request.id_no}" name="id_no" id="id_no">
               </td>
               <th class="th">{$_LANG_['merchant.index.company_name']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text" value="{$request.company_name}" name="company_name" id="company_name">
+                  <input type="text" autofocus="true" class="text" value="{$request.company_name}" name="company_name" id="company_name">
               </td>
               <th class="th">{$_LANG_['merchant.index.business_license_no']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text" value="{$request.business_license_no}" name="business_license_no" id="business_license_no">
+                  <input type="text" autofocus="true" class="text" value="{$request.business_license_no}" name="business_license_no" id="business_license_no">
               </td>
             </tr>
 
             <tr>
               <th class="th">{$_LANG_['framework.public.mobile']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text"  value="{$request.mobile}" name="mobile" id="mobile">
+                  <input type="text" autofocus="true" class="text"  value="{$request.mobile}" name="mobile" id="mobile">
               </td>
               <th class="th">{$_LANG_['merchant.index.email']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text" value="{$request.email}" name="email" id="email">
+                  <input type="text" autofocus="true" class="text" value="{$request.email}" name="email" id="email">
               </td>
 
               <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
@@ -139,7 +139,7 @@
         <td>
             <a href="/user/inex/?id={$item.id}" title="{$_LANG_['framework.public.view']}"> {$_LANG_['framework.public.view']}</a>
         </td>
-        <td>{$_LANG_[$request.STATE[$item.state]['NAME']]}</td>
+        <td>{$_LANG_[$request.STATE_CONF[$item.state]['NAME']]}</td>
 				<td>{$item.ctime}</td>
 				<td>{$item.utime}</td>
         <td>

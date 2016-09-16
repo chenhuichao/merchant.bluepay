@@ -14,11 +14,11 @@
             <tr>
               <th class="th">{$_LANG_['framework.public.mobile']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text"  value="{$request.mobile}" name="mobile" id="mobile">
+                  <input type="text" autofocus="true" class="text"  value="{$request.mobile}" name="mobile" id="mobile">
               </td>
               <th class="th">{$_LANG_['merchant.index.email']}</th>
               <td>
-                  <input type="text" autofocus="true" value=""  class="text" value="{$request.email}" name="email" id="email">
+                  <input type="text" autofocus="true" class="text" value="{$request.email}" name="email" id="email">
               </td>
 
               <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
@@ -30,7 +30,7 @@
             <tr>
             <th class="th">{$_LANG_['framework.public.merchant_id']}</th>
             <td>
-                <input type="text" autofocus="true" value=""  class="text"  value="{$request.merchant_id}" name="merchant_id" id="merchant_id">
+                <input type="text" autofocus="true" class="text"  value="{$request.merchant_id}" name="merchant_id" id="merchant_id">
             </td>
             <th class="th">{$_LANG_['merchant.user.is_default']}</th>
             <td>        
@@ -93,7 +93,7 @@
 				
 				
         <td>{$item.merchant_id}</td>
-        <td>{$_LANG_[$request.STATE[$item.state]['NAME']]}</td>
+        <td>{$_LANG_[$request.STATE_CONF[$item.state]['NAME']]}</td>
 				<td>{$item.ctime}</td>
 				<td>{$item.utime}</td>
         <td>
