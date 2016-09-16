@@ -1,7 +1,7 @@
 <?php
 class OperationlogSvc
 {/*{{{*/
-	const OBJ = 'Operationlog';
+	const OBJ = 'operation_log';
 	static public function add( $param )
 	{
 		$obj = Operationlog::createByBiz( $param );

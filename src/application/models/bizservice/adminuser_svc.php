@@ -1,13 +1,10 @@
 <?php
 
 class AdminuserSvc
-{
-
-    /* {{{ */
-    const OBJ = 'Adminuser';
+{ /* {{{ */
+    const OBJ = 'admin_user';
 
     const LOGIN_SUCC = 1;
-
     const LOGIN_FAIL = 0;
 
     static public function add($param)

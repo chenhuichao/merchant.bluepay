@@ -1,7 +1,7 @@
 <?php
 class NodeSvc
 {/*{{{*/
-	const OBJ = 'Node';
+	const OBJ = 'node';
 	static public function add( $param )
 	{
 		$obj = Node::createByBiz( $param );

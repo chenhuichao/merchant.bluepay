@@ -1,7 +1,7 @@
 <?php
 class MerchantSvc
 {/*{{{*/
-	const OBJ = 'Merchant';
+	const OBJ = 'merchant';
 	static private function add($param)
 	{
 		$obj = Merchant::createByBiz($param);
