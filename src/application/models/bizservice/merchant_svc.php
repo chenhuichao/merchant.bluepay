@@ -27,9 +27,9 @@ class MerchantSvc
 		return LoaderSvc::loadDao(self::OBJ);
 	}
 
-	static public function getPos($merchant_id,$user_id = 0)
+	static public function getPos($merchant_id,$user_id = null)
 	{
-		return self::getDao()->getPos($merchant_id);
+		return self::getDao()->getPos($merchant_id,$user_id);
 	}
 
 	static public function lists($request = array(),$options = array(),$export = false)

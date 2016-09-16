@@ -56,14 +56,14 @@ class MerchantDao extends BaseDao
 		return $r;	
 	}
 
-	public function getPos($merchant_id,$user_id = 0)
+	public function getPos($merchant_id,$user_id = null)
 	{
 		$sql_param = [];
 		$sql = "select * ";
 		$sql.= "from ".self::POS_TABLE_NAME." ";
 		$sql.= "where `merchant_id` = ? ";
 		$sql_param[] = $merchant_id;
-		if($uid > 0){
+		if(is_numeric($user_id) && $user_id >=0){
 			$sql .= "and `user_id` = ?";
 			$sql_param[] = $user_id;
 		}
