@@ -15,6 +15,7 @@ $_LANG_['framework.top.logout'] = '退出';
 $_LANG_['framework.content'] = '内容';
 
 $_LANG_['framework.public.id'] = '序号';
+$_LANG_['framework.public.sn'] = '序列号';
 $_LANG_['framework.public.search'] = '搜索';
 $_LANG_['framework.public.state'] = '状态';
 $_LANG_['framework.public.update_datetime'] = '更新日期';
@@ -28,6 +29,11 @@ $_LANG_['framework.public.total'] = '共';
 $_LANG_['framework.public.count'] = '条记录';
 $_LANG_['framework.public.mobile'] = '手机号码';
 $_LANG_['framework.public.view'] = '查看';
+$_LANG_['framework.public.merchant_id'] = '商户号';
+$_LANG_['framework.public.user_id'] = '用户号';
+
+$_LANG_['js.tips.confrim.delete'] = '确定要删除该数据吗？';
+$_LANG_['js.tips.error.exec'] = '处理异常';
 
 $_LANG_['index.title'] = '系统主页';
 $_LANG_['index.business_contact_info'] = '业务联系人信息';
@@ -58,12 +64,20 @@ $_LANG_['merchant.index.add_user'] = '新增子账号';
 
 $_LANG_['merchant.entity.type.company'] = '企业'; 
 $_LANG_['merchant.entity.type.personal'] = '个人'; 
+$_LANG_['user.entity.id_default.no'] = '主账号'; 
+$_LANG_['user.entity.id_default.yes'] = '子账号'; 
+$_LANG_['user.entity.state.disable'] = '已禁用'; 
+$_LANG_['user.entity.state.enable'] = '已启用'; 
 
 $_LANG_['merchant.entity.state.init'] = '初始'; 
 $_LANG_['merchant.entity.state.wait_audit'] = '待审核'; 
 $_LANG_['merchant.entity.state.rejected'] = '已驳回'; 
 $_LANG_['merchant.entity.state.valid'] = '生效'; 
 $_LANG_['merchant.entity.state.invalid'] = '无效'; 
+
+$_LANG_['merchant.user.title'] = '子账号列表';
+$_LANG_['merchant.user.add'] = '新增子账号';
+$_LANG_['merchant.user.is_default'] = '账号类型';
 
 
 

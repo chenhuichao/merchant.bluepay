@@ -3,6 +3,7 @@ class MerchantDao extends BaseDao
 {
 	const TABLE_NAME = 'merchant';
 	const COLUMN = '*';
+	const POS_TABLE_NAME = 'pos';
 
 	private function getTableName()
 	{
@@ -53,5 +54,21 @@ class MerchantDao extends BaseDao
 		}
 
 		return $r;	
+	}
+
+	public function getPos($merchant_id,$user_id = 0)
+	{
+		$sql_param = [];
+		$sql = "select * ";
+		$sql.= "from ".self::POS_TABLE_NAME." ";
+		$sql.= "where `merchant_id` = ? ";
+		$sql_param[] = $merchant_id;
+		if($uid > 0){
+			$sql .= "and `user_id` = ?";
+			$sql_param[] = $user_id;
+		}
+
+		$results = $this->getExecutor()->query($sql,array($v));
+		return is_array($results) ? $results : [];
 	}
 }

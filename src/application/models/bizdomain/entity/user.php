@@ -9,9 +9,19 @@ class User extends Entity
 	const STATE_DISABLE      		= 0;
 	const STATE_ENABLE      		= 1;
 
+	static $IS_DEFAULT_CONF = array(
+		self::IS_DEFAULT_NO => array('NAME' => 'user.entity.id_default.no'),
+		self::IS_DEFAULT_YES => array('NAME' => 'user.entity.id_default.yes'),
+	);
+
+	static $IS_DEFAULT_STV = array(
+		'IS_DEFAULT_NO'=>self::IS_DEFAULT_NO,
+		'IS_DEFAULT_YES'=>self::IS_DEFAULT_YES,
+	);
+
 	static $STATE_CONF = array(
-		self::STATE_DISABLE => array('NAME' => '禁用'),
-		self::STATE_ENABLE => array('NAME' => '启用'),
+		self::STATE_DISABLE => array('NAME' => 'user.entity.state.disable'),
+		self::STATE_ENABLE => array('NAME' => 'user.entity.state.enable'),
 	);
 
 	static $STATE_STV = array(
