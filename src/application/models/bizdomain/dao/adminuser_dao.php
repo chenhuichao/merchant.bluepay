@@ -3,9 +3,8 @@
 class AdminuserDao extends BaseDao
 {
 
-    const TABLE_NAME = 'adminuser';
-
-    const Login_LOG_TABLE = 'loginlog';
+    const TABLE_NAME = 'admin_user';
+    const Login_LOG_TABLE = 'login_log';
 
     private function getTableName()
     {

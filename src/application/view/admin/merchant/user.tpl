@@ -34,7 +34,7 @@
             </td>
             <th class="th">{$_LANG_['merchant.user.is_default']}</th>
             <td>        
-                  <select  name="state" class="text">
+                  <select  name="is_default" class="text">
                           <option {if $request.is_default eq ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
                       {foreach from=$request.IS_DEFAULT_CONF item=val key=key}
                           <option value="{$key}" {if $request.is_default == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
@@ -75,7 +75,7 @@
         <th>{$_LANG_['merchant.index.email']}</th>
         <th>{$_LANG_['merchant.user.is_default']}</th>
 
-        <th>$_LANG_['framework.public.merchant_id']</th>
+        <th>{$_LANG_['framework.public.merchant_id']}</th>
         <th>{$_LANG_['framework.public.state']}</th>
 				<th>{$_LANG_['framework.public.create_time']}</th>
 				<th>{$_LANG_['framework.public.update_time']}</th>
@@ -126,7 +126,7 @@
             startView: 2,
             minView:2
         });
-    }
+    });
 </script>
 {include file="footer.tpl"}
     
