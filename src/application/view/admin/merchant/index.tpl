@@ -22,17 +22,17 @@
                   </select>
 	          </td>
 
-              <th class="th">{$_LANG_['merchant.index.realname']}</th>
+              <th class="th">{$_LANG_['merchant.index.real_name']}</th>
               <td>
                   <input type="text" autofocus="true" class="text" value="{$request.real_name}" name="real_name" id="real_name">
               </td>
-              <th class="th">{$_LANG_['merchant.index.nickname']}</th>
+              <th class="th">{$_LANG_['merchant.index.nick_name']}</th>
               <td>
                   <input type="text" autofocus="true" class="text" value="{$request.nick_name}" name="nick_name" id="nick_name">
               </td>
   	        </tr>
             <tr>
-              <th class="th">{$_LANG_['merchant.index.idno']}</th>
+              <th class="th">{$_LANG_['merchant.index.id_no']}</th>
               <td>
                   <input type="text" autofocus="true"class="text" value="{$request.id_no}" name="id_no" id="id_no">
               </td>
@@ -58,8 +58,8 @@
 
               <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
               <td>
-                <input type="text" class="text  datetime" value="{$request.startime}" name="startime"  /> - 
-                <input type="text" class="text  datetime" value="{$request.endtime}" name="endtime"  />　
+                <input type="text" class="text  datetime" value="{$request.daystart}" name="daystart"  /> - 
+                <input type="text" class="text  datetime" value="{$request.dayend}" name="dayend"  />　
               </td>
             </tr>	          
             <tr>
@@ -95,8 +95,8 @@
 			<tr>
 				<th colspan="1" rowspan="1">{$_LANG_['framework.public.id']}</th>
 				<th>{$_LANG_['merchant.index.type']}</th>
-				<th>{$_LANG_['merchant.index.realname']}</th>
-				<th>{$_LANG_['merchant.index.nikename']}</th>
+				<th>{$_LANG_['merchant.index.real_name']}</th>
+				<th>{$_LANG_['merchant.index.nike_name']}</th>
         <th>{$_LANG_['merchant.index.idno']}</th>
         <th>{$_LANG_['merchant.index.id_pic']}</th>
         <th>{$_LANG_['merchant.index.company_name']}</th>
@@ -172,7 +172,7 @@
             startView: 2,
             minView:2
         });
-    }
+    });
 </script>
 {include file="footer.tpl"}
     

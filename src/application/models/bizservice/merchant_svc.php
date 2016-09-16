@@ -38,7 +38,7 @@ class MerchantSvc
 		$sql_condition = array();
 		$sql_param = array();
 
-		if(isset($request['id']) && $request['id']>1)
+		if(isset($request['id']) && $request['id']>=1)
 		{
 			$request_param[] = '`id`=' . $request['id'];
 			$sql_condition[] = '`id` = ? ';
@@ -50,6 +50,12 @@ class MerchantSvc
 			$sql_condition[] = '`mobile` = ?';
 			$sql_param[]	 = $request['mobile'];
 		}
+		if('' != $request['nick_name']){
+			$request_param[] = 'nick_name=' . $request['nick_name'];
+			$sql_condition[] = '`nick_name` = ?';
+			$sql_param[]	 = $request['nick_name'];
+		}
+
 		if('' != $request['real_name']){
 			$request_param[] = 'real_name=' . $request['real_name'];
 			$sql_condition[] = '`real_name` = ?';

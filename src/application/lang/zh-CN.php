@@ -46,9 +46,9 @@ $_LANG_['response.message.error'] = '操作失败';
 
 $_LANG_['merchant.index.title'] = '商户列表';
 $_LANG_['merchant.index.type'] = '商户类型'; 
-$_LANG_['merchant.index.realname'] = '姓名'; 
-$_LANG_['merchant.index.nikename'] = '昵称'; 
-$_LANG_['merchant.index.idno'] = '身份证号'; 
+$_LANG_['merchant.index.real_name'] = '姓名'; 
+$_LANG_['merchant.index.nik_ename'] = '昵称'; 
+$_LANG_['merchant.index.id_no'] = '身份证号'; 
 $_LANG_['merchant.index.id_pic'] = '手持身份证照片'; 
 $_LANG_['merchant.index.company_name'] = '企业简称'; 
 $_LANG_['merchant.index.email'] = '邮箱账号'; 

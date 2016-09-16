@@ -25,5 +25,5 @@
 var JS_LANG = [];
 JS_LANG['tips.confirm.delete'] = "{$_LANG_['js.tips.confrim.delete']}"; 
 JS_LANG['js.tips.error.exec'] = "{$_LANG_['js.tips.error.exec']}"; 
-</script
+</script>
 {include file="menu.tpl"}
