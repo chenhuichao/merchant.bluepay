@@ -2,7 +2,7 @@
 
 class Adminuser extends Entity
 {
-	const ID_OBJ = 'adminuser';
+	const ID_OBJ = 'admin_user';
 
 	const STATUS_DISABLE = '0';
 	const STATUS_ENABLE = '1';
