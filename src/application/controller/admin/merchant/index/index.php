@@ -8,6 +8,7 @@ $request['mobile'] = RequestSvc::request('mobile');
 $request['real_name'] = RequestSvc::request('real_name');
 $request['business_license_no'] = RequestSvc::request('business_license_no');
 $request['type'] = RequestSvc::request('type');
+$request['state'] = RequestSvc::request('state');
 
 $results = MerchantSvc::lists($request,array('page'=>RequestSvc::request('p',1,'int'),'baseurl'=>'/merchant/?'));
 
