@@ -68,7 +68,7 @@ class MerchantDao extends BaseDao
 			$sql_param[] = $user_id;
 		}
 
-		$results = $this->getExecutor()->query($sql,array($v));
+		$results = $this->getExecutor()->querys($sql,$sql_param);
 		return is_array($results) ? $results : [];
 	}
 }
