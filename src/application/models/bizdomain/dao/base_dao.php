@@ -49,7 +49,7 @@ class BaseDao
         {
             return null;
         }
-
+        $cls = ucfirst(str_replace('_','',$cls));
         $obj = new $cls( $row );
 
         return $obj;
@@ -79,6 +79,8 @@ class BaseDao
         {
             return $objs;
         }
+        
+        $cls = ucfirst(str_replace('_','',$cls));
         foreach ( $rows as $row )
         {
             $objs[$row['id']] = new $cls( $row );
