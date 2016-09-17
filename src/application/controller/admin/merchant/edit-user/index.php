@@ -32,7 +32,7 @@ if('do' == $action){
             User::IS_DEFAULT_YES
     )) ? $is_default : User::IS_DEFAULT_NO;
 
-    if(strlen($merchant_id) > 0){
+    if(intval($merchant_id) > 0){
     	$merchant = MerchantSvc::getById($merchant_id);
     	if(!is_object($merchant)){
     		$info = show_msg($_LANG_['response.message.merchant_not_found'], 'err');
@@ -82,6 +82,7 @@ if('do' == $action){
 	$r = UserSvc::updateById($id,$params);
 	if($r){
 		 $info = show_msg($_LANG_['response.message.success'], 'succ');
+         $record = UserSvc::getById($id);
 	}else{
 		 $info = show_msg($_LANG_['response.message.error'], 'err');
 	}

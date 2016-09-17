@@ -53,6 +53,11 @@ class UserSvc
 			$sql_condition[] = '`mobile` = ?';
 			$sql_param[]	 = $request['mobile'];
 		}
+		if('' != $request['email']){
+			$request_param[] = 'email=' . $request['email'];
+			$sql_condition[] = '`email` = ?';
+			$sql_param[]	 = $request['email'];
+		}
 		if('' != $request['state']){
 			$request_param[] = 'state=' . $request['state'];
 			$sql_condition[] = '`state` = ?';
@@ -61,13 +66,13 @@ class UserSvc
 
 		if('' != $request['daystart']){
 			$request_param[] = 'daystart=' . $request['daystart'];
-			$sql_condition[] = '`ctime` >= ?';
+			$sql_condition[] = '`utime` >= ?';
 			$sql_param[]	 = $request['daystart'];
 		}
 
 		if('' != $request['dayend']){
 			$request_param[] = 'dayend=' . $request['dayend'];
-			$sql_condition[] = '`ctime` <= ?';
+			$sql_condition[] = '`utime` <= ?';
 			$sql_param[]	 = $request['dayend'];
 		}
 
