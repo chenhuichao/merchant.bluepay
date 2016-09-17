@@ -38,8 +38,8 @@
 		            <label class="item-label">{$_LANG_['merchant.user.is_default']}</label>
 					<div class="controls">
 						<select id="is_default" name="is_default" class=" input-large">
-							<option selected="selected" value="{$request.IS_DEFAULT_STV.IS_DEFAULT_YES}">{$_LANG_['framework.public.enable']}</option>
-							<option value="{$request.IS_DEFAULT_STV.IS_DEFAULT_NO}">{$_LANG_['framework.public.disable']}</option>
+							<option selected="selected" value="{$request.IS_DEFAULT_STV.IS_DEFAULT_YES}">{$_LANG_['user.entity.id_default.yes']}</option>
+							<option value="{$request.IS_DEFAULT_STV.IS_DEFAULT_NO}">$_LANG_['user.entity.id_default.no']}</option>
 						</select>
 				     </div>
 		        </div>

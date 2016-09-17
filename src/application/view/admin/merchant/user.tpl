@@ -23,8 +23,7 @@
 
               <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
               <td>
-                <input type="text" class="text  datetime" value="{$request.daystart}" name="daystart"  /> - 
-                <input type="text" class="text  datetime" value="{$request.dayend}" name="dayend"  />　
+                <input type="text" class="text  datetime" value="{$request.daystart}" name="daystart"/> - <input type="text" class="text  datetime" value="{$request.dayend}" name="dayend"  />　
               </td>
             </tr>	          
             <tr>

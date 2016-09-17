@@ -39,8 +39,8 @@
 		            <label class="item-label">{$_LANG_['merchant.user.is_default']}</label>
 					<div class="controls">
 						<select id="is_default" name="is_default" class=" input-large">
-							<option {if $record->is_default eq $request.IS_DEFAULT_STV.IS_DEFAULT_YES}selected="selected"{/if} value="{$request.IS_DEFAULT_STV.IS_DEFAULT_YES}">{$_LANG_['framework.public.enable']}</option>
-							<option {if $record->is_default eq $request.IS_DEFAULT_STV.IS_DEFAULT_NO}selected="selected"{/if} value="{$request.IS_DEFAULT_STV.IS_DEFAULT_NO}">{$_LANG_['framework.public.disable']}</option>
+							<option {if $record->is_default eq $request.IS_DEFAULT_STV.IS_DEFAULT_YES}selected="selected"{/if} value="{$request.IS_DEFAULT_STV.IS_DEFAULT_YES}">{$_LANG_['user.entity.id_default.yes']}</option>
+							<option {if $record->is_default eq $request.IS_DEFAULT_STV.IS_DEFAULT_NO}selected="selected"{/if} value="{$request.IS_DEFAULT_STV.IS_DEFAULT_NO}">{$_LANG_['user.entity.id_default.no']}</option>
 						</select>
 				     </div>
 		        </div>
