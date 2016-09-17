@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 <!-- 标题栏 -->
 	<div class="main-title">
-		<h2>{$_LANG_['merchant.user.add']}</h2>
+		<h2>{$_LANG_['merchant.user.edit']}</h2>
 	</div>
 	{$info}
 	<!-- 表单内容 -->

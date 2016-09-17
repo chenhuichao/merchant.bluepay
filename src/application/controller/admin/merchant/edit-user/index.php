@@ -95,4 +95,4 @@ $request['IS_DEFAULT_STV'] = User::$IS_DEFAULT_STV;
 LoaderSvc::loadSmarty()->assign('request',$request);
 LoaderSvc::loadSmarty()->assign('record',$record);
 LoaderSvc::loadSmarty()->assign('info',$info);
-LoaderSvc::loadSmarty()->display('merchant/add-user.tpl');
+LoaderSvc::loadSmarty()->display('merchant/edit-user.tpl');

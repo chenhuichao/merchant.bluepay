@@ -40,11 +40,16 @@ if('do' == $action){
     }
 	
     $r = UserSvc::checkUnique('mobile',$mobile);
+    if(strlen($mobile) == 0){
+    	$info = show_msg($_LANG_['response.message.mobile_requie'], 'err');
+    	goto ret;
+    }
+
     if(!$r){
     	$info = show_msg($_LANG_['response.message.mobile_exists'], 'err');
     	goto ret;
-    }elseif(strval($email)){
-    	 $r = UserSvc::checkUnique('email',$mobile);
+    }elseif(strlen($email) > 0){
+    	 $r = UserSvc::checkUnique('email',$email);
     	 if(!$r){
     	 	$info = show_msg($_LANG_['response.message.email_exists'], 'err');
     		goto ret;

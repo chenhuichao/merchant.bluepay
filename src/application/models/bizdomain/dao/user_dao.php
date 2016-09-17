@@ -65,6 +65,16 @@ class UserDao extends BaseDao
 		return is_array($tmparr) ? $tmparr : array();
 	}
 
+	public function getUserInfoByEmail($email)
+	{
+		$sql = "select ".self::COLUMN." ";
+		$sql.= "from ".self::TABLE_NAME." ";
+		$sql.= "where `email` = ? ";
+		$tmparr = $this->getExecutor()->query($sql,array($email));
+
+		return is_array($tmparr) ? $tmparr : array();
+	}
+
 	public function getUserInfoByUid($uid)
 	{
 		$sql = "select ".self::COLUMN." ";

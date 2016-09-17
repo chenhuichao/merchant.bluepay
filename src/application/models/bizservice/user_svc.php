@@ -118,10 +118,16 @@ class UserSvc
 	}
 
 
+	static public function getUserInfoByEmail($email)
+	{
+		return self::getDao()->getUserInfoByEmail($email);
+	}
+
 	static public function getUserInfoByMobile($mobile)
 	{
 		return self::getDao()->getUserInfoByMobile($mobile);
 	}
+
 
 	static public function getUserInfoByUid($uid)
 	{

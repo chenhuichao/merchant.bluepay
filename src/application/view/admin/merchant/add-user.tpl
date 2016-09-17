@@ -37,7 +37,7 @@
 		        <div class="form-item">
 		            <label class="item-label">{$_LANG_['merchant.user.is_default']}</label>
 					<div class="controls">
-						<select id="state" name="state" class=" input-large">
+						<select id="is_default" name="is_default" class=" input-large">
 							<option selected="selected" value="{$request.IS_DEFAULt_STV.IS_DEFAULT_YES}">{$_LANG_['framework.public.enable']}</option>
 							<option value="{$request.IS_DEFAULt_STV.IS_DEFAULT_NO}">{$_LANG_['framework.public.disable']}</option>
 						</select>
@@ -55,7 +55,7 @@
 		      
 				<div class="form-item">
 							<td colspan="2"><div><button type="submit" class="btn">{$_LANG_['framework.public.submit']}</button>
-							<a class="btn btn-info" href="/merchant/add-user/">{$_LANG_['framework.public.return']}</a>
+							<a class="btn btn-info" href="/merchant/user/">{$_LANG_['framework.public.return']}</a>
 				     </div>
 		        </div>
 			</form>

@@ -57,6 +57,8 @@ $_LANG_['response.message.error'] = '操作失败';
 $_LANG_['response.message.merchant_not_found'] = '指定商户不存在';
 $_LANG_['response.message.email_exists'] = '指定邮件已存在';
 $_LANG_['response.message.mobile_exists'] = '指定手机号已存在';
+$_LANG_['response.message.mobile_requie'] = '手机号必填选项';
+$_LANG_['response.message.record_not_found'] = '相关记录不存在';
 
 $_LANG_['merchant.index.title'] = '商户列表';
 $_LANG_['merchant.index.type'] = '商户类型'; 
@@ -90,7 +92,8 @@ $_LANG_['merchant.entity.state.valid'] = '生效';
 $_LANG_['merchant.entity.state.invalid'] = '无效'; 
 
 $_LANG_['merchant.user.title'] = '账号列表';
-$_LANG_['merchant.user.add'] = '新增子账号';
+$_LANG_['merchant.user.add'] = '新增用户账号';
+$_LANG_['merchant.user.edit'] = '编辑用户账号';
 $_LANG_['merchant.user.is_default'] = '账号类型';
 
 
