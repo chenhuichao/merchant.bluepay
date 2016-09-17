@@ -2,7 +2,7 @@
 class UserSvc
 {/*{{{*/
 	const OBJ = 'User';
-	static private function add($param)
+	static public function add($param)
 	{
 		$obj = User::createByBiz($param);
 		return self::getDao()->add($obj);

@@ -3,10 +3,10 @@ class User extends Entity
 {
 	const ID_OBJ  = 'user';
 
-	const IS_DEFAULT_NO = 0;
+	const IS_DEFAULT_NO = 2;
 	const IS_DEFAULT_YES = 1;
 
-	const STATE_DISABLE      		= 0;
+	const STATE_DISABLE      		= 2;
 	const STATE_ENABLE      		= 1;
 
 	static $IS_DEFAULT_CONF = array(

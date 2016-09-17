@@ -7,6 +7,7 @@ $request['mobile'] = RequestSvc::request('mobile');
 $request['email'] = RequestSvc::request('email');
 $request['merchant_id'] = RequestSvc::request('merchant_id');
 $request['state'] = RequestSvc::request('state');
+$request['is_default'] = RequestSvc::request('is_default');
 
 $results = UserSvc::lists($request,array('page'=>RequestSvc::request('p',1,'int'),'baseurl'=>'/merchant/user?'));
 

@@ -35,18 +35,18 @@
             <th class="th">{$_LANG_['merchant.user.is_default']}</th>
             <td>        
                   <select  name="is_default" class="text">
-                          <option {if $request.is_default === ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
+                          <option {if $request.is_default == ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
                       {foreach from=$request.IS_DEFAULT_CONF item=val key=key}
-                          <option value="{$key}" {if $request.is_default === $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
+                          <option value="{$key}" {if $request.is_default == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
                       {/foreach}
                   </select>
             </td>
             <th class="th">{$_LANG_['framework.public.state']}</th>
 	          <td>				
                   <select  name="state" class="text">
-                           <option {if $request.state === ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
+                           <option {if $request.state == ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
                       {foreach from=$request.STATE_CONF item=val key=key}
-                          <option value="{$key}" {if $request.state === $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
+                          <option value="{$key}" {if $request.state == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
                       {/foreach}
                   </select>
 	          </td>

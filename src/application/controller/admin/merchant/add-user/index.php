@@ -36,6 +36,18 @@ if('do' == $action){
     	
     }
 	
+    $r = UserSvc::checkUnique('mobile',$mobile);
+    if($r){
+    	$info = show_msg($_LANG_['response.message.mobile_exists'], 'err');
+    	goto ret;
+    }elseif(strval($email)){
+    	 $r = UserSvc::checkUnique('email',$mobile);
+    	 if($r){
+    	 	$info = show_msg($_LANG_['response.message.email_exists'], 'err');
+    		goto ret;
+    	 }
+    }
+
 	$params = array(
 		'merchant_id'=>$merchant_id,
 		'mobile'=>$mobile,

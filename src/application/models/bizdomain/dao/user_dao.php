@@ -44,7 +44,7 @@ class UserDao extends BaseDao
 	public function checkUnique($key,$v)
 	{
 		$r = false;
-		if(in_array($key,array('mobile'))){
+		if(in_array($key,array('mobile','email'))){
 			$sql = "select count(*) as total ";
 			$sql.= "from ".self::TABLE_NAME." ";
 			$sql.= "where `$key` = ? ";
