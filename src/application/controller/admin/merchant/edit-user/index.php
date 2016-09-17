@@ -79,7 +79,7 @@ if('do' == $action){
         $params['passwd'] = $passwd;
         $params['salt'] = $salt;
     }
-	$r = UserSvc::updateById($params,$id);
+	$r = UserSvc::updateById($id,$params);
 	if($r){
 		 $info = show_msg($_LANG_['response.message.success'], 'succ');
 	}else{
