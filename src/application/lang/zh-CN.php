@@ -15,7 +15,7 @@ $_LANG_['framework.top.logout'] = '退出';
 $_LANG_['framework.content'] = '内容';
 
 $_LANG_['framework.public.id'] = '序号';
-$_LANG_['framework.public.sn'] = '序列号';
+$_LANG_['framework.public.sn'] = '设备序列号';
 $_LANG_['framework.public.search'] = '搜索';
 $_LANG_['framework.public.state'] = '状态';
 $_LANG_['framework.public.update_datetime'] = '更新日期';

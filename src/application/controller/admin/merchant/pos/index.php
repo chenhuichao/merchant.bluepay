@@ -24,7 +24,7 @@ function getData($results){
 	global $_LANG_;
 	$html = '<table class="table table-striped table-bordered"><tbody role="alert" aria-live="polite" aria-relevant="all">';
 	$html .= '<tr><th>'.$_LANG_['framework.public.id'].'</th>';
-	$html .= '<tr><th>'.$_LANG_['framework.public.sn'].'</th>';
+	$html .= '<th>'.$_LANG_['framework.public.sn'].'</th>';
 	$html .= '<th>'.$_LANG_['framework.public.merchant_id'].'</th>';
 	$html .= '<th>'.$_LANG_['framework.public.bind_user_id'].'</th>';
 	$html .= '<th>'.$_LANG_['framework.public.mobile'].'</th>';
