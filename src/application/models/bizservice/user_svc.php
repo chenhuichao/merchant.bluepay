@@ -191,4 +191,9 @@ class UserSvc
 		return $r;
 	}
 
+	static public function checkUnique($key,$v)
+	{
+		return self::getDao()->checkUnique($key,$v);
+	}
+
 }

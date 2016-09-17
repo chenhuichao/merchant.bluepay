@@ -2,6 +2,9 @@
 require_once dirname(dirname(dirname(__FILE__))).'/header.php';
 
 $action = isset($_GET['action']) ? $_GET['action'] : null;
+$request = array();
+$request['merchant_id'] = RequestSvc::request('merchant_id');
+
 $info = '';
 if('do' == $action){
 	$merchant_id = RequestSvc::Request('merchant_id');
@@ -37,12 +40,12 @@ if('do' == $action){
     }
 	
     $r = UserSvc::checkUnique('mobile',$mobile);
-    if($r){
+    if(!$r){
     	$info = show_msg($_LANG_['response.message.mobile_exists'], 'err');
     	goto ret;
     }elseif(strval($email)){
     	 $r = UserSvc::checkUnique('email',$mobile);
-    	 if($r){
+    	 if(!$r){
     	 	$info = show_msg($_LANG_['response.message.email_exists'], 'err');
     		goto ret;
     	 }
@@ -67,5 +70,6 @@ if('do' == $action){
 }
 
 ret:
+LoaderSvc::loadSmarty()->assign('request',$request);
 LoaderSvc::loadSmarty()->assign('info',$info);
 LoaderSvc::loadSmarty()->display('merchant/add-user.tpl');
