@@ -42,10 +42,10 @@ if ($action == 'do') {
 
 ret:
 $request = array();
-$request['STATE_CONF'] = User::$STATE_CONF;
-$request['TYPE_CONF'] = User::$TYPE_CONF;
-$request['STATE_STV'] = User::$STATE_STV;
-$request['TYPE_STV'] = User::$TYPE_STV;
+$request['STATE_CONF'] = Merchant::$STATE_CONF;
+$request['TYPE_CONF'] = Merchant::$TYPE_CONF;
+$request['STATE_STV'] = Merchant::$STATE_STV;
+$request['TYPE_STV'] = Merchant::$TYPE_STV;
 LoaderSvc::loadSmarty()->assign('request',$request);
 LoaderSvc::loadSmarty()->assign('info', $info);
 LoaderSvc::loadSmarty()->display('merchant/add.tpl');
