@@ -54,6 +54,6 @@ if('do' == $action){
 	}
 }
 
-label ret:
+ret:
 LoaderSvc::loadSmarty()->assign('info',$info);
 LoaderSvc::loadSmarty()->display('merchant/add-user.tpl');

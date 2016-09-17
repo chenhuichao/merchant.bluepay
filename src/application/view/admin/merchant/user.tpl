@@ -37,7 +37,7 @@
                   <select  name="is_default" class="text">
                           <option {if $request.is_default === ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
                       {foreach from=$request.IS_DEFAULT_CONF item=val key=key}
-                          <option value="{$key}" {if $request.is_default == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
+                          <option value="{$key}" {if $request.is_default === $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
                       {/foreach}
                   </select>
             </td>
@@ -46,7 +46,7 @@
                   <select  name="state" class="text">
                            <option {if $request.state === ""} selected="selected"  {/if} value="">{$_LANG_['framework.public.all']}</option>
                       {foreach from=$request.STATE_CONF item=val key=key}
-                          <option value="{$key}" {if $request.state == $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
+                          <option value="{$key}" {if $request.state === $key}selected="selected" {/if}>{$_LANG_[$val.NAME]}</option>
                       {/foreach}
                   </select>
 	          </td>
@@ -61,7 +61,7 @@
 	
 	<div class="cf">
 		 <div class="fl">
-            <a class="btn" href="/merchant/add-user?merchant_id="{$request.merchant_id}>{$_LANG_['merchant.user.add']}</a> 
+            <a class="btn" href="/merchant/add-user?merchant_id={$request.merchant_id}">{$_LANG_['merchant.user.add']}</a> 
         </div>
     </div>
     <!-- 数据列表 -->
@@ -97,7 +97,7 @@
 				<td>{$item.ctime}</td>
 				<td>{$item.utime}</td>
         <td>
-            <a href="/merchant/add-user/?id={$item.id}" title="{$_LANG_['framework.public.edit']}" class="btn"> {$_LANG_['framework.public.edit']}</a>
+            <a href="/merchant/edit-user/?id={$item.id}" title="{$_LANG_['framework.public.edit']}" class="btn"> {$_LANG_['framework.public.edit']}</a>
         </td>
 			</tr>
 			{/foreach}
