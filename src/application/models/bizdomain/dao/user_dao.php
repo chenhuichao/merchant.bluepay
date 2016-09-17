@@ -2,7 +2,7 @@
 class UserDao extends BaseDao
 {
 	const TABLE_NAME = 'user';
-	const COLUMN = '`id`,`mobile`,`is_default`,`merchant_id`,`realname`,`state`,`ctime`,`utime`,`salt`,`passwd`,`pay_passwd`';
+	const COLUMN = '`id`,`mobile`,`is_default`,`merchant_id`,`state`,`ctime`,`utime`,`salt`,`passwd`,`pay_passwd`';
 
 	private function getTableName()
 	{
