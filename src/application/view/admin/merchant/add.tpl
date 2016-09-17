@@ -69,7 +69,9 @@
 	                    </div>
 
 				        <ul>
-						<li key="{$result.mmarriage}" onmouseover="onMouseOver($(this))" onmouseout="onMouseOut($(this))" style="position: relative;"><a href="#" class="btnShow"><img style="width: 150px;height: 100px;" src="/file?key=s_{$record.id_pic}"/></a><div class="delate-image-fuceng" style="display: none" onclick="del($(this))"></div></li>
+				        {if strlen($record.id_pic)}
+						<li key="{$record.id_pic}" onmouseover="onMouseOver($(this))" onmouseout="onMouseOut($(this))" style="position: relative;"><a href="#" class="btnShow"><img style="width: 150px;height: 100px;" src="/file?key=s_{$record.id_pic}"/></a><div class="delate-image-fuceng" style="display: none" onclick="del($(this))"></div></li>
+						{/if}
 				        </ul>
 				     </div>
 		        </div>
@@ -220,7 +222,7 @@
            	if(type == 1){
            		$('.company-group').show();
            		$('.personal-group').hide();
-           	}else($type == 2){
+           	}else(type == 2){
            		$('.company-group').hide();
            		$('.personal-group').show();
            	}
