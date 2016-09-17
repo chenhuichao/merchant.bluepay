@@ -95,12 +95,6 @@ class UserSvc
 		return $results;
 	}/*}}}*/
 
-	static public function checkUnique($key,$v)
-	{
-		return self::getDao()->checkUnique($key,$v);
-	}
-	
-
 	static public function registration($param)
 	{
 		$mobile = $param['mobile'];
