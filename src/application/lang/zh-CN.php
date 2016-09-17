@@ -35,6 +35,8 @@ $_LANG_['framework.public.bind_user_id'] = '绑定用户号';
 $_LANG_['framework.public.email'] = 'Email';
 $_LANG_['framework.public.passwd'] = '登录密码';
 $_LANG_['framework.public.pay_passwd'] = '交易密码';
+$_LANG_['framework.public.pick_file'] = '选择文件';
+$_LANG_['framework.public.upload'] = '上传文件';
 
 $_LANG_['framework.public.disable'] = '禁用';
 $_LANG_['framework.public.enable'] = '启用';

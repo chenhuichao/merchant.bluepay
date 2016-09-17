@@ -9,7 +9,7 @@ Filepool::set($key,array('path'=>$b_path,'type'=>$_FILES['Filedata']['type'],"fi
 
 //生成缩略图
 include_once ROOT_PATH.'/src/helper/file/ImageResize.php';
-$s_path = $r['data']['path'].'small.jpg';
+$s_path = $r['data']['path'].'_small.jpg';
 
 $image = new \Eventviva\ImageResize($r['data']['path']);
 $image->resizeToBestFit(400, 300);

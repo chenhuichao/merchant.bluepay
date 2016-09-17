@@ -30,13 +30,13 @@
 								<input type="text" autofocus="true" value="" class="text input-large" name="email" id="email">
 				    </div>
 		        </div>
-		        <div class="form-item">
+		        <div class="form-item personal-group">
 		            <label class="item-label">{$_LANG_['merchant.index.nick_ename']}</label>
 					<div class="controls">
 								<input type="text" autofocus="true" value=""  class="text input-large" name="nick_name" id="nick_name">
 				     </div>
 		        </div>
-				<div class="form-item">
+				<div class="form-item personal-group">
 		            <label class="item-label">{$_LANG_['merchant.index.real_name']}</label>
 					<div class="controls">
 								<input type="text" autofocus="true" value=""  class="text input-large" name="real_name" id="real_name">
@@ -60,40 +60,45 @@
 								<input type="text" autofocus="true" value="" class="text input-large" name="bank_of_deposit" id="bank_of_deposit">
 				     </div>
 		        </div>
-		         <div class="form-item">
+		         <div class="form-item personal-group">
 		            <label class="item-label">{$_LANG_['merchant.index.id_pic']}</label>
+		            <input type="hidden" autofocus="true" value="" class="text input-large" name="id_pic" id="id_pic">
 					<div class="controls">
 						<div>
 	                        <input type="button" value="上传文件" class="file"><span>{$err.msg}</span>
 	                    </div>
-						<input type="hidden" autofocus="true" value="" class="text input-large" name="id_pic" id="id_pic">
+
+				        <ul>
+						<li key="{$result.mmarriage}" onmouseover="onMouseOver($(this))" onmouseout="onMouseOut($(this))" style="position: relative;"><a href="#" class="btnShow"><img style="width: 150px;height: 100px;" src="/file?key=s_{$record.id_pic}"/></a><div class="delate-image-fuceng" style="display: none" onclick="del($(this))"></div></li>
+				        </ul>
 				     </div>
 		        </div>
-		        <div class="form-item">
+		        <div class="form-item personal-group">
 		            <label class="item-label">{$_LANG_['merchant.index.id_no']}</label>
 					<div class="controls">
 								<input type="text" autofocus="true" value="" class="text input-large" name="id_no" id="id_no">
 				     </div>
 		        </div>
-		        <div class="form-item">
+		        <div class="form-item company-group">
 		            <label class="item-label">{$_LANG_['merchant.index.company_name']}</label>
 					<div class="controls">
 								<input type="text" autofocus="true" value="" class="text input-large" name="company_name" id="company_name">
 				     </div>
 		        </div>
-		        <div class="form-item">
+		        <div class="form-item company-group">
 		            <label class="item-label">{$_LANG_['merchant.index.contact']}</label>
 					<div class="controls">
 								<input type="text" autofocus="true" value="" class="text input-large" name="contact" id="contact">
 				     </div>
 		        </div>
-		        <div class="form-item">
+		        <div class="form-item company-group">
 		            <label class="item-label">{$_LANG_['merchant.index.business_license_pic']}</label>
 					<div class="controls">
 								<input type="text" autofocus="true" value="" class="text input-large" name="business_license_pic" id="business_license_pic">
 				     </div>
+
 		        </div>
-		        <div class="form-item">
+		        <div class="form-item company-group">
 		            <label class="item-label">{$_LANG_['merchant.index.business_license_no']}</label>
 					<div class="controls">
 								<input type="text" autofocus="true" value="" class="text input-large" name="business_license_no" id="business_license_no">
@@ -128,7 +133,7 @@
 
 {literal}
     <script>
-        var htmlcontent = '<div id="uploaddiv"  class="uploaddiv-special"><div id="filelist"></div><div id="container"><a id="pickfiles" href="javascript:;">选择文件</a> <a id="uploadfiles" href="javascript:;">上传文件</a></div><pre id="console" style="border: 0;margin: 0;padding: 0;"></pre></div>';
+        var htmlcontent = '<div id="uploaddiv"  class="uploaddiv-special"><div id="filelist"></div><div id="container"><a id="pickfiles" href="javascript:;">'+JS_LANG['js.file.pick_file']+'</a> <a id="uploadfiles" href="javascript:;">'+JS_LANG['js.file.upload']+'</a></div><pre id="console" style="border: 0;margin: 0;padding: 0;"></pre></div>';
         var obj;
         $(document).ready(function() {
             $(".file").on("click",function() {
@@ -163,7 +168,6 @@
                             };
                         },
                         FilesAdded: function(up, files) {
-
                             document.getElementById('console').innerHTML = '';
                             plupload.each(files, function(file) {
                                 document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
@@ -193,7 +197,6 @@
 
                             if(data.type == 'img'){
                                 var html='<li key="'+data.key+'" onmouseover="onMouseOver($(this))" onmouseout="onMouseOut($(this))" style="position: relative;"><a href="#" class="btnShow"><img style="width: 150px;height: 100px;" src="/file?key=s_'+data.key+'"/></a><div class="delate-image-fuceng" style="display: none" onclick="del($(this))"></div></li>';
-
                             }else{
                                 var html='<li key="'+data.key+'"><a href="/file?key=s_'+data.key+'">'+data.filename+'</a></li>';
                             }
@@ -213,31 +216,25 @@
                 lnk.click();
             });
 
-            var types = $("#types").val();
-            if(types == 1){
-                $(".loanind").show();
-            }else if(types == 2){
-                $(".loanent").show();
-            }
-            else if(types == 3){
-                $(".mortgage").show();
-            }
-            else if(types == 4){
-                $(".loancar").show();
-                $(".cwork").show();
-                $(".cincome").show();
-                $(".cpcredit").show();
-            }
-            else if(types == 5){
-                $(".loancar").show();
-                $(".cmrecord").show();
-            }
+            var type = $("#type").val();
+           	if(type == 1){
+           		$('.company-group').show();
+           		$('.personal-group').hide();
+           	}else($type == 2){
+           		$('.company-group').hide();
+           		$('.personal-group').show();
+           	}
 
-            var cat = $("#cat").val();
-            if(cat == 2){
-                $(".repay").show();
-            }
-
+           	$('#type').change(function(){
+           		var type = $(this).val();
+           		if(type == 1){
+	           		$('.company-group').show();
+	           		$('.personal-group').hide();
+	           	}else($type == 2){
+	           		$('.company-group').hide();
+	           		$('.personal-group').show();
+	           	}
+           	});
         });
 
         //移入事件
@@ -251,7 +248,6 @@
 
         //删除
         function del(obj){
-
             var key=obj.parent().attr("key");
             var key1=key+",";
             var key2=","+key;

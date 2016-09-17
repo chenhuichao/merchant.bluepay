@@ -22,9 +22,23 @@
     <script type="text/javascript" src="{$_STATIC_}/js/artDialog/jquery.artDialog.js"></script>
     <script type="text/javascript" src="{$_STATIC_}/js/plupload/plupload.js"></script>
 </head>
+<style>
+        /*上传删除浮层*/
+    .delate-image-fuceng{
+        width: 20px;height: 22px;background-image:url("{$_STATIC_}/images/opa-icons-red32.png");  position: absolute;top: -3px;right:-1px;cursor: pointer;filter:alpha(opacity=70);
+        -moz-opacity:0.7;
+        -khtml-opacity: 0.7;
+        opacity: 0.7;z-index: 1;
+        background-position: -390px -36px;
+        display: none}
+    .delate-image-fuceng span{
+        color: #ff0000;display: block;width: 5px;float: left;margin-top:-1px; margin-right: -1px;}
+</style>
 <script>
 var JS_LANG = [];
 JS_LANG['tips.confirm.delete'] = "{$_LANG_['js.tips.confrim.delete']}"; 
 JS_LANG['js.tips.error.exec'] = "{$_LANG_['js.tips.error.exec']}"; 
+JS_LANG['js.file.pick_file'] = "{$_LANG_['framework.public.pick_file']}"; 
+JS_LANG['js.file.upload'] = "{$_LANG_['framework.public.upload']}"; 
 </script>
 {include file="menu.tpl"}
