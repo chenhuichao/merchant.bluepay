@@ -21,17 +21,24 @@ $data = array(
 echo json_encode($data);
 
 function getData($results){
+	global $_LANG_;
 	$html = '<table class="table table-striped table-bordered"><tbody role="alert" aria-live="polite" aria-relevant="all">';
+	$html .= '<tr><th>'.$_LANG_['framework.public.id'].'</th>';
+	$html .= '<tr><th>'.$_LANG_['framework.public.sn'].'</th>';
+	$html .= '<th>'.$_LANG_['framework.public.merchant_id'].'</th>';
+	$html .= '<th>'.$_LANG_['framework.public.bind_user_id'].'</th>';
+	$html .= '<th>'.$_LANG_['framework.public.mobile'].'</th>';
+	$html .= '<th>'.$_LANG_['framework.public.ctime'].'</th>';
+	$html .= '</tr>';
 	foreach($results as $row){
 		$record = UserSvc::getById($row['user_id']);
-		$html .= '<tr><th>FFFFUK'.$_LANG_['framework.public.id'].'</th><td>'.$row['id'].'</td></tr>';
-		$html .= '<tr><th>'.$_LANG_['framework.public.sn'].'</th><td>'.$row['sn'].'</td></tr>';
-		$html .= '<tr><th>'.$_LANG_['framework.public.merchant_id'].'</th><td>'.$row['merchant_id'].'</td></tr>';
-		$html .= '<tr><th>'.$_LANG_['framework.public.bind_user_id'].'</th><td>'.$row['user_id'].'</td></tr>';
-		$html .= '<tr><th>'.$_LANG_['framework.public.mobile'].'</th><td>'.$record->mobile.'</td></tr>';
-		$html .= '<tr><th>'.$_LANG_['framework.public.ctime'].'</th><td>'.$row['ctime'].'</td></tr>';
+		$html .= '<tr><td>'.$row['id'].'</td>';
+		$html .= '<td>'.$row['sn'].'</td>';
+		$html .= '<td>'.$row['merchant_id'].'</td>';
+		$html .= '<td>'.$row['user_id'].'</td>';
+		$html .= '<td>'.$record->mobile.'</td>';
+		$html .= '<td>'.$row['ctime'].'</td></tr>';
 	}
     $html .= '</tbody></table>';
-
 	return $html;
 }

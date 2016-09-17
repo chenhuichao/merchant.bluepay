@@ -95,7 +95,7 @@ if(is_array($_URIS_)){
 	unset($_URL_,$_URIS_,$_URI_);
 	
 	//no ajax 
-	if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])){
+	//if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])){
 		LoaderSvc::loadSmarty()->assign('_C_',$_SERVER['_C_']);
 		LoaderSvc::loadSmarty()->assign('_A_',$_SERVER['_A_']);
 		LoaderSvc::loadSmarty()->assign('_T_',$_SERVER['_T_']);
@@ -108,7 +108,7 @@ if(is_array($_URIS_)){
 		include ROOT_PATH.'/src/application/lang/'.$lang.'.php';
 		LoaderSvc::loadSmarty()->assign('lang',$lang);
 		LoaderSvc::loadSmarty()->assign('_LANG_',$_LANG_);
-	}
+	//}
 
 	$_L_F = ROOT_PATH.DIRECTORY_SEPARATOR.'src/application/controller'.DIRECTORY_SEPARATOR.APP_NAME.DIRECTORY_SEPARATOR.$_SERVER['_C_'].DIRECTORY_SEPARATOR.$_SERVER['_A_'].DIRECTORY_SEPARATOR.'index.php';
 	if(file_exists($_L_F)){
