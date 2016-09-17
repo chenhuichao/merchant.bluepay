@@ -222,7 +222,7 @@
            	if(type == 1){
            		$('.company-group').show();
            		$('.personal-group').hide();
-           	}else(type == 2){
+           	}else if(type == 2){
            		$('.company-group').hide();
            		$('.personal-group').show();
            	}
@@ -232,7 +232,7 @@
            		if(type == 1){
 	           		$('.company-group').show();
 	           		$('.personal-group').hide();
-	           	}else($type == 2){
+	           	}else if(type == 2){
 	           		$('.company-group').hide();
 	           		$('.personal-group').show();
 	           	}
