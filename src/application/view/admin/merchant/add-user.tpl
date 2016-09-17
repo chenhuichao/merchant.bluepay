@@ -54,7 +54,7 @@
 		        </div>
 		      
 				<div class="form-item">
-							<td colspan="2"><div><button type="submit" class="btn">{$_LANG_['framework.public.submit']}</button>
+							<div><button type="submit" class="btn">{$_LANG_['framework.public.submit']}</button>
 							<a class="btn btn-info" href="/merchant/user/">{$_LANG_['framework.public.return']}</a>
 				     </div>
 		        </div>

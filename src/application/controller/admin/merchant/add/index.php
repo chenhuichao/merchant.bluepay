@@ -1,9 +1,9 @@
 <?php
 require_once dirname(dirname(dirname(__FILE__))) . '/header.php';
 
-$type = isset($_GET['type']) ? $_GET['type'] : null;
+$action = isset($_GET['action']) ? $_GET['action'] : null;
 $info = '';
-if ($type == 'save') {
+if ($action == 'do') {
     $name = trim($_POST['name']);
     $ename = trim($_POST['ename']);
     $depart = $_POST['depart'];
@@ -40,8 +40,12 @@ if ($type == 'save') {
     
 }
 
-
+ret:
 $request = array();
+$request['STATE_CONF'] = User::$STATE_CONF;
+$request['TYPE_CONF'] = User::$TYPE_CONF;
+$request['STATE_STV'] = User::$STATE_STV;
+$request['TYPE_STV'] = User::$TYPE_STV;
 LoaderSvc::loadSmarty()->assign('request',$request);
 LoaderSvc::loadSmarty()->assign('info', $info);
 LoaderSvc::loadSmarty()->display('merchant/add.tpl');

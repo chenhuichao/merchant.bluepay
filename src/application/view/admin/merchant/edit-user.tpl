@@ -48,14 +48,14 @@
 		            <label class="item-label">{$_LANG_['framework.public.state']}</label>
 					<div class="controls">
 						<select id="state" name="state" class=" input-large">
-							<option {if $record->state eq $request.STATE_STV.STATE_ENABLE}selected="selected"{/if}  value="{$request.STATE_STV.STATE_ENABLE}">{$_LANG_['framework.public.enable']}</option>
-							<option {if $record->state eq $request.STATE_STV.STATE_DISABLE}selected="selected"{/if}   value="{$request.STATE_STV.STATE_DISABLE}">{$_LANG_['framework.public.disable']}</option>
+							<option selected="selected" value="{$request.STATE_STV.STATE_ENABLE}">{$_LANG_['framework.public.enable']}</option>
+							<option value="{$request.STATE_STV.STATE_DISABLE}">{$_LANG_['framework.public.disable']}</option>
 						</select>
 				     </div>
 		        </div>
 		      
 				<div class="form-item">
-						<td colspan="2"><div><button type="submit" class="btn">{$_LANG_['framework.public.submit']}</button>
+						<div><button type="submit" class="btn">{$_LANG_['framework.public.submit']}</button>
 						<a class="btn btn-info" href="/merchant/user/">{$_LANG_['framework.public.return']}</a>
 				     </div>
 		        </div>
