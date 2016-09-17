@@ -71,7 +71,7 @@ class AdminuserDao extends BaseDao
         $sql .= "values(?,?,?,?,?) ";
         
         $sqlv = array(
-            LoaderSvc::loadIdGenter()->create('loginlog'),
+            LoaderSvc::loadIdGenter()->create('login_log'),
             $params['uid'],
             $params['ip'],
             $params['state'],
