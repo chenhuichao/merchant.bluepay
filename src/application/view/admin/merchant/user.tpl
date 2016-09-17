@@ -89,6 +89,7 @@
 				<td>{$key+1}</td>
         <td>{$item.id}</td>
         <td>{$item.mobile}</td>
+        <td>{$item.email}</td>
 				<td>{$_LANG_[$request.IS_DEFAULT_CONF[$item.is_default]['NAME']]}</td>
 				
 				

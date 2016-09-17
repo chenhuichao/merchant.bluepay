@@ -70,6 +70,10 @@ if('do' == $action){
 }
 
 ret:
+$request['STATE_CONF'] = User::$STATE_CONF;
+$request['IS_DEFAULT_CONF'] = User::$IS_DEFAULT_CONF;
+$request['STATE_STV'] = User::$STATE_STV;
+$request['IS_DEFAULT_STV'] = User::$IS_DEFAULT_STV;
 LoaderSvc::loadSmarty()->assign('request',$request);
 LoaderSvc::loadSmarty()->assign('info',$info);
 LoaderSvc::loadSmarty()->display('merchant/add-user.tpl');

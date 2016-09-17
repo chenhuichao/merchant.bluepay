@@ -47,7 +47,6 @@ class User extends Entity
 		$obj->passwd = isset($param['passwd']) ? $param['passwd'] : '';
 		$obj->pay_passwd = isset($param['pay_passwd']) ? $param['pay_passwd'] : '';
 		$obj->mobile = isset($param['mobile']) ? $param['mobile'] : '';
-		$obj->realname = isset($param['realname']) ? $param['realname'] : '';
 		$obj->is_default = ($param['is_default'] === self::IS_DEFAULT_YES) ? self::IS_DEFAULT_YES : self::IS_DEFAULT_NO;
 		$obj->state = ($param['state'] === self::STATE_ENABLE) ? self::STATE_ENABLE : self::STATE_DISABLE;
 		$obj->salt = is_null($param['salt']) ? '' : $param['salt'];
