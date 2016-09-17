@@ -64,10 +64,10 @@ class MerchantDao extends BaseDao
 		$sql.= "where `merchant_id` = ? ";
 		$sql_param[] = $merchant_id;
 		if(is_numeric($user_id) && $user_id >=0){
-			$sql .= "and `user_id` = ?";
+			$sql .= "and `user_id` = ? ";
 			$sql_param[] = $user_id;
 		}
-
+		$sql .= "order by `id` asc";
 		$results = $this->getExecutor()->querys($sql,$sql_param);
 		return is_array($results) ? $results : [];
 	}

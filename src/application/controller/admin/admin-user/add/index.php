@@ -44,11 +44,11 @@ if ($type == 'save') {
                     'remark' => $remark,
                 );
                 AdminuserSvc::add($params);
-                $info = show_msg('操作成功', 'succ');
+                $info = show_msg($_LANG_['response.message.success'] , 'succ');
             }
            
         } else {
-            $info = show_msg('操作失败', 'err');
+            $info = show_msg($_LANG_['response.message.error'] , 'err');
         }
     } 
 }

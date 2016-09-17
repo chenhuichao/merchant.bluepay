@@ -28,7 +28,7 @@ function getData($results){
 	$html .= '<th>'.$_LANG_['framework.public.merchant_id'].'</th>';
 	$html .= '<th>'.$_LANG_['framework.public.bind_user_id'].'</th>';
 	$html .= '<th>'.$_LANG_['framework.public.mobile'].'</th>';
-	$html .= '<th>'.$_LANG_['framework.public.ctime'].'</th>';
+	$html .= '<th>'.$_LANG_['framework.public.create_time'].'</th>';
 	$html .= '</tr>';
 	foreach($results as $row){
 		$record = UserSvc::getById($row['user_id']);

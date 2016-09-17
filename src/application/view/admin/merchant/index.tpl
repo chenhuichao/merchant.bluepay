@@ -137,7 +137,7 @@
         <td>{$item.contact}</td>
         <td><a href="javascript:getData({$item.id});">{$_LANG_['framework.public.view']}</a></td>
         <td>
-            <a href="/merchant/user/?id={$item.id}" title="{$_LANG_['framework.public.view']}"> {$_LANG_['framework.public.view']}</a>
+            <a href="/merchant/user/?merchant_id={$item.id}" title="{$_LANG_['framework.public.view']}"> {$_LANG_['framework.public.view']}</a>
         </td>
         <td>{$_LANG_[$request.STATE_CONF[$item.state]['NAME']]}</td>
 				<td>{$item.ctime}</td>

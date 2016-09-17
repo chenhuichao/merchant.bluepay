@@ -32,6 +32,12 @@ $_LANG_['framework.public.view'] = '查看';
 $_LANG_['framework.public.merchant_id'] = '商户号';
 $_LANG_['framework.public.user_id'] = '用户号';
 $_LANG_['framework.public.bind_user_id'] = '绑定用户号';
+$_LANG_['framework.public.email'] = 'Email';
+$_LANG_['framework.public.passwd'] = '登录密码';
+$_LANG_['framework.public.disable'] = '禁用';
+$_LANG_['framework.public.enable'] = '启用';
+$_LANG_['framework.public.submit'] = '提交';
+$_LANG_['framework.public.return'] = '返回';
 
 $_LANG_['js.tips.confrim.delete'] = '确定要删除该数据吗？';
 $_LANG_['js.tips.error.exec'] = '处理异常';
@@ -44,6 +50,7 @@ $_LANG_['index.qq'] = 'QQ';
 
 $_LANG_['response.message.success'] = '操作成功';
 $_LANG_['response.message.error'] = '操作失败';
+$_LANG_['response.message.merchant_not_found'] = '指定商户不存在';
 
 $_LANG_['merchant.index.title'] = '商户列表';
 $_LANG_['merchant.index.type'] = '商户类型'; 
@@ -76,7 +83,7 @@ $_LANG_['merchant.entity.state.rejected'] = '已驳回';
 $_LANG_['merchant.entity.state.valid'] = '生效'; 
 $_LANG_['merchant.entity.state.invalid'] = '无效'; 
 
-$_LANG_['merchant.user.title'] = '子账号列表';
+$_LANG_['merchant.user.title'] = '账号列表';
 $_LANG_['merchant.user.add'] = '新增子账号';
 $_LANG_['merchant.user.is_default'] = '账号类型';
 
