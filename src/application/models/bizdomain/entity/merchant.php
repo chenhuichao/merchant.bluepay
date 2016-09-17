@@ -40,7 +40,7 @@ class Merchant extends Entity
 		self::STATE_INVALID => array('NAME'=>'merchant.entity.state.invalid'),
 	);
 
-	static $STATE_CONF_STV = array(
+	static $STATE_STV = array(
 		'STATE_INIT'=>self::STATE_INIT,
 		'STATE_WAIT_AUDIT'=>self::STATE_WAIT_AUDIT,
         'STATE_REJECTED'=>self::STATE_REJECTED,
