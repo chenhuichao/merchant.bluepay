@@ -16,7 +16,7 @@ class Merchant extends Entity
 		self::TYPE_PERSONAL => array('NAME'=>'merchant.entity.type.personal'),
 	);
 
-	static $TYPE_CONF_STV = array(
+	static $TYPE_STV = array(
 		'TYPE_COMPANY'=>self::TYPE_COMPANY,
 		'TYPE_PERSONAL'=>self::TYPE_PERSONAL,
 	);
