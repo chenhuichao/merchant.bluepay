@@ -14,6 +14,6 @@ if(!is_null($sid)){
 		SysinfoSvc::log('API URI['.$_SERVER['REQUEST_URI'].'] CODE[ERR_SID_NOT_FOUND] SID['.$sid.']');
 	}
 	$_SESS = unserialize($_r);
-}else $sid = UtlsSvc::uuid;
+}else $sid = UtlsSvc::uuid();
 
 $_SESS = is_array($_SESS) ? $_SESS : [];

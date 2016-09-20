@@ -37,6 +37,12 @@ if(strlen($sms)){
 		'mobile'=>$userinfo['mobile'],
 		'sid'=>$sid,
     );
+
+    if($merchant->type == Merchant::TYPE_PERSONAL){
+		$res['real_name'] = $merchant->real_name;
+	}elseif($merchant->type == Merchant::TYPE_COMPANY){
+		$res['company_name'] = $merchant->company_name;
+	}
     
     $_RESULT['result'] = $res;//for response
     $_SESS = array_merge($_SESS,$res);

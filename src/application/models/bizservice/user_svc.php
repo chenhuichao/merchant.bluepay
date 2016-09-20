@@ -184,13 +184,19 @@ class UserSvc
 
 		$merchant_id = $tmparr['merchant_id'];
 		$merchant = MerchantSvc::getById($merchant_id);
+
 		$data = array(
 			'uid'=>$tmparr['id'],
-			'real_name'=>$merchant->real_name,
 			'mobile'=>$tmparr['mobile'],
 			'merchant_id'=>$merchant_id,
 			'is_default'=>$tmparr['is_default']
 		);
+		if($merchant->type == Merchant::TYPE_PERSONAL){
+			$data['real_name'] = $merchant->real_name;
+		}elseif($merchant->type == Merchant::TYPE_COMPANY){
+			$data['company_name'] = $merchant->company_name;
+		}
+
 		return $data;
 	}
 
