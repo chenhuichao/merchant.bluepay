@@ -100,4 +100,9 @@ class PosSvc
 		return self::getDao()->getByUid($uid);
 	}
 
+	static public function getByMerchantId($merchant_id)
+	{
+		return self::getDao()->getByMerchantId($merchant_id);
+	}
+
 }
