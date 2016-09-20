@@ -94,5 +94,10 @@ class PosSvc
 	{
 		return self::getDao()->getBySn($sn);
 	}
-	
+
+	static public function getByUid($uid)
+	{
+		return self::getDao()->getByUid($uid);
+	}
+
 }
