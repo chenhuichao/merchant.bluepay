@@ -1,5 +1,4 @@
 <?php
-include_once ROOT_PATH.'/src/config/interface_init.php';
 ob_start();
 $filepath = $_SERVER['ENV_APPLOGS_DIR'].'/req.log';
 LogSvc::fileLog($filepath,$_REQUEST);
@@ -18,7 +17,7 @@ Request:
 SysinfoSvc::log($desc);
 
 define('DEBUG_ON',1);
-require_once ROOT_PATH.'/src/application/controller/business-logic/interface/auth/access-auth.php';
+require_once __DIR__.'/auth/access-auth.php';
 
 $_RESULT = array(
 	'code'=>'OK',
@@ -37,7 +36,7 @@ $_Logic_File = '';
 if($r0 === 1 && $r1 === 1){
 	$_Module = $matches0[0];
 	$_Func = $matches1[0];
-	$_Logic_File = ROOT_PATH.'/src/application/business-logic/interface/'.$_Module.'/'.$_Func.'.php';
+	$_Logic_File = __DIR__.'/'.$_Module.'/'.$_Func.'.php';
 }
 
 if(file_exists($_Logic_File)){

@@ -23,5 +23,7 @@ $_GET = RequestfilterSvc::htmlspecialcharsRecursive($_GET);
 $_POST = RequestfilterSvc::htmlspecialcharsRecursive($_POST);
 $_COOKIE = RequestfilterSvc::htmlspecialcharsRecursive($_COOKIE);
 
+include_once ROOT_PATH.'/src/application/controller/interface/interface.php';
+
 
 
