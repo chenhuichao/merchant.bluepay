@@ -23,7 +23,7 @@ PAMAMS:['.var_export($_REQUEST,true).']
 </pre>';
 	//echo 'desc:'.$desc;
 	SysinfoSvc::log($desc);
-	if(isset($_REQUEST['_DEGUG_']) && DEBUG_ON === 1){
+	if(isset($_REQUEST['_DEBUG_']) && APP_DEBUG == 1){
 		echo 'Break Auth IP:';
 		var_dump($_REQUEST);die();
 	}else{
@@ -44,7 +44,7 @@ PAMAMS:['.var_export($_REQUEST,true).']
 	//echo 'desc:'.$desc;
 	SysinfoSvc::log($desc);
 
-	if(isset($_REQUEST['_DEGUG_']) && DEBUG_ON === 1){
+	if(isset($_REQUEST['_DEBUG_']) && APP_DEBUG == 1){
 		echo 'Break Auth App:';
 		var_dump($_REQUEST);die();
 	}else{
