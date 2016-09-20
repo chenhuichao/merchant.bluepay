@@ -40,7 +40,7 @@ if(strlen($sms)){
     
     $_RESULT['result'] = $res;//for response
     $_SESS = array_merge($_SESS,$res);
-    $r = MemCachedDriver::mcache('SESSION_')->set($sid,serialize($_SESS),86400);
+    $r = MemCachedDriver::mcache('S_')->set($sid,serialize($_SESS),86400);
     if($r === false){
 		$desc = '<pre style="color:red;">
 [Memcache Set SMS Login Fail'.$_SERVER['REQUEST_URI'].']
@@ -74,7 +74,7 @@ if(is_numeric($r)){
 
 	$_RESULT['result'] = $r;//for response
 
-	$r = MemCachedDriver::mcache('SESSION_')->set($sid,serialize($_SESS),86400);
+	$r = MemCachedDriver::mcache('S_')->set($sid,serialize($_SESS),86400);
 	if($r === false){
 		$desc = '<pre style="color:red;">
 [Memcache Set Login Fail'.$_SERVER['REQUEST_URI'].']

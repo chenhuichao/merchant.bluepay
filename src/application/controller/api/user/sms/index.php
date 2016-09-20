@@ -15,7 +15,7 @@ $rand = UtlsSvc::random(6,6,0);
 UtlsSvc::sms($mobile,0,['CODE'=>$rand]);
 
 $_SESS['sms'] = $rand;
-$r = MemCachedDriver::mcache('SESSION_')->set($sid,serialize($_SESS),86400);
+$r = MemCachedDriver::mcache('S_')->set($sid,serialize($_SESS),86400);
 if($r === false){
 	$desc = '<pre style="color:red;">
 [Memcache Set SMS Fail'.$_SERVER['REQUEST_URI'].']
