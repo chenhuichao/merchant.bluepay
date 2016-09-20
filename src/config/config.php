@@ -8,7 +8,7 @@ $_SERVER['MEMCACHED_SETS'] = array (
         '_' => array (
             array('127.0.0.1', 11212),
         ),
-        'SESSION_' => array (
+        'S_' => array (
             array('127.0.0.1', 11212),
         )
 );
