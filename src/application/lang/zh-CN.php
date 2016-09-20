@@ -108,6 +108,8 @@ $_LANG_['ERR_LOGOUT_FAIL'] = '退出异常';
 $_LANG_['ERR_MOBILE_NOT_UNIQUE'] = '手机号已存在';
 $_LANG_['ERR_PASSWD_TOO_SHORT'] = '登录密码长度太短';
 $_LANG_['OK'] = 'OK'; 
+$_LANG_['ERR_USER_NOT_LOGGED'] = '用户未登录'; 
+$_LANG_['ERR_POS_BIND_FAIL'] = '指定POS不存在或已被其他用户绑定';
 
 
 

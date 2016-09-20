@@ -727,7 +727,7 @@ class UtlsSvc
 	static public function sms($mobile,$type,$data,$channel = 0)
 	{
 		$tpl = [
-			0=>'尊敬的用户，本次验证码为：%_CODE_%，非常感谢使用我们服务！';,
+			0=>'尊敬的用户，本次验证码为：%_CODE_%，非常感谢使用我们服务！',
 		];
 
 		$content = $tpl[$type];

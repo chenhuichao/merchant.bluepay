@@ -25,20 +25,22 @@ if(strlen($sms)){
     $_SESS = is_array($_SESS) ? $_SESS : array();
     $userinfo = UserSvc::getUserInfoByMobile($mobile);
     $uid = $userinfo['id'];
-
+    $merchant_id = $userinfo['merchant_id'];
+	$merchant = MerchantSvc::getById($merchant_id);
     $sid = Utls::uuid();
     $res = array(
 		'logined'=>1,
-		'realname'=>$userinfo['realname'],
+		'uid'=>$uid,
+		'merchant_id'=>$merchant_id,
+		'is_default'=>$userinfo['is_default'],
+		'real_name'=>$merchant->real_name,
 		'mobile'=>$userinfo['mobile'],
 		'sid'=>$sid,
     );
     
     $_RESULT['result'] = $res;//for response
     $_SESS = array_merge($_SESS,$res);
-    $_SESS['uid'] = $uid;
     $r = MemCachedDriver::mcache('SESSION_')->set($sid,serialize($_SESS),86400);
-
     if($r === false){
 		$desc = '<pre style="color:red;">
 [Memcache Set SMS Login Fail'.$_SERVER['REQUEST_URI'].']
@@ -56,7 +58,6 @@ $param = array(
 	'mobile'=>$mobile,
 	'passwd'=>substr($passwd,0,250),
 );
-
 
 $r = UserSvc::login($param);
 if(is_numeric($r)){

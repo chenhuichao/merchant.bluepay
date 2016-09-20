@@ -7,4 +7,12 @@ function outPut($_RESULT,$type = 0){
 		echo json_encode($_RESULT);
 	}
 	exit;
-} 
+}
+
+function getSessUid(){
+	global $_SESS;
+	if(isset($_SESS['logined']) && $_SESS['logined'] == 1){
+		return intval($_SESS['uid']);
+	}
+	return 0;
+}
