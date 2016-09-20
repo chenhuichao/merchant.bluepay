@@ -3,7 +3,7 @@ include __DIR__.'/funcs.php';
 
 $_RESULT = array(
 	'code'=>'OK',
-	'msg'=>'';
+	'msg'=>''
 );
 
 $sid = UserSvc::getAppSessionId() ? UserSvc::getAppSessionId() : UtlsSvc::uuid();
