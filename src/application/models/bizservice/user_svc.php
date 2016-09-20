@@ -189,7 +189,8 @@ class UserSvc
 			'uid'=>$tmparr['id'],
 			'mobile'=>$tmparr['mobile'],
 			'merchant_id'=>$merchant_id,
-			'is_default'=>$tmparr['is_default']
+			'is_default'=>$tmparr['is_default'],
+			'type'=>$merchant->type,
 		);
 		if($merchant->type == Merchant::TYPE_PERSONAL){
 			$data['real_name'] = $merchant->real_name;

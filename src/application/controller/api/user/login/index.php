@@ -33,7 +33,7 @@ if(strlen($sms)){
 		'uid'=>$uid,
 		'merchant_id'=>$merchant_id,
 		'is_default'=>$userinfo['is_default'],
-		'real_name'=>$merchant->real_name,
+		'type'=>$merchant->type,
 		'mobile'=>$userinfo['mobile'],
 		'sid'=>$sid,
     );
