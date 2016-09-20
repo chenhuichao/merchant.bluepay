@@ -9,13 +9,12 @@ if(empty($_SESS['sms']) || $_SESS['sms'] != $sms){
 	$_RESULT = array(
 		'code'=>'ERR_SMS_VERIFY_FAIL'
 	);
-	echo json_encode($_RESULT);
-	exit;
+	outPut($_RESULT);
 }
 
 unset($_SESS['sms']);
 $_SESS = is_array($_SESS) ? $_SESS : array();
-$r = MemCachedDriver::mcache('SESSION_')->set($sid,serialize($_SESS),86400);
+$r = MemCachedDriver::mcache('S_')->set($sid,serialize($_SESS),86400);
 if($r === false){
 	$desc = '<pre style="color:red;">
 [Memcache Set Reset Passwd SMS Clear Fail'.$_SERVER['REQUEST_URI'].']
@@ -30,16 +29,14 @@ if(strlen($passwd) < 6){
 	$_RESULT = array(
 		'code'=>'ERR_PASSWD_TOO_SHORT'
 	);
-	echo json_encode($_RESULT);
-	exit;
+	outPut($_RESULT);
 }
 
 if($mobile != $_SESS['mobile']){
 	$_RESULT = array(
 		'code'=>'ERR_RESET_MOBILE_INVALID'
 	);
-	echo json_encode($_RESULT);
-	exit;
+	outPut($_RESULT);
 }
 
 $userinfo = UserSvc::getUserInfoByMobile($mobile);
@@ -55,5 +52,6 @@ if($r == 0){
 	exit;
 }*/
 
-echo json_encode($_RESULT);
+outPut($_RESULT);
+
 
