@@ -68,7 +68,8 @@ if(is_numeric($r)){
 	$sid = UtlsSvc::uuid();
 	$_SESS = [];
 	$_SESS['logined'] = 1;
-	$_SESS['sid'] = $sid;
+
+	$r['sid'] = $sid;
     $_SESS = array_merge($_SESS,$r);
 
 	$_RESULT['result'] = $r;//for response
