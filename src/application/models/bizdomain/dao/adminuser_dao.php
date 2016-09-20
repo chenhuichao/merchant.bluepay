@@ -3,8 +3,8 @@
 class AdminuserDao extends BaseDao
 {
 
-    const TABLE_NAME = 'admin_user';
-    const Login_LOG_TABLE = 'login_log';
+    const TABLE_NAME = 'adminuser';
+    const Login_LOG_TABLE = 'loginlog';
 
     private function getTableName()
     {
@@ -71,7 +71,7 @@ class AdminuserDao extends BaseDao
         $sql .= "values(?,?,?,?,?) ";
         
         $sqlv = array(
-            LoaderSvc::loadIdGenter()->create('login_log'),
+            LoaderSvc::loadIdGenter()->create('loginlog'),
             $params['uid'],
             $params['ip'],
             $params['state'],

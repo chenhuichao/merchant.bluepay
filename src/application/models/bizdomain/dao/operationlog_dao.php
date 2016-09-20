@@ -1,7 +1,7 @@
 <?php
 class OperationlogDao extends BaseDao
 {
-	const TABLE_NAME = 'operation_log';
+	const TABLE_NAME = 'operationlog';
 
 	private function getTableName()
 	{

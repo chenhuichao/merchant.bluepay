@@ -2,7 +2,7 @@
 
 class AdminuserSvc
 { /* {{{ */
-    const OBJ = 'admin_user';
+    const OBJ = 'adminuser';
 
     const LOGIN_SUCC = 1;
     const LOGIN_FAIL = 0;
