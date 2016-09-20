@@ -107,6 +107,7 @@ $_LANG_['ERR_USER_PASSWD_WRONG'] = '登录密码错误';
 $_LANG_['ERR_LOGOUT_FAIL'] = '退出异常';
 $_LANG_['ERR_MOBILE_NOT_UNIQUE'] = '手机号已存在';
 $_LANG_['ERR_PASSWD_TOO_SHORT'] = '登录密码长度太短';
+$_LANG_['OK'] = 'OK'; 
 
 
 

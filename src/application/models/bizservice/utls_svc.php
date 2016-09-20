@@ -655,14 +655,14 @@ class UtlsSvc
 	 * @param    int $max 长度范围
 	 * @return   string
 	 */
-	public static function random($length = 20, $max = FALSE)
+	public static function random($length = 20,$max = false,$type = 0)
 	{
 		if (is_int($max) && $max > $length) {
 			$length = mt_rand($length, $max);
 		}
 		$output = '';
 		for ($i = 0; $i < $length; $i++) {
-			$which = mt_rand(0, 2);
+			$which = ($type == 0 ? 0 : mt_rand(0, 2));
 			if ($which === 0) {
 				$output .= mt_rand(0, 9);
 			} elseif ($which === 1) {
@@ -724,8 +724,19 @@ class UtlsSvc
 		return $mail->Send();
 	}
 
-	static public function sms($mobile,$content,$channel = 0)
+	static public function sms($mobile,$type,$data,$channel = 0)
 	{
+		$tpl = [
+			0=>'尊敬的用户，本次验证码为：%_CODE_%，非常感谢使用我们服务！';,
+		];
+
+		$content = $tpl[$type];
+		foreach($data as $key=>$val){
+			$content = str_replace('%_'.$key.'_%',$val,$content);
+		}
+
+		//send data
+
 		return true;
 	}
 
