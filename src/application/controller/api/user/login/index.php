@@ -30,7 +30,7 @@ if(strlen($sms)){
     $sid = Utls::uuid();
     $res = array(
 		'logined'=>1,
-		'uid'=>$uid,
+		'user_id'=>$uid,
 		'merchant_id'=>$merchant_id,
 		'is_default'=>$userinfo['is_default'],
 		'type'=>$merchant->type,

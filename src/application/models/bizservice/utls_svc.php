@@ -724,6 +724,28 @@ class UtlsSvc
 		return $mail->Send();
 	}
 
+	public static function makeSign($data,$salt,$algo='md5')
+    {/*{{{*/
+        if (is_array($data)) {
+            $str = '';
+            ksort($data);
+            foreach ($data as $key => $val) {
+                if ('' === strval($val) || 'sign' == $key) {
+                    continue;
+                }
+                $str .= "{$key}={$val}&";
+            }
+            $str  = rtrim($str,'&');
+            $str .= $salt;
+        } elseif (is_string($data)) {
+            $str  = $data.$salt;
+        } else {
+            throw new Exception("unsupported sign data type");
+        }
+
+        return hash($algo, $str);
+    }/*}}}*/
+
 	static public function sms($mobile,$type,$data,$channel = 0)
 	{
 		$tpl = [

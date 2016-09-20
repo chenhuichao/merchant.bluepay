@@ -5,7 +5,7 @@ include dirname(dirname(__DIR__)).'/require-login.php';
 $merchant_id = $_SESS['merchant_id'];
 $sn = RequestSvc::Request('sn');
 $pos = PosSvc::getBySn($sn);
-if(empty($pos) || $pos['merchant_id'] != $merchant_id || $pos['uid'] > 0){
+if(empty($pos) || $pos['merchant_id'] != $merchant_id || $pos['user_id'] > 0){
 	$_RESULT = array(
 		'code'=>'ERR_POS_BIND_FAIL'
 	);

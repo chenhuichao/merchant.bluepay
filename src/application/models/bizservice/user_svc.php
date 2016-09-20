@@ -143,7 +143,12 @@ class UserSvc
 		return self::getDao()->getUserInfoByMobile($mobile);
 	}
 
-
+	static public function getUserInfoBySid($sid)
+	{
+		$r = MemCachedDriver::mcache('S_')->get($sid);
+		return unserialize($r);
+	}
+	
 	static public function getUserInfoByUid($uid)
 	{
 		return self::getDao()->getUserInfoByUid($uid);
@@ -186,7 +191,7 @@ class UserSvc
 		$merchant = MerchantSvc::getById($merchant_id);
 
 		$data = array(
-			'uid'=>$tmparr['id'],
+			'user_id'=>$tmparr['id'],
 			'mobile'=>$tmparr['mobile'],
 			'merchant_id'=>$merchant_id,
 			'is_default'=>$tmparr['is_default'],
