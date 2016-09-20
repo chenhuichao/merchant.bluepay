@@ -5,21 +5,18 @@ $mobile = (UtlsSvc::checkMobile(RequestSvc::Request('mobile')) == true) ? Reques
 $passwd = RequestSvc::Request('passwd');
 $sms = RequestSvc::Request('sms');
 
-$data = unserialize($_r);
-if(empty($data['sms']) || $data['sms'] != $sms){
+if(empty($_SESS['sms']) || $_SESS['sms'] != $sms){
 	$_RESULT = array(
 		'code'=>'ERR_SMS_VERIFY_FAIL'
 	);
-	echo json_encode($_RESULT);
-	exit;
+	outPut($_RESULT);
 }
 
 if(strlen($passwd) < 6){
 	$_RESULT = array(
 		'code'=>'ERR_PASSWD_TOO_SHORT'
 	);
-	echo json_encode($_RESULT);
-	exit;
+	outPut($_RESULT);
 }
 
 $param = array(
@@ -41,4 +38,4 @@ else{
 	);
 }
 
-echo json_encode($_RESULT);
+outPut($_RESULT);

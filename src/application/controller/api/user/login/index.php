@@ -10,8 +10,7 @@ if(strlen($mobile) == 0){
 	$_RESULT = array(
 		'code'=>'ERR_MOBILE_FORMAT_WRONG'
 	);
-	echo json_encode($_RESULT);
-	exit;
+	outPut($_RESULT);
 }
 
 //=======>>>>Dynamic SMS Login Begin<<<<=======
@@ -20,18 +19,19 @@ if(strlen($sms)){
 		$_RESULT = array(
 			'code'=>'ERR_SMS_VERIFY_FAIL'
 		);
-		echo json_encode($_RESULT);
-		exit;
+		outPut($_RESULT);
     }
     unset($_SESS['sms']);
     $_SESS = is_array($_SESS) ? $_SESS : array();
     $userinfo = UserSvc::getUserInfoByMobile($mobile);
     $uid = $userinfo['id'];
 
+    $sid = Utls::uuid();
     $res = array(
 		'logined'=>1,
 		'realname'=>$userinfo['realname'],
 		'mobile'=>$userinfo['mobile'],
+		'sid'=>$sid,
     );
     
     $_RESULT['result'] = $res;//for response
@@ -48,8 +48,7 @@ Data:'.var_export($_SESS,true).
 		SysinfoSvc::log($desc);
     }
 
-    echo json_encode($_RESULT);
-    exit;
+    outPut($_RESULT);
 }
 //=======>>>>Dynamic SMS Login End<<<<=======
 
@@ -65,11 +64,12 @@ if(is_numeric($r)){
 		'code'=>User::$ERR_CONF_MSG[$r],
 	);
 }elseif(is_array($r)){
-	$_SESS = unserialize($_r);
+	$sid = UtlsSvc::uuid();
+	$_SESS = [];
 	$_SESS['logined'] = 1;
+	$_SESS['sid'] = $sid;
     $_SESS = array_merge($_SESS,$r);
 
-	unset($r['uid']);
 	$_RESULT['result'] = $r;//for response
 
 	$r = MemCachedDriver::mcache('SESSION_')->set($sid,serialize($_SESS),86400);
@@ -83,6 +83,6 @@ Data:'.var_export($_SESS,true).
 	}
 }
 
-echo json_encode($_RESULT);
+outPut($_RESULT);
 
 

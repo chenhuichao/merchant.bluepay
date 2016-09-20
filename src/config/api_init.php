@@ -52,9 +52,13 @@ if(is_array($_URIS_)){
 	unset($_URL_,$_URIS_,$_URI_);
 	$_L_F = ROOT_PATH.DIRECTORY_SEPARATOR.'src/application/controller'.DIRECTORY_SEPARATOR.APP_NAME.DIRECTORY_SEPARATOR.$_SERVER['_C_'].DIRECTORY_SEPARATOR.$_SERVER['_A_'].DIRECTORY_SEPARATOR.'index.php';
 	if(file_exists($_L_F)){
+		$lang = UserSvc::getAppLang() ? UserSvc::getAppLang() : RequestSvc::Request('lang');
+		$lang = in_array($lang,['zh-CN','en-US']) ? $lang : 'zh-CN';
+		include_once ROOT_PATH.'/src/application/lang/'.$lang.'.php';
 		require_once($_L_F);
 	}else {
-		UtlsSvc::displayErr($_SERVER["REQUEST_URI"],404);
+		header("HTTP/1.1 404 Not Found");
+		exit;
 	}
 }else{
 	die('Parse URI Fail');

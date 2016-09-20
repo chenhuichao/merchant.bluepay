@@ -62,15 +62,15 @@
 		        </div>
 		         <div class="form-item personal-group">
 		            <label class="item-label">{$_LANG_['merchant.index.id_pic']}</label>
-		            <input type="hidden" autofocus="true" value="" class="text input-large" name="id_pic" id="id_pic">
 					<div class="controls">
+						<input type="hidden" autofocus="true" value="" class="text input-large" name="id_pic" id="id_pic">
 						<div>
 	                        <input type="button" value="上传文件" class="file"><span>{$err.msg}</span>
 	                    </div>
 
 				        <ul>
 				        {if strlen($record.id_pic)}
-						<li key="{$record.id_pic}" onmouseover="onMouseOver($(this))" onmouseout="onMouseOut($(this))" style="position: relative;"><a href="#" class="btnShow"><img style="width: 150px;height: 100px;" src="/file?key=s_{$record.id_pic}"/></a><div class="delate-image-fuceng" style="display: none" onclick="del($(this))"></div></li>
+						<li key="{$record.id_pic}" style="position: relative;"><a href="#" class="btnShow"><img style="width: 150px;height: 100px;" src="/file?key=s_{$record.id_pic}"/></a></li>
 						{/if}
 				        </ul>
 				     </div>
@@ -186,26 +186,14 @@
                         },
                         FileUploaded: function(up, file, response) {
                             var data = $.parseJSON(response.response);
-
-                            key = obj.prev().val();
-                            if(key){
-                                key += "," +data.key +",";
-                            }else{
-                                key += data.key +",";
-                            }
-
-                            var newkey=key.substring(0,key.length-1);
-                            obj.prev().val(newkey);
+                            obj.prev().val(data.key);
 
                             if(data.type == 'img'){
-                                var html='<li key="'+data.key+'" onmouseover="onMouseOver($(this))" onmouseout="onMouseOut($(this))" style="position: relative;"><a href="#" class="btnShow"><img style="width: 150px;height: 100px;" src="/file?key=s_'+data.key+'"/></a><div class="delate-image-fuceng" style="display: none" onclick="del($(this))"></div></li>';
+                                var html='<li key="'+data.key+'" style="position: relative;"><a href="#"><img style="width: 150px;height: 100px;" src="/file?key=s_'+data.key+'"/></a></li>';
                             }else{
                                 var html='<li key="'+data.key+'"><a href="/file?key=s_'+data.key+'">'+data.filename+'</a></li>';
                             }
-
-                            //$("#uploaddiv").remove();
                             obj.parent().find("ul").append(html);
-                            obj.parent().parent().find("td:eq(0)").find("span").html('');
                         },
                         Error: function(up, err) {
                             document.getElementById('console').innerHTML += "\nError #" + err.code + ": " + err.message;
@@ -239,14 +227,7 @@
            	});
         });
 
-        //移入事件
-        function onMouseOver(obj){
-            obj.find(".delate-image-fuceng").show();
-        }
-        //移出事件
-        function onMouseOut(obj){
-            obj.find(".delate-image-fuceng").hide();
-        }
+
 
         //删除
         function del(obj){

@@ -16,6 +16,16 @@ class UserSvc
 		return self::getDao()->getById($id,self::OBJ);
 	}
 
+	static public function getAppSessionId()
+	{
+		return strlen($_SERVER['HTTP_SID']) >= 26 ? $_SERVER['HTTP_SID'] : null;
+	}
+
+	static public function getAppLang()
+	{
+		return $_SERVER['HTTP_LANG'];
+	}
+
 	static public function updateById($id,$param)
 	{
 		return self::getDao()->updateById($id,$param,self::OBJ);

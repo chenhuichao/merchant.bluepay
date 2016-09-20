@@ -724,6 +724,11 @@ class UtlsSvc
 		return $mail->Send();
 	}
 
+	static public function sms($mobile,$content,$channel = 0)
+	{
+		return true;
+	}
+
 	static public function displayErr($uri, $code)
 	{
    		$r = strpos($uri,'/static/');
@@ -801,6 +806,8 @@ Error Code ['.$code.'] ==> ['.$uri.']';
         $orderid .= "$snum".substr(date('YmdHis'),2,12);
         return $orderid;
     }
+
+
 
 
 }/*}}}*/

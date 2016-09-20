@@ -8,7 +8,7 @@ if($r === false){
 	);
 }
 
-echo json_encode($_RESULT);
+outPut($_RESULT);
 
 
 

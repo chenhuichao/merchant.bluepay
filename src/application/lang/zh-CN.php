@@ -99,9 +99,14 @@ $_LANG_['merchant.user.edit'] = '编辑用户账号';
 $_LANG_['merchant.user.is_default'] = '账号类型';
 
 
-
-
-
+/*############## App Tpl ###############*/
+$_LANG_['ERR_MOBILE_FORMAT_WRONG'] = '手机格式错误';
+$_LANG_['ERR_SMS_VERIFY_FAIL'] = '短信认证失败';
+$_LANG_['ERR_USER_NOT_FOUND'] = '用户未找到';
+$_LANG_['ERR_USER_PASSWD_WRONG'] = '登录密码错误';
+$_LANG_['ERR_LOGOUT_FAIL'] = '退出异常';
+$_LANG_['ERR_MOBILE_NOT_UNIQUE'] = '手机号已存在';
+$_LANG_['ERR_PASSWD_TOO_SHORT'] = '登录密码长度太短';
 
 
 
