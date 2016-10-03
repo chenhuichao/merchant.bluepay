@@ -64,7 +64,7 @@
 		            <label class="item-label">{$_LANG_['merchant.index.id_pic']}</label>
 					<div class="controls">
 	                    <img id="id_pic_0" src="/file?key=s_{$record.id_pic_0}" width="200" height="150"/><br/>
-						<input type="file" name="upfile" class="img-upload-0" value="{$_LANG_['framework.public.upload']}"/>
+						<input type="file" name="Filedata" class="img-upload-0" value="{$_LANG_['framework.public.upload']}"/>
 						<input type="hidden" class="form-control" name="id_pic_0"  value="{$record.id_pic_0}" />
 				     </div>
 		        </div>
@@ -161,7 +161,7 @@
 						preview(JS_LANG['tips.alert.title'],JS_LANG['tips.alert.status'] + data.status);
 					}
 					// 清理旧图片
-					$("input[name=upfile]").val('');
+					$("input[name=Filedata]").val('');
 					$("input[name=id_pic_0]").val(data.key);
 
 					$("#id_pic_0").attr('src','/file?key=s_' + data.key);
