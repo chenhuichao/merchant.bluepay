@@ -19,8 +19,8 @@
 		            <label class="item-label">{$_LANG_['framework.public.state']}</label>
 					<div class="controls">
 								<select id="status" name="status" class="text input-large">
-									<option selected="selected" value="1" {if $record->status == '1'}selected="selected"{/if}>启用</option>
-									<option value="0" {if $record->status == '0'}selected="selected"{/if}>禁用</option>
+									<option selected="selected" value="1" {if $record->status == '1'}selected="selected"{/if}>{$_LANG_['framework.public.enable']}</option>
+									<option value="0" {if $record->status == '0'}selected="selected"{/if}>{$_LANG_['framework.public.diable']}</option>
 								</select>
 				     </div>
 		        </div>

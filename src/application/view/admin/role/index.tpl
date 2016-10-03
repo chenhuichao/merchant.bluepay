@@ -6,7 +6,7 @@
 </div>
 <div class="cf">
 	<div class="fl">
-        <a class="btn" href="/role/add">$_LANG_['role.index.add_role']</a>
+        <a class="btn" href="/role/add">{$_LANG_['role.index.add_role']}</a>
     </div>
 </div>
 <!-- 数据列表 -->

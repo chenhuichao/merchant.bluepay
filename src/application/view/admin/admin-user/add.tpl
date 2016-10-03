@@ -62,10 +62,10 @@
 									{foreach from=$request.RID_CONF key=k item=item}
 									{if $k eq $request.RID_STV.RID_ROOT}
 										{if $rid eq $request.RID_STV.RID_ROOT}
-											<option value="{$k}">{$item.NAME}</option>
+											<option value="{$k}">{$_LANG_[$item.NAME]}</option>
 										{/if}
 									{else}
-										<option value="{$k}">{$item.NAME}</option>
+										<option value="{$k}">{$_LANG_[$item.NAME]}</option>
 									{/if}
 									{/foreach}
 								</select>

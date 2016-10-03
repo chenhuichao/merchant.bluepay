@@ -59,7 +59,7 @@
 								<select id="rid" name="rid" class="input-large">
 									<option {if $record->rid == 0}selected="selected"{/if}  value="0">{$_LANG_['adminuser.entity.rid.unknown']}</option>
 									{foreach from=$request.RID_CONF key=k item=item}
-										<option {if $k == $record->rid}selected="selected"{/if} value="{$k}">{$item.NAME}</option>
+										<option {if $k == $record->rid}selected="selected"{/if} value="{$k}">{$_LANG_[$item.NAME]}</option>
 									{/foreach}
 								</select>
 				     </div>
