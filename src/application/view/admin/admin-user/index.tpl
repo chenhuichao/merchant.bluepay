@@ -2,7 +2,7 @@
 <script type="text/javascript" src="{$_STATIC_}/js/public/admin-user-index.js"></script>
 <!-- 标题栏 -->
 	<div class="main-title">
-		<h2>用户列表</h2>
+		<h2>{$_LANG_['admin_user.index.title']}</h2>
 	</div>
 	
 	<div class="table-responsive">
@@ -15,12 +15,12 @@
 		
 	      <tbody>
 	        <tr>
-	          <th class="th">名字</th>
-	          <td><input type="text" class="text input-large" placeholder="姓名" name="name" value="{$request.name}"></td>
+	          <th class="th">{$_LANG_['admin_user.user.real_name']}</th>
+	          <td><input type="text" class="text input-large" placeholder="{$_LANG_['admin_user.user.real_name']}" name="name" value="{$request.name}"></td>
 	        </tr>
 	
 	        <tr>
-	          <th colspan="2"><button type="submit" class="btn btn-info" style="margin-left:200px;">搜索</button></th>
+	          <th colspan="2"><button type="submit" class="btn btn-info" style="margin-left:200px;">{$_LANG_['framework.public.search']}</button></th>
 	        </tr>
 	      </tbody>
 	    </table>
@@ -29,7 +29,7 @@
 	
 	<div class="cf">
 		<div class="fl">
-            <a class="btn" href="/admin-user/add/">新 增</a>
+            <a class="btn" href="/admin-user/add/">{$_LANG_['admin_user.index.add']}</a>
         </div>
         <!-- 高级搜索 
 		<div class="search-form fr cf">
@@ -44,15 +44,15 @@
 	<table>
     	<thead>
 			<tr>
-				<th  colspan="1" rowspan="1">编号</th>
-				<th  colspan="1" rowspan="1">名称</th>
-				<th  colspan="1" rowspan="1">邮件</th>
-				<th  rowspan="1">部门</th>
-				<th  rowspan="1">职务</th>
-				<th  rowspan="1">状态</th>
-				<th >描述</th>
-				<th >角色</th>
-				<th >操作</th>
+				<th colspan="1" rowspan="1">{$_LANG_['framework.public.id']}</th>
+				<th colspan="1" rowspan="1">{$_LANG_['admin_user.user.real_name']}</th>
+				<th colspan="1" rowspan="1">{$_LANG_['merchant.index.email']}</th>
+				<th rowspan="1">{$_LANG_['admin_user.index.depart']}</th>
+				<th rowspan="1">{$_LANG_['admin_user.index.position']}</th>
+				<th rowspan="1">{$_LANG_['framework.public.state']}</th>
+				<th>{$_LANG_['framework.public.remark']}</th>
+				<th>{$_LANG_['role.index.role_name']}</th>
+				<th>{$_LANG_['framework.public.action']}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -68,15 +68,14 @@
 				<td>{$item.depart}</td>
 				<td>{$item.position}</td>
 
-				<td>{if $item.status==$request.STATUS_STV.STATUS_ENABLE}启用{else}禁用{/if}</td>
+				<td>{if $item.status==$request.STATUS_STV.STATUS_ENABLE}{{$_LANG_['framework.public.enable']}}{else}{{$_LANG_['framework.public.disable']}}{/if}</td>
 				<td>{$item.remark}</td>
 				<td>{$item.role}</td>
 				<td>
-				<a  class="btn" title="编辑" href="/admin-user/edit/?id={$item.id}" class="load-page"> 编辑</a>
+				<a  class="btn"  href="/admin-user/edit/?id={$item.id}" class="load-page">{{$_LANG_['framework.public.edit']}}</a>
 				{if $rid eq $request.RID_STV.RID_ROOT}
-				<a class="btn btn-warning" href="javascript:aduit({$item.id},{$item.status});"> {if $item.status==$request.STATUS_STV.STATUS_ENABLE}禁用{else}启用{/if}</a>
-				<a title="移除" class="btn btn-danger" href="javascript:delById({$item.id});">移除</a>
-                <a  class="btn" title="编辑" href="/admin-user/web/?id={$item.id}" class="load-page">授权</a>
+				<a class="btn btn-warning" href="javascript:aduit({$item.id},{$item.status});"> {if $item.status==$request.STATUS_STV.STATUS_ENABLE}{$_LANG_['framework.public.disable']}{else}{{$_LANG_['framework.public.enable']}}{/if}</a>
+				<a class="btn btn-danger" href="javascript:delById({$item.id});">{$_LANG_['framework.public.delete']}</a>
 				{/if}
 				</td>
 			</tr>
@@ -84,11 +83,11 @@
 		</tbody>
 	</table>
 </div>
-		<div class="page">
-			<div>  
-			{$results.pages} 
-			<span class="rows">共 {$results.total} 条记录</span>
-			</div>
-		</div>
+<div class="page">
+	<div>  
+	{$results.pages} 
+	<span class="rows">{$_LANG_['framework.public.total']} {$results.total} {$_LANG_['framework.public.count']}</span>
+	</div>
+</div>
 
 {include file="footer.tpl"}

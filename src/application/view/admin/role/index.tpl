@@ -2,11 +2,11 @@
 <script type="text/javascript" src="{$_STATIC_}/js/public/role-index.js"></script>
 <!-- 标题栏 -->
 <div class="main-title">
-	<h2>角色列表</h2>
+	<h2>{$_LANG_['role.index.title']}</h2>
 </div>
 <div class="cf">
 	<div class="fl">
-        <a class="btn" href="/role/add">新 增</a>
+        <a class="btn" href="/role/add">$_LANG_['role.index.add_role']</a>
     </div>
 </div>
 <!-- 数据列表 -->
@@ -14,11 +14,11 @@
 	<table>
     	<thead>
 			<tr>
-				<th>编号</th>
-				<th>名称</th>
-				<th>状态</th>
-				<th>描述</th>
-				<th>操作</th>
+				<th>{$_LANG_['framework.public.id']}</th>
+				<th>{$_LANG_['role.index.role_name']}</th>
+				<th>{$_LANG_['framework.public.state']}</th>
+				<th>{$_LANG_['role.index.desc']}</th>
+				<th>{$_LANG_['framework.public.action']}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -26,15 +26,15 @@
 				<tr id="tr_{$item.id}">
 					<td>{$smarty.foreach.d.iteration}</td>
 					<td>{if $item.status==$request.STATUS_STV.STATUS_DISABLE}<s style="color:red;">{$item.name}</s>{else}{$item.name}{/if}</td>
-					<td>{if $item.status==$request.STATUS_STV.STATUS_ENABLE}启用{else}禁用{/if}</td>
+					<td>{if $item.status==$request.STATUS_STV.STATUS_ENABLE}{$_LANG_['framework.public.enable']}{else}{$_LANG_['framework.public.disable']}{/if}</td>
 					<td>{$item.remark}</td>
 					<td>
-						<a class="btn" title=""  href="/admin-user/?rid={$item.id}" >列表</a>
-						<a class="btn" title=""  href="/role/auth/?id={$item.id}" >授权</a>
-						<a class="btn" title=""  href="/role/edit/?id={$item.id}">编辑</a>
-						<a class="btn btn-warning" title=""  href="javascript:aduit({$item.id},{$item.status});">{if $item.status==$request.STATUS_STV.STATUS_ENABLE}禁用 {else}启用 {/if}</a>
+						<a class="btn" title=""  href="/admin-user/?rid={$item.id}" >{$_LANG_['role.index.list']}</a>
+						<a class="btn" title=""  href="/role/auth/?id={$item.id}" >{$_LANG_['role.index.authorization']}</a>
+						<a class="btn" title=""  href="/role/edit/?id={$item.id}">{$_LANG_['framework.public.edit']}</a>
+						<a class="btn btn-warning" title=""  href="javascript:aduit({$item.id},{$item.status});">{if $item.status==$request.STATUS_STV.STATUS_ENABLE}{$_LANG_['framework.public.disable']} {else}{$_LANG_['framework.public.enable']} {/if}</a>
 						{if $item.id gt 0}
-						<a class="btn btn-danger" title=""  href="javascript:delById({$item.id});" data-method="delete" >移除</a>
+						<a class="btn btn-danger" title=""  href="javascript:delById({$item.id});" data-method="delete" >{$_LANG_['framework.public.delete']}</a>
 						{/if}
 					</td>
 				</tr>

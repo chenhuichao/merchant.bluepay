@@ -26,7 +26,7 @@ $_LANG_['framework.public.update_time'] = 'Updated Time';
 $_LANG_['framework.public.action'] = 'Action';
 $_LANG_['framework.public.edit'] = 'Edit';
 $_LANG_['framework.public.total'] = 'Total';
-$_LANG_['framework.public.count'] = 'Count';
+$_LANG_['framework.public.count'] = '';
 $_LANG_['framework.public.mobile'] = 'Mobile';
 $_LANG_['framework.public.view'] = 'View';
 $_LANG_['framework.public.merchant_id'] = 'Merchant ID';
@@ -46,6 +46,8 @@ $_LANG_['framework.public.return'] = 'Return';
 $_LANG_['framework.public.error.title'] = 'Error Title';
 $_LANG_['framework.public.error.info'] = 'Error Info';
 $_LANG_['framework.public.image.preview'] = 'Preview';
+$_LANG_['framework.public.delete'] = 'Delete';
+$_LANG_['framework.public.exception'] = 'Exec Exception';
 
 $_LANG_['js.tips.confirm.delete'] = 'Confirm to delete?';
 $_LANG_['js.tips.error.exec'] = 'Exception';
@@ -107,6 +109,35 @@ $_LANG_['merchant.user.add'] = 'Add Operator';
 $_LANG_['merchant.user.edit'] = 'Edit Operator';
 $_LANG_['merchant.user.is_default'] = 'Operator Type';
 
+
+$_LANG_['admin_user.user.modify_password'] = 'Modify Password';
+$_LANG_['admin_user.user.real_name'] = 'Full Name';
+$_LANG_['admin_user.user.login_account'] = 'Login Email';
+$_LANG_['admin_user.user.old_password'] = 'Old Password';
+$_LANG_['admin_user.user.new_password'] = 'New Password';
+$_LANG_['admin_user.user.confirm_password'] = 'Repeat New Password';
+$_LANG_['admin_user.index.title'] = 'Admin User List';
+$_LANG_['admin_user.index.add'] = 'Add Admin User';
+$_LANG_['admin_user.index.depart'] = 'Department';
+$_LANG_['admin_user.index.position'] = 'Position';
+$_LANG_['admin_user.index.ename'] = 'Display Name';
+$_LANG_['admin_user.edit.title'] = 'Edit Admin User';
+$_LANG_['admin_user.user_exists'] = 'Admin User Exists';
+$_LANG_['permission.deny'] = 'Permission Deny';
+
+$_LANG_['role.index.title'] = 'Role List';
+$_LANG_['role.index.add_role'] = 'Add Role';
+$_LANG_['role.index.role_name'] = 'Role Name';
+$_LANG_['role.index.desc'] = 'Role Remark';
+$_LANG_['role.index.list'] = 'List';
+$_LANG_['role.index.authorization'] = 'Authorization';
+$_LANG_['role.add.title'] = 'Add Role';
+$_LANG_['role.edit.title'] = 'Edit Role';
+$_LANG_['role_name.require'] = 'Role Name Required';
+$_LANG_['role.root.no_del'] = 'Root Role Delete Deny';
+$_LANG_['adminuser.entity.rid.admin'] = 'Admin Group';
+$_LANG_['adminuser.entity.rid.root'] = 'Root Group';
+$_LANG_['adminuser.entity.rid.unknown'] = 'Role UnKnown'; 
 
 /*############## App Tpl ###############*/
 $_LANG_['ERR_MOBILE_FORMAT_WRONG'] = 'Mobile Format Wrong';

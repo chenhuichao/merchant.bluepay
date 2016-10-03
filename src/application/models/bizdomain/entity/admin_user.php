@@ -21,8 +21,8 @@ class Adminuser extends Entity
 	const RID_ROOT = -500;
 
 	static $RID_CONF = array(
-		self::RID_ADMIN => array('NAME' => '管理员组'),
-		self::RID_ROOT => array('NAME' => '超级管理员组'),
+		self::RID_ADMIN => array('NAME' => 'adminuser.entity.rid.admin'),
+		self::RID_ROOT => array('NAME' => 'adminuser.entity.rid.root'),
 	);
 
 	static $RID_STV = array(
@@ -51,7 +51,7 @@ class Adminuser extends Entity
 		$obj->status = in_array($param['status'], self::$STATUS_OPTIONS) ? $param['status'] : self::STATUS_ENABLE;
 		$obj->passwd = $param['passwd'];
 		$obj->remark = is_null($param['remark']) ? '' : $param['remark'];
-		$obj->wid = is_int($param['remark']) ? intval($param['remark']) : 0;
+		
 		return $obj;
 	}
 }

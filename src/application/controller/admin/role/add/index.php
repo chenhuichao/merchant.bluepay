@@ -17,9 +17,9 @@ if($type == 'save'){
 			'remark'=>$remark
 		);
 		RoleSvc::add($params);
-    	$info = show_msg('添加记录成功','succ');	
+    	$info = show_msg($_LANG_['response.message.success'],'succ');	
 	}else{
-		$info = show_msg('角色名称不能为空','err');	
+		$info = show_msg($_LANG_['role_name.require'],'err');	
 	}
 	
 	

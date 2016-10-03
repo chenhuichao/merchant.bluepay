@@ -19,7 +19,7 @@ if ($type == 'save' && is_object($record)) {
     $email = trim($_POST['email']);
     $rid = ($_POST['rid'] > 0 || in_array($_POST['rid'],Adminuser::$RID_OPTIONS)) ? intval($_POST['rid']) : 0;
     if(($rid == Adminuser::RID_ROOT || $record->rid == Adminuser::RID_ROOT)&& (AdminuserSvc::getById($uid)->rid != Adminuser::RID_ROOT)){
-        $info = show_msg('权限拒绝', 'err');
+        $info = show_msg($_LANG_['permission.deny'], 'err');
     }else{
         $rrecord = RoleSvc::getById($rid);
         $role = is_object($rrecord) ? $rrecord->name : '-';
@@ -33,7 +33,7 @@ if ($type == 'save' && is_object($record)) {
         if (!empty($name) && !empty($email)) {
             $arr = AdminuserSvc::getByEmail($email);
             if(!empty($arr) && $arr['id'] !=$id){
-                $info = show_msg('用户已存在', 'err');
+                $info = show_msg($_LANG_['admin_user.user_exists'], 'err');
             }else{
                 $params = array(
                     'name' => $name,
@@ -51,11 +51,11 @@ if ($type == 'save' && is_object($record)) {
                 }
                 AdminuserSvc::UpdateById($id, $params);
                 $record = AdminuserSvc::getById($id);
-                $info = show_msg('操作成功', 'succ');
+                $info = show_msg($_LANG_['response.message.success'], 'succ');
             }
 
         }else{
-            $info = show_msg('操作失败', 'err');
+            $info = show_msg($_LANG_['response.message.error'], 'err');
         }
     }
 }

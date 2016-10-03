@@ -21,7 +21,7 @@ if($type == 'save'){
 	
 	RoleSvc::UpdateById($id,$params);
 	$record = RoleSvc::getById($id);
-	$info = show_msg('更新记录成功', 'succ');
+	$info = show_msg($_LANG_['response.message.success'], 'succ');
 }
 
 LoaderSvc::loadSmarty()->assign('info',$info);

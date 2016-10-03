@@ -59,9 +59,8 @@ if(is_object($record)){
 		$nodes[$k]['record'] = $results;
 	}
 	
-
 }else{
-	$info = show_msg('数据异常','warning');	
+	$info = show_msg($_LANG_['framework.public.exception'],'warning');	
 }
 
 //var_dump($nodes);

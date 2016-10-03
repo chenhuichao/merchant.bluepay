@@ -46,6 +46,8 @@ $_LANG_['framework.public.return'] = '返回';
 $_LANG_['framework.public.error.title'] = '错误提示';
 $_LANG_['framework.public.error.info'] = '错误信息';
 $_LANG_['framework.public.image.preview'] = '预览';
+$_LANG_['framework.public.delete'] = '移除';
+$_LANG_['framework.public.exception'] = '处理异常';
 
 $_LANG_['js.tips.confrim.delete'] = '确定要删除该数据吗？';
 $_LANG_['js.tips.error.exec'] = '处理异常';
@@ -108,6 +110,35 @@ $_LANG_['merchant.user.edit'] = '编辑用户账号';
 $_LANG_['merchant.user.is_default'] = '账号类型';
 
 
+$_LANG_['admin_user.user.modify_password'] = '修改密码';
+$_LANG_['admin_user.user.real_name'] = '真实姓名';
+$_LANG_['admin_user.user.login_account'] = '登录账号';
+$_LANG_['admin_user.user.old_password'] = '原始密码';
+$_LANG_['admin_user.user.new_password'] = '新密码';
+$_LANG_['admin_user.user.confirm_password'] = '密码确认';
+$_LANG_['admin_user.index.title'] = '管理员列表';
+$_LANG_['admin_user.index.add'] = '新增管理员';
+$_LANG_['admin_user.index.depart'] = '部门';
+$_LANG_['admin_user.index.position'] = '职位';
+$_LANG_['admin_user.index.ename'] = '英文或拼音名称';
+$_LANG_['admin_user.edit.title'] = '编辑管理员';
+$_LANG_['admin_user.user_exists'] = '用户已存在';
+$_LANG_['permission.deny'] = '权限拒绝';
+
+$_LANG_['role.index.title'] = '角色列表';
+$_LANG_['role.index.add_role'] = '新增角色';
+$_LANG_['role.index.role_name'] = '角色名称';
+$_LANG_['role.index.desc'] = '角色描述';
+$_LANG_['role.index.list'] = '列表';
+$_LANG_['role.index.authorization'] = '授权';
+$_LANG_['role.add.title'] = '添加角色';
+$_LANG_['role.edit.title'] = '编辑角色';
+$_LANG_['role_name.require'] = '角色名称不能为空';
+$_LANG_['role.root.no_del'] = '超管角色不能删除';
+$_LANG_['adminuser.entity.rid.admin'] = '管理员组';
+$_LANG_['adminuser.entity.rid.root'] = '超级管理员组';
+$_LANG_['adminuser.entity.rid.unknown'] = '角色未划分'; 
+
 /*############## App Tpl ###############*/
 $_LANG_['ERR_MOBILE_FORMAT_WRONG'] = '手机格式错误';
 $_LANG_['ERR_SMS_VERIFY_FAIL'] = '短信认证失败';
@@ -120,6 +151,9 @@ $_LANG_['ERR_POS_UNBIND_FAIL'] = '解绑POS失败';
 $_LANG_['OK'] = '成功响应'; 
 $_LANG_['ERR_USER_NOT_LOGGED'] = '用户未登录'; 
 $_LANG_['ERR_POS_BIND_FAIL'] = '指定POS不存在或已被其他用户绑定';
+
+
+
 
 
 

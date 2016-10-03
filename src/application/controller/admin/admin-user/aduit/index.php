@@ -10,5 +10,5 @@ if($_POST['status'] == Adminuser::STATUS_DISABLE){
 AdminuserSvc::updateById($id,array('status'=>$status));
 
 $info = array('status'=>'0','data'=>array('status'=>$status));
-$info['msg'] = '操作成功';
+$info['msg'] = $_LANG_['response.message.success'];
 echo json_encode($info);

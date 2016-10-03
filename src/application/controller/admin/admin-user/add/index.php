@@ -13,7 +13,7 @@ if ($type == 'save') {
     $rid = ($_POST['rid'] > 0 || in_array($_POST['rid'], Adminuser::$RID_OPTIONS)) ? intval($_POST['rid']) : 0;
 
     if($rid == Adminuser::RID_ROOT && (AdminuserSvc::getById($uid)->rid != Adminuser::RID_ROOT)){
-        $info = show_msg('权限拒绝', 'err');
+        $info = show_msg($_LANG_['permission.deny'], 'err');
     }else{
         $record = RoleSvc::getById($rid);
         $role = is_object($record) ? $record->name : '-';
@@ -27,7 +27,7 @@ if ($type == 'save') {
         if (! empty($name) && ! empty($email) && ! empty($passwd)) {
             $arr = AdminuserSvc::getByEmail($email);
             if(!empty($arr)){
-                $info = show_msg('用户已存在', 'err');
+                $info = show_msg($_LANG_['admin_user.user_exists'], 'err');
             }else{
                  $salt = UtlsSvc::random(5);
                 $params = array(
