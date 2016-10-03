@@ -54,7 +54,7 @@ if(is_array($_URIS_)){
 	$_L_F = ROOT_PATH.DIRECTORY_SEPARATOR.'src/application/controller'.DIRECTORY_SEPARATOR.APP_NAME.DIRECTORY_SEPARATOR.$_SERVER['_C_'].DIRECTORY_SEPARATOR.$_SERVER['_A_'].DIRECTORY_SEPARATOR.'index.php';
 	if(file_exists($_L_F)){
 		$lang = UserSvc::getAppLang() ? UserSvc::getAppLang() : RequestSvc::Request('lang');
-		$lang = in_array($lang,['zh-CN','en-US']) ? $lang : 'zh-CN';
+		$lang = in_array($lang,['zh-CN','en-US']) ? $lang : 'en-US';
 		include_once ROOT_PATH.'/src/application/lang/'.$lang.'.php';
 		require_once($_L_F);
 	}else {

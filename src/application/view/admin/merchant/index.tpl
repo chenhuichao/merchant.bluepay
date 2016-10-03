@@ -96,7 +96,7 @@
 				<th colspan="1" rowspan="1">{$_LANG_['framework.public.id']}</th>
 				<th>{$_LANG_['merchant.index.type']}</th>
 				<th>{$_LANG_['merchant.index.real_name']}</th>
-				<th>{$_LANG_['merchant.index.nike_name']}</th>
+				<th>{$_LANG_['merchant.index.nick_name']}</th>
         <th>{$_LANG_['merchant.index.idno']}</th>
         <th>{$_LANG_['merchant.index.id_pic']}</th>
         <th>{$_LANG_['merchant.index.company_name']}</th>

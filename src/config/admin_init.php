@@ -104,7 +104,7 @@ if(is_array($_URIS_)){
 		require_once ROOT_PATH.'/src/application/controller/admin/funcs.php';
 		$lang = getPreferredLanguage();
 		$lang = in_array($_COOKIE['_lang'],['zh-CN','en-US']) ? $_COOKIE['_lang'] : 'en-US';
-		$lang= 'zh-CN';
+		//$lang= 'zh-CN';
 		include ROOT_PATH.'/src/application/lang/'.$lang.'.php';
 		LoaderSvc::loadSmarty()->assign('lang',$lang);
 		LoaderSvc::loadSmarty()->assign('_LANG_',$_LANG_);

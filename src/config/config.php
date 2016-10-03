@@ -1,6 +1,6 @@
 <?php
 define('APP_ENV','');
-define('PER_PAGE',30);
+define('PER_PAGE',100);
 
 
 //define('WARNING_NOTIFICATION_EMAIL','');
