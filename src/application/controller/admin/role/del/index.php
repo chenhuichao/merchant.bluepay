@@ -5,8 +5,8 @@ $id = RequestSvc::Request('id');
 
 if($id > 0){
 	RoleSvc::delRecordById($id);
-	$info = array('status'=>'0','msg'=>'删除记录成功');
+	$info = array('status'=>'0','msg'=>$_LANG_['response.message.success']);
 }else{
-	$info = array('status'=>'1','msg'=>'超管定义角色不能删除');
+	$info = array('status'=>'1','msg'=>$_LANG_['role.root.no_del']);
 }
 echo json_encode($info);
