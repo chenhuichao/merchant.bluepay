@@ -45,6 +45,7 @@ $_LANG_['framework.public.submit'] = '提交';
 $_LANG_['framework.public.return'] = '返回';
 $_LANG_['framework.public.error.title'] = '错误提示';
 $_LANG_['framework.public.error.info'] = '错误信息';
+$_LANG_['framework.public.image.preview'] = '预览';
 
 $_LANG_['js.tips.confrim.delete'] = '确定要删除该数据吗？';
 $_LANG_['js.tips.error.exec'] = '处理异常';
@@ -62,8 +63,13 @@ $_LANG_['response.message.error'] = '操作失败';
 $_LANG_['response.message.merchant_not_found'] = '指定商户不存在';
 $_LANG_['response.message.email_exists'] = '指定邮件已存在';
 $_LANG_['response.message.mobile_exists'] = '指定手机号已存在';
-$_LANG_['response.message.mobile_requie'] = '手机号必填选项';
+$_LANG_['response.message.mobile_requie'] = '手机号为必填选项';
 $_LANG_['response.message.record_not_found'] = '相关记录不存在';
+$_LANG_['response.message.id_no.exists'] = '该身份证号码已存在';
+$_LANG_['response.message.business_license_no.exists'] = '该营业执照号已存在';
+$_LANG_['response.message.id_no.requie'] = '身份证号码为必填选项';
+$_LANG_['response.message.business_license_no.requie'] = '营业执照号为必填选项';
+
 
 $_LANG_['merchant.index.title'] = '商户列表';
 $_LANG_['merchant.index.type'] = '商户类型'; 

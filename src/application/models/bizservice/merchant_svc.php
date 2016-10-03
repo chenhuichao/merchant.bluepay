@@ -132,6 +132,16 @@ class MerchantSvc
 		return $results;
 	}/*}}}*/
 
+	public static function getMerchantInfoByBL($business_license_no)
+	{
+		return self::getDao()->getMerchantInfoByBL($business_license_no);
+	}
+
+	public static function getMerchantInfoByIdNo($id_no)
+	{
+		return self::getDao()->getMerchantInfoByIdNo($id_no);
+	}
+
 	static public function checkUnique($key,$v)
 	{
 		return self::getDao()->checkUnique($key,$v);

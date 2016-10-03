@@ -65,7 +65,8 @@ class Merchant extends Entity
 		$obj->bank_name = is_null($param['bank_name']) ? '' : $param['bank_name'];
 		$obj->bank_of_deposit = is_null($param['bank_of_deposit']) ? '' : $param['bank_of_deposit'];
 
-		$obj->id_pic = is_null($param['id_pic']) ? '' : $param['id_pic'];
+		$obj->id_pic_0 = is_null($param['id_pic_0']) ? '' : $param['id_pic_0'];
+		$obj->id_pic_1 = is_null($param['id_pic_1']) ? '' : $param['id_pic_1'];
 		$obj->id_no = is_null($param['id_no']) ? '' : $param['id_no'];
 		$obj->company_name = is_null($param['company_name']) ? '' : $param['company_name'];
 		$obj->contact = is_null($param['contact']) ? '' : $param['contact'];

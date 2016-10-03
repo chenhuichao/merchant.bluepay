@@ -4,40 +4,84 @@ require_once dirname(dirname(dirname(__FILE__))) . '/header.php';
 $action = isset($_GET['action']) ? $_GET['action'] : null;
 $info = '';
 if ($action == 'do') {
-    $name = trim($_POST['name']);
-    $ename = trim($_POST['ename']);
-    $depart = $_POST['depart'];
-    $position = $_POST['position'];
-    $passwd = $_POST['passwd'];
-    $email = trim($_POST['email']);
-    $remark = $_POST['remark'];
+    $type = RequestSvc::Request('type');
+    $mobile = RequestSvc::Request('mobile');
+    $email = RequestSvc::Request('email');
+    $nick_name = RequestSvc::Request('nick_name');
+    $real_name = RequestSvc::Request('real_name');
 
-    if (! empty($name) && ! empty($email) && ! empty($passwd)) {
-        $arr = AdminuserSvc::getByEmail($email);
-        if(!empty($arr)){
-            $info = show_msg('用户已存在', 'err');
-        }else{
-             $salt = UtlsSvc::random(5);
-            $params = array(
-                'name' => $name,
-                'ename' => $ename,
-                'status' => $status,
-                'depart' => $depart,
-                'position' => $position,
-                'email' => $email,
-                'rid' => $rid,
-                'role' => $role,
-                'salt' => $salt,
-                'passwd' => md5($passwd . md5($salt)),
-                'remark' => $remark,
-            );
-            AdminuserSvc::add($params);
-            $info = show_msg('操作成功', 'succ');
-        }
-    }else {
-        $info = show_msg('操作失败', 'err');
-    }
+    $bank_card_no = RequestSvc::Request('bank_card_no');
+    $bank_name = RequestSvc::Request('bank_name');
+    $bank_of_deposit = RequestSvc::Request('bank_of_deposit');
+    $id_no = RequestSvc::Request('id_no');
+    $id_pic_0 = RequestSvc::Request('id_pic_0');
+
+    $company_name = RequestSvc::Request('company_name');
+    $contact = RequestSvc::Request('contact');
+    $business_license_no = RequestSvc::Request('business_license_no');
+    $business_license_pic = RequestSvc::Request('business_license_pic');
+
+    $state = RequestSvc::Request('state');
+
+    $type = in_array($type, array(
+            Merchant::TYPE_COMPANY,
+            Merchant::TYPE_PERSONAL
+    )) ? $type : Merchant::TYPE_COMPANY;
+
+    $state = in_array($state, array(
+            Merchant::STATE_VALID,
+            Merchant::STATE_INVALID
+    )) ? $state : Merchant::STATE_INVALID;
     
+    $params = array(
+        'type'=>$type,
+        'mobile'=>$mobile,
+        'email'=>$email,
+        'bank_card_no'=>$bank_card_no,
+        'bank_name'=>$bank_name,
+        'bank_of_deposit'=>$bank_of_deposit,
+        'contact'=>$contact,
+        'state'=>$state,
+    );
+
+    if($type == Merchant::TYPE_COMPANY){
+        $params['business_license_pic'] = $business_license_pic;
+        $params['business_license_no'] = $business_license_no;
+        $params['company_name'] = $company_name;
+
+        if(strlen($business_license_no) == 0){
+            $info = show_msg($_LANG_['response.message.business_license_no.requie'], 'err');
+            goto ret;
+        }
+        $r = MerchantSvc::checkUnique('business_license_no',$business_license_no);
+        if(!$r){
+            $info = show_msg($_LANG_['response.message.business_license_no.exists'], 'err');
+            goto ret;
+        }
+    }elseif($type == Merchant::TYPE_PERSONAL){
+        $params['nick_name'] = $nick_name;
+        $params['real_name'] = $real_name;
+        $params['id_no'] = $id_no;
+        $params['id_pic_0'] = $id_pic_0;
+
+        if(strlen($id_no) == 0){
+            $info = show_msg($_LANG_['response.message.id_no.requie'], 'err');
+            goto ret;
+        }
+        $r = MerchantSvc::checkUnique('id_no',$id_no);
+        if(!$r){
+            $info = show_msg($_LANG_['response.message.id_no.exists'], 'err');
+            goto ret;
+        }
+    }
+
+    $obj = MerchantSvc::add($params);
+
+    if(is_object($obj)){
+         $info = show_msg($_LANG_['response.message.success'], 'succ');
+    }else{
+         $info = show_msg($_LANG_['response.message.error'], 'err');
+    }
 }
 
 ret:

@@ -125,12 +125,12 @@
 				<td>{$item.real_name}</td>
 				<td>{$item.nick_name}</td>
         <td>{$item.idno}</td>
-        <td>{$_LANG_['framework.public.view']}</td>
+        <td><a href="javascript:viewImage({$item.id_pic_0});">{$_LANG_['framework.public.view']}</a></td>
 
         <td>{$item.company_name}</td>
         <td>{$item.email}</td>
         <td>{$item.business_license_no}</td>
-        <td>{$_LANG_['framework.public.view']}</td>
+        <td><a href="javascript:viewImage({$item.business_license_pic});">{$_LANG_['framework.public.view']}</a></td>
         <td>{$item.bank_name}</td>
         <td>{$item.bank_card_no}</td>
         <td>{$item.bank_of_deposit}</td>

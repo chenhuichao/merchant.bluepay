@@ -33,5 +33,6 @@ JS_LANG['js.tips.error.exec'] = "{$_LANG_['js.tips.error.exec']}";
 JS_LANG['js.file.pick_file'] = "{$_LANG_['framework.public.pick_file']}"; 
 JS_LANG['js.file.upload'] = "{$_LANG_['framework.public.upload']}"; 
 JS_LANG['js.file.upload.file_ext'] = "{$_LANG_['framework.public.upload.file_ext']}";
+JS_LANG['js.image.preview'] = "{$_LANG_['framework.public.image.preview']}";
 </script>
 {include file="menu.tpl"}

@@ -56,6 +56,28 @@ class MerchantDao extends BaseDao
 		return $r;	
 	}
 
+	public function getMerchantInfoByBL($business_license_no)
+	{
+		$sql = "select ".self::COLUMN." ";
+		$sql.= "from ".self::TABLE_NAME." ";
+		$sql.= "where `type` = ? ";
+		$sql.= "and `business_license_no` = ? ";
+		$tmparr = $this->getExecutor()->query($sql,array(Merchant::TYPE_COMPANY,$business_license_no));
+
+		return is_array($tmparr) ? $tmparr : array();
+	}
+
+	public function getMerchantInfoByIdNo($id_no)
+	{
+		$sql = "select ".self::COLUMN." ";
+		$sql.= "from ".self::TABLE_NAME." ";
+		$sql.= "where `type` = ? ";
+		$sql.= "and `id_no` = ? ";
+		$tmparr = $this->getExecutor()->query($sql,array(Merchant::TYPE_PERSONAL,$id_no));
+
+		return is_array($tmparr) ? $tmparr : array();
+	}
+
 	public function getPos($merchant_id,$user_id = null)
 	{
 		$sql_param = [];

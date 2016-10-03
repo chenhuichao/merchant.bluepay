@@ -23,11 +23,15 @@ function delById(id){
 	}
 }
 
+function viewImage(key){
+	var content = '<img  src="/file?key=' + key + '"/>';
+	preview(JS_LANG['js.image.preview'],content);
+}
+
 function goto(){
     var p = $('#p').val();
 	p = p>0?p:1;
 	window.location.href = '/merchnat/?p='+p;
-	//alert(88);
 }
 
 function getData(id){

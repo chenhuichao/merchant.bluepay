@@ -53,7 +53,9 @@ if('do' == $action){
             $info = show_msg($_LANG_['response.message.mobile_exists'], 'err');
             goto ret;
         }
-    }elseif(strval($email)){
+    }
+    
+    if(strval($email)){
     	 $r = UserSvc::checkUnique('email',$email);
     	 if(!$r){
             $userInfo = UserSvc::getUserInfoByEmail($email);
