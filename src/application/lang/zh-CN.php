@@ -37,6 +37,7 @@ $_LANG_['framework.public.passwd'] = '登录密码';
 $_LANG_['framework.public.pay_passwd'] = '交易密码';
 $_LANG_['framework.public.pick_file'] = '选择文件';
 $_LANG_['framework.public.upload'] = '上传文件';
+$_LANG_['framework.public.upload.file_ext'] = '请选择图片，支持的图片格式有：JPEG, PNG, GIF !';
 
 $_LANG_['framework.public.disable'] = '禁用';
 $_LANG_['framework.public.enable'] = '启用';
@@ -47,6 +48,8 @@ $_LANG_['framework.public.error.info'] = '错误信息';
 
 $_LANG_['js.tips.confrim.delete'] = '确定要删除该数据吗？';
 $_LANG_['js.tips.error.exec'] = '处理异常';
+$_LANG_['js.tips.alert.title'] = '提示';
+$_LANG_['js.tips.alert.status'] = '异常代码:';
 
 $_LANG_['index.title'] = '系统主页';
 $_LANG_['index.business_contact_info'] = '业务联系人信息';

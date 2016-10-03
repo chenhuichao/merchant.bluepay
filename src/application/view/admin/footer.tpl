@@ -56,6 +56,60 @@
 
 
         }();
+
+        function preview(title,content){
+            //alert(content);
+            $.dialog({
+                padding: 0,
+                title: title,
+                content: content,
+                lock: true
+            });
+            return false;
+        }
+
+        /*
+        * 检查文件格式
+        */
+        function checkExt(obj) {
+            var v = obj.val();
+            var ext = v.substring(v.lastIndexOf("."));
+            if(ext != ".jpg" && ext != ".png" && ext != ".gif") {
+                alert(JS_LANG['js.file.upload.file_ext']);
+                obj.val("");
+                return false;
+            }
+            return true;
+        }
+
+          //上传
+        $("body").on("change","#img-upload",function(){
+            var cur = $(this);
+            if(checkExt(cur)) {
+                cur.wrap('<form enctype="multipart/form-data"/>');
+                var options = {
+                    url : "/admin/index/uploadImg",
+                    type : "post",
+                    dataType : "json",
+                    success : function(data) {
+                        if(data.state !='SUCCESS'){
+                            return modal.alert(data.state);
+                        }
+                        // 清理旧图片
+                        $(".img_file").remove();
+                        $("#img_url").val(data.url);
+                        $("#img_show").attr('src',data.url);
+                        // 取消form包裹
+                        cur.unwrap();
+                        // 此处data可以返回文件ID，然后根据ID查询并返回文件即可
+                 },
+                 error : function(XMLHttpRequest, textStatus, errorThrown) {
+                     alert(textStatus + "," + errorThrown);
+                 }
+                };
+                cur.parent("form").ajaxSubmit(options);    // 异步提交
+            }
+        });
     </script>
 
 

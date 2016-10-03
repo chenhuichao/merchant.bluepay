@@ -26,8 +26,11 @@
 <script>
 var JS_LANG = [];
 JS_LANG['tips.confirm.delete'] = "{$_LANG_['js.tips.confrim.delete']}"; 
+JS_LANG['tips.alert.title'] = "{$_LANG_['js.tips.alert.title']}"; 
+JS_LANG['tips.alert.status'] = "{$_LANG_['js.tips.alert.status']}"; 
 JS_LANG['js.tips.error.exec'] = "{$_LANG_['js.tips.error.exec']}"; 
 JS_LANG['js.file.pick_file'] = "{$_LANG_['framework.public.pick_file']}"; 
 JS_LANG['js.file.upload'] = "{$_LANG_['framework.public.upload']}"; 
+JS_LANG['js.file.upload.file_ext'] = "{$_LANG_['framework.public.upload.file_ext']}";
 </script>
 {include file="menu.tpl"}

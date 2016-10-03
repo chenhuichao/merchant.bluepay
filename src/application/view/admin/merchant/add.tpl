@@ -63,16 +63,9 @@
 		         <div class="form-item personal-group">
 		            <label class="item-label">{$_LANG_['merchant.index.id_pic']}</label>
 					<div class="controls">
-						<input type="hidden" autofocus="true" value="" class="text input-large" name="id_pic" id="id_pic">
-						<div>
-	                        <input type="button" value="上传文件" class="file"><span>{$err.msg}</span>
-	                    </div>
-
-				        <ul>
-				        {if strlen($record.id_pic)}
-						<li key="{$record.id_pic}" style="position: relative;"><a href="#" class="btnShow"><img style="width: 150px;height: 100px;" src="/file?key=s_{$record.id_pic}"/></a></li>
-						{/if}
-				        </ul>
+	                    <img id="id_pic_0" src="/file?key=s_{$record.id_pic_0}" width="200" height="150"/><br/>
+						<input type="file" name="upfile" class="img-upload-0" value="{$_LANG_['framework.public.upload']}"/>
+						<input type="hidden" class="form-control" name="id_pic_0"  value="{$record.id_pic_0}" />
 				     </div>
 		        </div>
 		        <div class="form-item personal-group">
@@ -134,114 +127,55 @@
 		</div>
 
 {literal}
-    <script>
-        var htmlcontent = '<div id="uploaddiv"  class="uploaddiv-special"><div id="filelist"></div><div id="container"><a id="pickfiles" href="javascript:;">'+JS_LANG['js.file.pick_file']+'</a> <a id="uploadfiles" href="javascript:;">'+JS_LANG['js.file.upload']+'</a></div><pre id="console" style="border: 0;margin: 0;padding: 0;"></pre></div>';
-        var obj;
-        $(document).ready(function() {
-            $(".file").on("click",function() {
-                obj=$(this).parent();
-                //$(this).next().html("");
-                $("#uploaddiv").remove();
-                $(this).parent().append(htmlcontent);
-                $("#uploaddiv").slideDown();
-                var key='';
-                var uploader = new plupload.Uploader({
-                    resize : {width : 800, height : 800, quality : 90},
-                    runtimes : 'html5,flash,silverlight,html4',
-                    file_data_name :'Filedata',
-                    browse_button : 'pickfiles', // you can pass in id...
-                    container: document.getElementById('container'), // ... or DOM Element itself
-                    url : "/upload/index",
-                    filters : {
-                        max_file_size : '10mb',
-                        mime_types: [
-                            {title : "Image files", extensions : "jpg,gif,png"},
-                            {title : "Zip files", extensions : "zip,rar,docx"}
-                        ]
-                    },
-                    flash_swf_url : '{$_STATIC_}/js/plupload/Moxie.cdn.swf',
-                    silverlight_xap_url : '{$_STATIC_}/js/plupload/Moxie.cdn.xap',
-                    init: {
-                        PostInit: function() {
-                            document.getElementById('filelist').innerHTML = '';
-                            document.getElementById('uploadfiles').onclick = function() {
-                                uploader.start();
-                                return false;
-                            };
-                        },
-                        FilesAdded: function(up, files) {
-                            document.getElementById('console').innerHTML = '';
-                            plupload.each(files, function(file) {
-                                document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
-                            });
-                        },
-                        UploadComplete: function(up, files) {
+<script>
+	var type = $("#type").val();
+   	if(type == 1){
+   		$('.company-group').show();
+   		$('.personal-group').hide();
+   	}else if(type == 2){
+   		$('.company-group').hide();
+   		$('.personal-group').show();
+   	}
 
-                        },
-                        UploadProgress: function(up, file) {
-                            document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
-                            if(file.percent == 100){
-                                $("#"+file.id).slideUp(500);
-                            }
-                        },
-                        FileUploaded: function(up, file, response) {
-                            var data = $.parseJSON(response.response);
-                            obj.prev().val(data.key);
+   	$('#type').change(function(){
+   		var type = $(this).val();
+   		if(type == 1){
+       		$('.company-group').show();
+       		$('.personal-group').hide();
+       	}else if(type == 2){
+       		$('.company-group').hide();
+       		$('.personal-group').show();
+       	}
+   	});
+    //上传
+	$("body").on("change",".img-upload-0",function(){
+		var cur = $(this);
+		if(checkExt(cur)) {
+			cur.wrap('<form enctype="multipart/form-data"/>');
+			var options = {
+				url : "/upload/index",
+				type : "post",
+				dataType : "json",
+				success : function(data) {
+					if(data.status != 0){
+						preview(JS_LANG['tips.alert.title'],JS_LANG['tips.alert.status'] + data.status);
+					}
+					// 清理旧图片
+					$("input[name=upfile]").val('');
+					$("input[name=id_pic_0]").val(data.key);
 
-                            if(data.type == 'img'){
-                                var html='<li key="'+data.key+'" style="position: relative;"><a href="#"><img style="width: 150px;height: 100px;" src="/file?key=s_'+data.key+'"/></a></li>';
-                            }else{
-                                var html='<li key="'+data.key+'"><a href="/file?key=s_'+data.key+'">'+data.filename+'</a></li>';
-                            }
-                            obj.parent().find("ul").append(html);
-                        },
-                        Error: function(up, err) {
-                            document.getElementById('console').innerHTML += "\nError #" + err.code + ": " + err.message;
-                        }
-                    }
-                });
-                uploader.init();
-                lnk = document.getElementById("pickfiles");
-
-                lnk.click();
-            });
-
-            var type = $("#type").val();
-           	if(type == 1){
-           		$('.company-group').show();
-           		$('.personal-group').hide();
-           	}else if(type == 2){
-           		$('.company-group').hide();
-           		$('.personal-group').show();
-           	}
-
-           	$('#type').change(function(){
-           		var type = $(this).val();
-           		if(type == 1){
-	           		$('.company-group').show();
-	           		$('.personal-group').hide();
-	           	}else if(type == 2){
-	           		$('.company-group').hide();
-	           		$('.personal-group').show();
-	           	}
-           	});
-        });
-
-
-
-        //删除
-        function del(obj){
-            var key=obj.parent().attr("key");
-            var key1=key+",";
-            var key2=","+key;
-            var h_key=obj.parent().parent().parent().find('[type="hidden"]').val();
-            var new_key=h_key.replace(key1,"");
-            new_key=new_key.replace(key2,"");
-            new_key=new_key.replace(key,"");
-
-            obj.parent().parent().parent().find('[type="hidden"]').val(new_key);
-            obj.parent().remove();
-        }
-    </script>
+					$("#id_pic_0").attr('src','/file?key=s_' + data.key);
+					// 取消form包裹
+					cur.unwrap();
+					// 此处data可以返回文件ID，然后根据ID查询并返回文件即可
+				},
+				error : function(XMLHttpRequest, textStatus, errorThrown) {
+					alert(textStatus + "," + errorThrown);
+				}
+			};
+			cur.parent("form").ajaxSubmit(options);    // 异步提交
+		}
+	});
+</script>
 {/literal}
 {include file="footer.tpl"}
