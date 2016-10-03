@@ -9,11 +9,6 @@ if($uid && LoaderSvc::loadSess()->get('APP_NAME') == APP_NAME){
 }else{
 	if(isset($_GET['lang']) && in_array($_GET['lang'],['zh-CN','en-US'])){
 		setcookie("_lang",$_GET['lang'],time() + 2592000);
-		include ROOT_PATH.'/src/application/lang/'.$lang.'.php';
-		LoaderSvc::loadSmarty()->assign('lang',$_GET['lang']);
-		LoaderSvc::loadSmarty()->assign('_LANG_',$_LANG_);
+		header("location:/login");
 	}
-	
-	LoaderSvc::loadSess()->set('returl',urlencode($returl));
-	LoaderSvc::loadSmarty()->display('login/index.tpl');
 }

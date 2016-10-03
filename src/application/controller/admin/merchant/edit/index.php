@@ -60,7 +60,7 @@ if('do' == $action){
         $params['company_name'] = $company_name;
 
         if(strlen($business_license_no) == 0){
-            $info = show_msg($_LANG_['response.message.business_license_no.requie'], 'err');
+            $info = show_msg($_LANG_['response.message.business_license_no.require'], 'err');
             goto ret;
         }
         $r = MerchantSvc::checkUnique('business_license_no',$business_license_no);
@@ -78,7 +78,7 @@ if('do' == $action){
         $params['id_pic_0'] = $id_pic_0;
 
         if(strlen($id_no) == 0){
-            $info = show_msg($_LANG_['response.message.id_no.requie'], 'err');
+            $info = show_msg($_LANG_['response.message.id_no.require'], 'err');
             goto ret;
         }
         $r = MerchantSvc::checkUnique('id_no',$id_no);

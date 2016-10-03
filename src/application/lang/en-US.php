@@ -2,9 +2,9 @@
 $_LANG_['system.name'] = 'BluePay Backend';
 $_LANG_['system.welcome'] = 'Welcome BluePay Backend Management';
 
-$_LANG_['login.tips.user'] = 'User Email Requied';
-$_LANG_['login.tips.pass'] = 'Password Requied';
-$_LANG_['login.tips.captcha'] = 'Captcha Requied';
+$_LANG_['login.tips.user'] = 'User Email Required';
+$_LANG_['login.tips.pass'] = 'Password Required';
+$_LANG_['login.tips.captcha'] = 'Captcha Required';
 $_LANG_['login.tips.click'] = 'Click';
 $_LANG_['login.tips.loading'] = 'Logining ...';
 $_LANG_['login.tips.login'] = 'Login';
@@ -63,12 +63,12 @@ $_LANG_['response.message.error'] = 'Fail';
 $_LANG_['response.message.merchant_not_found'] = 'Merchant Not Found';
 $_LANG_['response.message.email_exists'] = 'Email Exists';
 $_LANG_['response.message.mobile_exists'] = 'Mobile Exists';
-$_LANG_['response.message.mobile_requie'] = 'Mobile Requied';
+$_LANG_['response.message.mobile_require'] = 'Mobile Required';
 $_LANG_['response.message.record_not_found'] = 'Record Not Found';
 $_LANG_['response.message.id_no.exists'] = 'Citizen ID Number Exists';
 $_LANG_['response.message.business_license_no.exists'] = '该营业执照号已存在';
-$_LANG_['response.message.id_no.requie'] = '身份证号码为必填选项';
-$_LANG_['response.message.business_license_no.requie'] = '营业执照号为必填选项';
+$_LANG_['response.message.id_no.require'] = '身份证号码为必填选项';
+$_LANG_['response.message.business_license_no.require'] = '营业执照号为必填选项';
 
 
 $_LANG_['merchant.index.title'] = 'Merchant List';

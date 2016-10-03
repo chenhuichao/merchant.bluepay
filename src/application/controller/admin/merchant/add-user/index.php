@@ -41,7 +41,7 @@ if('do' == $action){
 	
     $r = UserSvc::checkUnique('mobile',$mobile);
     if(strlen($mobile) == 0){
-    	$info = show_msg($_LANG_['response.message.mobile_requie'], 'err');
+    	$info = show_msg($_LANG_['response.message.mobile_require'], 'err');
     	goto ret;
     }
 
