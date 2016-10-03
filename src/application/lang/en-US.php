@@ -68,9 +68,9 @@ $_LANG_['response.message.mobile_exists'] = 'Mobile Exists';
 $_LANG_['response.message.mobile_require'] = 'Mobile Required';
 $_LANG_['response.message.record_not_found'] = 'Record Not Found';
 $_LANG_['response.message.id_no.exists'] = 'Citizen ID Number Exists';
-$_LANG_['response.message.business_license_no.exists'] = '该营业执照号已存在';
-$_LANG_['response.message.id_no.require'] = '身份证号码为必填选项';
-$_LANG_['response.message.business_license_no.require'] = '营业执照号为必填选项';
+$_LANG_['response.message.business_license_no.exists'] = 'Corporate License Number Exists';
+$_LANG_['response.message.id_no.require'] = 'Citizen ID Number Required';
+$_LANG_['response.message.business_license_no.require'] = 'Corporate License Number Required';
 
 
 $_LANG_['merchant.index.title'] = 'Merchant List';
@@ -79,7 +79,7 @@ $_LANG_['merchant.index.real_name'] = 'Full Name';
 $_LANG_['merchant.index.nick_name'] = 'Display Name'; 
 $_LANG_['merchant.index.id_no'] = 'Citizen ID Number'; 
 $_LANG_['merchant.index.id_pic'] = 'User Photo'; 
-$_LANG_['merchant.index.company_name'] = 'Corporate Acronym,'; 
+$_LANG_['merchant.index.company_name'] = 'Corporate Acronym'; 
 $_LANG_['merchant.index.email'] = 'Email Address'; 
 $_LANG_['merchant.index.bank_card_no'] = 'Bank Card Number'; 
 $_LANG_['merchant.index.bank_name'] = 'Bank Name'; 
@@ -91,7 +91,7 @@ $_LANG_['merchant.index.add_merchant'] = 'Add Merchant';
 $_LANG_['merchant.index.user']= 'Sub-Account'; 
 $_LANG_['merchant.index.add_user'] = 'Add Operator';
 
-$_LANG_['merchant.entity.type.company'] = 'Merchant'; 
+$_LANG_['merchant.entity.type.company'] = 'Company'; 
 $_LANG_['merchant.entity.type.personal'] = 'Personal'; 
 $_LANG_['user.entity.id_default.no'] = 'Master-Account'; 
 $_LANG_['user.entity.id_default.yes'] = 'Sub-Account'; 
