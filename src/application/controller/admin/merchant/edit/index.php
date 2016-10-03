@@ -96,4 +96,4 @@ $request['TYPE_STV'] = Merchant::$TYPE_STV;
 LoaderSvc::loadSmarty()->assign('request',$request);
 LoaderSvc::loadSmarty()->assign('info', $info);
 LoaderSvc::loadSmarty()->assign('record', $record);
-LoaderSvc::loadSmarty()->display('admin-user/edit.tpl');
+LoaderSvc::loadSmarty()->display('merchant/edit.tpl');

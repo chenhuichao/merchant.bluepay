@@ -2,7 +2,7 @@
 class MerchantSvc
 {/*{{{*/
 	const OBJ = 'merchant';
-	static private function add($param)
+	static public function add($param)
 	{
 		$obj = Merchant::createByBiz($param);
 		return self::getDao()->add($obj);
