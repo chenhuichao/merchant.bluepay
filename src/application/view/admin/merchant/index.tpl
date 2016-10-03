@@ -125,12 +125,12 @@
 				<td>{$item.real_name}</td>
 				<td>{$item.nick_name}</td>
         <td>{$item.idno}</td>
-        <td>{if $item.type eq $request.TYPE_STV.TYPE_PERSONAL}<a href="javascript:viewImage('{$item.id_pic_0}');">{$_LANG_['framework.public.view']}</a>{else}-{/if}</td>
+        <td>{if $item.type eq $request.TYPE_STV['TYPE_PERSONAL']}<a href="javascript:viewImage('{$item.id_pic_0}');">{$_LANG_['framework.public.view']}</a>{else}-{/if}</td>
 
         <td>{$item.company_name}</td>
         <td>{$item.email}</td>
         <td>{$item.business_license_no}</td>
-        <td>{if $item.type eq $request.TYPE_STV.TYPE_COMPANY}<a href="javascript:viewImage('{$item.business_license_pic}');">{$_LANG_['framework.public.view']}</a>{else}-{/if}</td>
+        <td>{if $item.type eq $request.TYPE_STV['TYPE_COMPANY']}<a href="javascript:viewImage('{$item.business_license_pic}');">{$_LANG_['framework.public.view']}</a>{else}-{/if}</td>
         <td>{$item.bank_name}</td>
         <td>{$item.bank_card_no}</td>
         <td>{$item.bank_of_deposit}</td>
