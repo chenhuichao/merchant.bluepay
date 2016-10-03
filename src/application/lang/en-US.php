@@ -1,5 +1,5 @@
 <?php
-$_LANG_['system.name'] = 'Backend Management';
+$_LANG_['system.name'] = 'BluePay Backend';
 $_LANG_['system.welcome'] = 'Welcome BluePay Backend Management';
 
 $_LANG_['login.tips.user'] = 'User Email Requied';

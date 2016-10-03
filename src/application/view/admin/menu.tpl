@@ -35,10 +35,10 @@
         <!-- 子导航 -->
         {foreach from=$menu item=v1}
 			<li>
-				<h3><i class="icon icon-unfold"></i>{if $lang eq 'zh-CN'}{$v1.title}{else if $lang eq 'en-Us'}{$v1.title_en}{/if}</h3>    
+				<h3><i class="icon icon-unfold"></i>{if $lang eq 'zh-CN'}{$v1.title}{else if $lang eq 'en-US'}{$v1.title_en}{/if}</h3>    
 				<ul class="side-sub-menu">
 				{foreach $v1.childen item=v2}
-					<li {if isset($v1.menu) && isset($v2.menu)}class="{$v2.menu}"{/if}><a href="/{$v2.name}/{$v2.action}" class="item">{if $lang eq 'zh-CN'}{$v2.title}{else if $lang eq 'en-Us'}{$v2.title_en}{/if}</a></li>
+					<li {if isset($v1.menu) && isset($v2.menu)}class="{$v2.menu}"{/if}><a href="/{$v2.name}/{$v2.action}" class="item">{if $lang eq 'zh-CN'}{$v2.title}{else if $lang eq 'en-US'}{$v2.title_en}{/if}</a></li>
 				{/foreach}
 				</ul>
 			</li>
