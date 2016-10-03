@@ -21,6 +21,7 @@
     <script type="text/javascript" src="{$_STATIC_}/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
     <script type="text/javascript" src="{$_STATIC_}/js/artDialog/jquery.artDialog.js"></script>
     <script type="text/javascript" src="{$_STATIC_}/js/plupload/plupload.js"></script>
+    <script src="{$_STATIC_}/js/jQuery/jquery-form.js"></script>
 </head>
 
 <script>
