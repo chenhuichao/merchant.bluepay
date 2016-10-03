@@ -1,7 +1,7 @@
 <?php
 class Operationlog extends Entity
 {
-	const ID_OBJ  = 'operation_log';
+	const ID_OBJ  = 'operationlog';
 
 	public static function createByBiz( $param )
 	{
