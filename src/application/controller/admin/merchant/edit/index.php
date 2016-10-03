@@ -42,6 +42,18 @@ if('do' == $action){
             Merchant::STATE_INVALID
     )) ? $state : Merchant::STATE_INVALID;
 
+
+    $params = array(
+        'type'=>$type,
+        'mobile'=>$mobile,
+        'email'=>$email,
+        'bank_card_no'=>$bank_card_no,
+        'bank_name'=>$bank_name,
+        'bank_of_deposit'=>$bank_of_deposit,
+        'contact'=>$contact,
+        'state'=>$state,
+    );
+
     if($type == Merchant::TYPE_COMPANY){
         $params['business_license_pic'] = $business_license_pic;
         $params['business_license_no'] = $business_license_no;

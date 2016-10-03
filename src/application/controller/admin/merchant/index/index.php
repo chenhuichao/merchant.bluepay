@@ -19,6 +19,8 @@ $results = MerchantSvc::lists($request,array('page'=>RequestSvc::request('p',1,'
 
 $request['STATE_CONF'] = Merchant::$STATE_CONF;
 $request['TYPE_CONF'] = Merchant::$TYPE_CONF;
+$request['STATE_STV'] = Merchant::$STATE_STV;
+$request['TYPE_STV'] = Merchant::$TYPE_STV;
 LoaderSvc::loadSmarty()->assign('request',$request);
 LoaderSvc::loadSmarty()->assign('results',$results);
 LoaderSvc::loadSmarty()->display('merchant/index.tpl');
