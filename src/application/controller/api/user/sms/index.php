@@ -25,5 +25,5 @@ Data:'.var_export($_SESS,true).
 	SysinfoSvc::log($desc);
 }
 
-$_RESULT['sms'] = $rand;
+$_RESULT['result'] = ['sms' => $rand];
 outPut($_RESULT);

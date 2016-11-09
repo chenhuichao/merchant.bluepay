@@ -6,7 +6,7 @@ if($_SESS['is_default'] == User::IS_DEFAULT_YES){
 	$results = PosSvc::getByMerchantId($_SESS['merchant_id']);
 }else $results = PosSvc::getByUid($uid);
 
-$_RESULT['data'] = $results;
+$_RESULT['result'] = $results;
 outPut($_RESULT);
 
 

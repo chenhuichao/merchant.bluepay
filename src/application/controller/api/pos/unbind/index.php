@@ -11,7 +11,7 @@ if(empty($pos) || $pos['user_id'] != $uid){
 	);
 }else{
 	$id = $pos['id'];
-	PosSvc::updateById($id,['user_id'=>0,'utime'=>date('Y-m-d H:i:s')]);
+	PosSvc::updateById($id,['user_id'=>0,'merchant_id'=>0,'utime'=>date('Y-m-d H:i:s')]);
 }
 
 outPut($_RESULT);
