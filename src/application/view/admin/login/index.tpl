@@ -26,7 +26,7 @@
                         <div id="itemBox" class="item-box">
                             <select id="language" style="width:290px;height:20px;margin-bottom:5px;">
 							  	<option value="en-US" {if $lang eq 'en-US'}selected="selected"{/if}>English</option>
-							  	<option value="zh-CN" {if $lang eq 'zh-CN'}selected="selected"{/if}>中文</option>
+							  	<!--<option value="zh-CN" {if $lang eq 'zh-CN'}selected="selected"{/if}>中文</option>-->
 							</select>
                             <div class="item">
                                 <i class="icon-login-user"></i>

@@ -655,7 +655,7 @@ class UtlsSvc
 	 * @param    int $max 长度范围
 	 * @return   string
 	 */
-	public static function random($length = 20,$max = false,$type = 0)
+	public static function random($length = 20,$max = false,$type = 3)
 	{
 		if (is_int($max) && $max > $length) {
 			$length = mt_rand($length, $max);
