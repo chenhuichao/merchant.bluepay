@@ -42,6 +42,8 @@ function pkcs5unPadding($data)
     $unpadding = ord($data[$length - 1]);
     return substr($data, 0, $length - $unpadding);
 }
+
+/*
 // 3DES方式
 $encrypter = new DesCrypter('sfe023f_sefiel#fi32lf3e!', MCRYPT_3DES);
 // DES 方式
@@ -51,3 +53,4 @@ $result = $encrypter->encrypt($data);
 var_dump(base64_encode($result));
 var_dump(rtrim($encrypter->decrypt($result)));
 $encrypter->close();
+*/

@@ -151,6 +151,8 @@ $_LANG_['ERR_POS_UNBIND_FAIL'] = 'Unbind POS Fail';
 $_LANG_['OK'] = 'Success'; 
 $_LANG_['ERR_USER_NOT_LOGGED'] = 'Operator UnLogin'; 
 $_LANG_['ERR_POS_BIND_FAIL'] = 'Bind POS FAIL';
+$_LANG_['ERR_POS_AUTH_FAIL'] = 'POS AUTH FAIL';
+
 
 
 
