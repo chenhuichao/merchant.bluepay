@@ -95,8 +95,8 @@ $_LANG_['merchant.entity.type.company'] = 'Company';
 $_LANG_['merchant.entity.type.personal'] = 'Personal'; 
 $_LANG_['user.entity.id_default.no'] = 'Master-Account'; 
 $_LANG_['user.entity.id_default.yes'] = 'Sub-Account'; 
-$_LANG_['user.entity.state.disable'] = 'Disable'; 
-$_LANG_['user.entity.state.enable'] = 'Enable'; 
+$_LANG_['user.entity.state.disable'] = 'Disabled'; 
+$_LANG_['user.entity.state.enable'] = 'Enabled'; 
 
 $_LANG_['merchant.entity.state.init'] = 'Init'; 
 $_LANG_['merchant.entity.state.wait_audit'] = '待审核'; 
