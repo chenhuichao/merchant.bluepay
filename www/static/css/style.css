@@ -22,7 +22,7 @@ body{
     line-height: 50px;
     background-color: #383838;
 }
-.logo{float:left;margin-left:16px;width:184px;height:49px;font-size:25px;color:#fff;background-size:204px 49px;}
+.logo{float:left;margin-left:16px;width:204px;height:49px;font-size:25px;color:#fff;background-size:204px 49px;}
 
 /* 主导航 */
 .main-nav {
