@@ -384,6 +384,7 @@ body{
 /* 后台内页模块样式
 ------------------------------------------------- */
 .main {
+    margin-left: 20px;
     padding:20px;
 	background-color: #f6f6f6;
 }
@@ -622,6 +623,7 @@ body{
     height: 39px;
     line-height: 39px;
     text-align: center;
+    padding-left: 20px;
 }
 .copyright a {
     margin: 0 4px;
