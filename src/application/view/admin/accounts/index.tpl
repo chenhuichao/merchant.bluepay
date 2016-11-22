@@ -16,13 +16,14 @@
               <td>
                   <input type="text" autofocus="true" class="text" value="{$request.merchant_id}" name="merchant_id" id="merchant_id">
               </td>
-               <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
+              <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
               <td>
                 <input type="text" class="text  datetime" value="{$request.daystart}" name="daystart"  /> - 
                 <input type="text" class="text  datetime" value="{$request.dayend}" name="dayend"  />　
               </td>
-           
-	            <th><button type="submit" class="btn btn-info" style="margin-left:200px;">{$_LANG_['framework.public.search']}</button></th>
+          </tr>
+          <tr>
+	            <th colspan="4"><button type="submit" class="btn btn-info" style="margin-left:200px;">{$_LANG_['framework.public.search']}</button></th>
 	        </tr>
 	      </tbody>
 	    </table>
@@ -37,6 +38,8 @@
 			<tr>
 				<th colspan="1" rowspan="1">{$_LANG_['framework.public.id']}</th>
 				<th>{$_LANG_['accounts.index.merchant_id']}</th>
+        <th>{$_LANG_['merchant.index.company_name']}</th>
+        <th>{$_LANG_['merchant.index.real_name']}</th>
 				<th>{$_LANG_['accounts.index.balance']}</th>
 
 				<th>{$_LANG_['framework.public.create_time']}</th>

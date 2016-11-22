@@ -60,8 +60,10 @@ ob_clean();
 
 $_Format = RequestSvc::request('_Format');
 if('json' == $_Format){
+	header('Content-type: application/json');
 	echo json_encode($_RESULT);
 }else{
+	header("Content-Type: text/plain");
 	echo serialize($_RESULT);
 }
 

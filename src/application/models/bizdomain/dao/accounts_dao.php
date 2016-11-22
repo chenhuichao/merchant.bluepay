@@ -10,15 +10,15 @@ class AccountsDao extends BaseDao
 	
 	public function getRecord($sql_condition = array(),$sql_param = array(),$options = array())
 	{
-		$sql = "select SQL_CALC_FOUND_ROWS * ";
-		$sql.= "from ".self::getTableName()." ";
+		$sql = "select SQL_CALC_FOUND_ROWS A.*,M.id as merchant_id,M.type as merchant_type,M.real_name,M.company_name ";
+		$sql.= "from ".self::getTableName()." A join bind_user B on A.uid=B.id join merchant M on M.id=B.key ";
 		if(!empty( $sql_condition )){
 			$sql.= 'where '. implode(' and ', $sql_condition);
 		}
 		if($options['orderby']){
 			$sql.= " order by ".$options['orderby']." ";
 		}else{
-			$sql.= " order by `id` desc ";
+			$sql.= " order by `A.id` desc ";
 		}
 		
 		if($options['offset'] >=0 && $options['len'] > 0){

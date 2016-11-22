@@ -102,7 +102,7 @@
         <th>{$_LANG_['transaction.index.amount']}</th>
         <th>{$_LANG_['transaction.index.fee']}</th>
         <th>{$_LANG_['transaction.index.user_id']}</th>
-        <th>{$_LANG_['transaction.index.sn']}</th>
+        <th>{$_LANG_['framework.public.sn']}</th>
         <th>{$_LANG_['framework.public.state']}</th>
 				<th>{$_LANG_['framework.public.create_time']}</th>
 				<th>{$_LANG_['framework.public.update_time']}</th>

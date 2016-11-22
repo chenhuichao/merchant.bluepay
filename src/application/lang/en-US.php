@@ -180,6 +180,7 @@ $_LANG_['transaction.index.tradeno'] = 'Trade No';
 $_LANG_['transaction.index.user_id'] = 'User ID';
 $_LANG_['transaction.index.amount'] = 'Amount';
 $_LANG_['transaction.index.fee'] = 'Fee';
+$_LANG_['accounts.index.title'] = 'Accounts';
 
 
 
