@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="table-responsive">
-		<form  class="form-horizontal" action="/merchant/index?" method="get">
+		<form  class="form-horizontal" action="/transaction/index?" method="get">
 		<table class="table table-striped table-bordered bootstrap-datatable">
 	      <tbody>
 	        <tr>
