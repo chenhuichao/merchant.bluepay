@@ -78,9 +78,9 @@ if ($action == 'do') {
     $obj = MerchantSvc::add($params);
 
     if(is_object($obj)){
-         $info = show_msg($_LANG_['response.message.success'], 'succ');
+        $info = show_msg($_LANG_['response.message.success'], 'succ');
     }else{
-         $info = show_msg($_LANG_['response.message.error'], 'err');
+        $info = show_msg($_LANG_['response.message.error'], 'err');
     }
 }
 

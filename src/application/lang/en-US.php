@@ -153,6 +153,35 @@ $_LANG_['ERR_USER_NOT_LOGGED'] = 'Operator UnLogin';
 $_LANG_['ERR_POS_BIND_FAIL'] = 'Bind POS FAIL';
 $_LANG_['ERR_POS_AUTH_FAIL'] = 'POS AUTH FAIL';
 
+/*############## App Tpl ###############*/
+
+$_LANG_['transaction.entity.state.init'] = 'Init';
+$_LANG_['transaction.entity.state.succ'] = 'Success';
+$_LANG_['transaction.entity.state.processing'] = 'Processing';
+$_LANG_['transaction.entity.state.fail'] = 'Fail';
+
+$_LANG_['transaction.entity.btype.unknown'] = 'UnKnown';
+$_LANG_['transaction.entity.btype.refund'] = 'Refund';
+$_LANG_['transaction.entity.btype.cash'] = 'Cash';
+$_LANG_['transaction.entity.btype.recharge'] = 'Recharge';
+
+$_LANG_['transaction.entity.type.in'] = 'In';
+$_LANG_['transaction.entity.type.out'] = 'Out';
+
+$_LANG_['transaction.entity.sstate.unsettled'] = 'Unsettled';
+$_LANG_['transaction.entity.sstate.settled'] = 'Settled';
+
+$_LANG_['transaction.index.title'] = 'Transaction';
+$_LANG_['transaction.index.type'] = 'Type';
+$_LANG_['transaction.index.btype'] = 'Transaction Category';
+$_LANG_['transaction.index.merchant_id'] = 'Merchant ID';
+$_LANG_['transaction.index.orderid'] = 'Order ID';
+$_LANG_['transaction.index.tradeno'] = 'Trade No';
+$_LANG_['transaction.index.user_id'] = 'User ID';
+$_LANG_['transaction.index.amount'] = 'Amount';
+$_LANG_['transaction.index.fee'] = 'Fee';
+
+
 
 
 
