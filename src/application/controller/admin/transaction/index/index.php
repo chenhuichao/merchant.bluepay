@@ -10,12 +10,12 @@ $request['tradeno'] = RequestSvc::request('tradeno');
 
 $user = !empty($request['mobile']) ? (UserSvc::getUserInfoByMobile($request['mobile'])) : [];
 $request['user_id'] = !empty($user) ? $user['id'] : RequestSvc::request('user_id');
-
+$request['sn'] = !empty($user) ? $user['sn'] : RequestSvc::request('sn');
 $request['daystart'] = RequestSvc::request('daystart');
 $request['dayend'] = RequestSvc::request('dayend');
 $request['state'] = RequestSvc::request('state');
 $request['merchant_id'] = RequestSvc::request('merchant_id');
-$request['uid'] = !empty($request['merchant_id']) ? MerchantSvc::getUidByKey($request['merchant_id']) : '';
+//$request['uid'] = !empty($request['merchant_id']) ? MerchantSvc::getUidByKey($request['merchant_id']) : '';
 
 $results = TransactionSvc::lists($request,array('page'=>RequestSvc::request('p',1,'int'),'baseurl'=>'/transaction/?'));
 

@@ -56,6 +56,10 @@
               <td>
                   <input type="text" autofocus="true" class="text"  value="{$request.mobile}" name="mobile" id="mobile">
               </td>
+              <th class="th">{$_LANG_['framework.public.sn']}</th>
+              <td>
+                  <input type="text" autofocus="true" class="text"  value="{$request.sn}" name="sn" id="sn">
+              </td>
   
               <th class="th">{$_LANG_['framework.public.update_datetime']}</th>
               <td>

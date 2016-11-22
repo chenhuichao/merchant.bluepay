@@ -58,9 +58,12 @@ _Func:['.$_Func.']</pre>';
 }
 ob_clean();
 
-echo serialize($_RESULT);
-
-
+$_Format = RequestSvc::request('_Format');
+if('json' == $_Format){
+	echo json_encode($_RESULT);
+}else{
+	echo serialize($_RESULT);
+}
 
 //if($_RESULT['code'] !== 'OK'){
 	$desc = '<pre style="color:red;">
