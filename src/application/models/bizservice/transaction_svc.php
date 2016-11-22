@@ -103,6 +103,12 @@ class TransactionSvc
 			$sql_param[]	 = $request['sn'];
 		}
 
+		if('' != $request['merchant_id']){
+			$request_param[] = 'merchant_id=' . $request['merchant_id'];
+			$sql_condition[] = '`merchant_id` = ?';
+			$sql_param[]	 = $request['merchant_id'];
+		}
+
 		$option = array();
 		$option['len'] = ($options['len'] > 0) ? $options['len'] : PER_PAGE;
 		if($options['page'] > 0){

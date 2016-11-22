@@ -99,8 +99,8 @@ $_LANG_['user.entity.state.disable'] = 'Disabled';
 $_LANG_['user.entity.state.enable'] = 'Enabled'; 
 
 $_LANG_['merchant.entity.state.init'] = 'Init'; 
-$_LANG_['merchant.entity.state.wait_audit'] = '待审核'; 
-$_LANG_['merchant.entity.state.rejected'] = '已驳回'; 
+$_LANG_['merchant.entity.state.wait_audit'] = 'Auditing'; 
+$_LANG_['merchant.entity.state.rejected'] = 'Rejected'; 
 $_LANG_['merchant.entity.state.valid'] = 'Valid'; 
 $_LANG_['merchant.entity.state.invalid'] = 'Invalid'; 
 
@@ -174,13 +174,13 @@ $_LANG_['transaction.entity.sstate.settled'] = 'Settled';
 $_LANG_['transaction.index.title'] = 'Transaction';
 $_LANG_['transaction.index.type'] = 'Type';
 $_LANG_['transaction.index.btype'] = 'Transaction Category';
-$_LANG_['transaction.index.orderid'] = 'Order ID';
+$_LANG_['transaction.index.orderid'] = 'Order Serial Number';
 $_LANG_['transaction.index.tradeno'] = 'Trade No';
 $_LANG_['transaction.index.user_id'] = 'User ID';
 $_LANG_['transaction.index.amount'] = 'Amount';
 $_LANG_['transaction.index.fee'] = 'Fee';
 $_LANG_['accounts.index.title'] = 'Accounts';
-$_LANG_['accounts.index.balance'] = 'Balance';
+$_LANG_['accounts.index.balance'] = 'Remaining Balance';
 
 
 
