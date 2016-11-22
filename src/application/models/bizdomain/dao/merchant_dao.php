@@ -93,4 +93,14 @@ class MerchantDao extends BaseDao
 		$results = $this->getExecutor()->querys($sql,$sql_param);
 		return is_array($results) ? $results : [];
 	}
+
+	public function getUidByKey($key)
+	{
+		$sql = "select `id` as uid ";
+		$sql.= "from binduser ";
+		$sql.= "where `key`= ?";
+		$result = $this->getExecutor()->query($sql,array($key));
+		$uid = is_array($result) && $result['uid'] > 0 ? $result['uid'] : null;
+		return $uid;   
+	}
 }

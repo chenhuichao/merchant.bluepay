@@ -146,4 +146,11 @@ class MerchantSvc
 	{
 		return self::getDao()->checkUnique($key,$v);
 	}
+
+
+	//仅仅为转化
+	static public function getUidByKey($key)
+	{
+		return self::getDao()->getUidByKey($key);
+	}
 }
