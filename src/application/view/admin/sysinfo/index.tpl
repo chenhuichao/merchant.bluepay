@@ -6,8 +6,9 @@
 	</div>
 	
 	<style>
-		pre{  border: 0px solid #ccc;   background-color: #f5f5f5;}
-	
+		pre{  
+			border: 0px solid #ccc;background-color: #f5f5f5;
+		}
 	</style>
     <!-- 数据列表 -->
     <div class="data-table table-striped">
