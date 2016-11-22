@@ -38,6 +38,7 @@
 			<tr>
 				<th colspan="1" rowspan="1">{$_LANG_['framework.public.id']}</th>
 				<th>{$_LANG_['framework.public.merchant_id']}</th>
+        <th>{$_LANG_['merchant.index.type']}</th>
         <th>{$_LANG_['merchant.index.company_name']}</th>
         <th>{$_LANG_['merchant.index.real_name']}</th>
 				<th>{$_LANG_['accounts.index.balance']}</th>

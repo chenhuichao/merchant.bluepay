@@ -73,7 +73,7 @@
                       {/foreach}
                   </select>
 	          </td>
-            <th class="th">{$_LANG_['framework.public.merchant_id}</th>
+            <th class="th">{$_LANG_['framework.public.merchant_id']}</th>
             <td>
                 <input type="text" autofocus="true" class="text" value="{$request.id}" name="id" id="id">
             </td>

@@ -20,24 +20,24 @@ class AccountsSvc
 		if(isset($request['id']) && $request['id']>1)
 		{
 			$request_param[] = '`id`=' . $request['id'];
-			$sql_condition[] = '`id` = ? ';
+			$sql_condition[] = 'A.id = ? ';
 			$sql_param[] = $request['id'];
 		}
 		if('' != $request['uid']){
 			$request_param[] = 'uid=' . $request['uid'];
-			$sql_condition[] = '`uid` = ?';
+			$sql_condition[] = 'A.uid = ?';
 			$sql_param[]	 = $request['uid'];
 		}
 
 		if('' != $request['daystart']){
 			$request_param[] = 'daystart=' . $request['daystart'];
-			$sql_condition[] = '`ctime` >= ?';
+			$sql_condition[] = 'A.ctime >= ?';
 			$sql_param[]	 = $request['daystart'];
 		}
 
 		if('' != $request['dayend']){
 			$request_param[] = 'dayend=' . $request['dayend'];
-			$sql_condition[] = '`ctime` <= ?';
+			$sql_condition[] = 'A.ctime <= ?';
 			$sql_param[]	 = $request['dayend'];
 		}
 
