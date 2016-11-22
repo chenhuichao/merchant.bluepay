@@ -174,7 +174,6 @@ $_LANG_['transaction.entity.sstate.settled'] = 'Settled';
 $_LANG_['transaction.index.title'] = 'Transaction';
 $_LANG_['transaction.index.type'] = 'Type';
 $_LANG_['transaction.index.btype'] = 'Transaction Category';
-$_LANG_['transaction.index.merchant_id'] = 'Merchant ID';
 $_LANG_['transaction.index.orderid'] = 'Order ID';
 $_LANG_['transaction.index.tradeno'] = 'Trade No';
 $_LANG_['transaction.index.user_id'] = 'User ID';

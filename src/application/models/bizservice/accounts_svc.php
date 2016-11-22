@@ -29,6 +29,18 @@ class AccountsSvc
 			$sql_param[]	 = $request['uid'];
 		}
 
+		if('' != $request['daystart']){
+			$request_param[] = 'daystart=' . $request['daystart'];
+			$sql_condition[] = '`ctime` >= ?';
+			$sql_param[]	 = $request['daystart'];
+		}
+
+		if('' != $request['dayend']){
+			$request_param[] = 'dayend=' . $request['dayend'];
+			$sql_condition[] = '`ctime` <= ?';
+			$sql_param[]	 = $request['dayend'];
+		}
+
 		$option = array();
 		$option['len'] = ($options['len'] > 0) ? $options['len'] : PER_PAGE;
 		if($options['page'] > 0){

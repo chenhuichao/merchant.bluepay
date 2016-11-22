@@ -31,10 +31,10 @@
                       {/foreach}
                   </select>
             </td>
-              <th class="th">{$_LANG_['transaction.index.merchant_id']}</th>
-              <td>
-                  <input type="text" autofocus="true" class="text" value="{$request.merchant_id}" name="merchant_id" id="merchant_id">
-              </td>
+            <th class="th">{$_LANG_['framework.public.merchant_id}</th>
+            <td>
+                <input type="text" autofocus="true" class="text" value="{$request.merchant_id}" name="merchant_id" id="merchant_id">
+            </td>
   	        </tr>
             <tr>
               <th class="th">{$_LANG_['transaction.index.orderid']}</th>
@@ -101,6 +101,7 @@
         <th>{$_LANG_['transaction.index.tradeno']}</th>
         <th>{$_LANG_['transaction.index.amount']}</th>
         <th>{$_LANG_['transaction.index.fee']}</th>
+        <th>{$_LANG_['framework.public.merchant_id}</td>
         <th>{$_LANG_['transaction.index.user_id']}</th>
         <th>{$_LANG_['framework.public.sn']}</th>
         <th>{$_LANG_['framework.public.state']}</th>
@@ -119,6 +120,7 @@
 				<td>{$item.tradeno}</td>
         <td>{if $item.type eq 1}{$item.tin}{else}{$item.tout}{/if}</td>
         <td>{$item.fee}</td>
+        <td>{$item.merchant_id}</td>
         <td>{$item.user_id}</td>
         <td>{$item.sn}</td>
         <td>{$_LANG_[$request.STATE_CONF[$item.state]['NAME']]}</td>

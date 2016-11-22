@@ -61,6 +61,7 @@
                 <input type="text" class="text  datetime" value="{$request.daystart}" name="daystart"  /> - 
                 <input type="text" class="text  datetime" value="{$request.dayend}" name="dayend"  />　
               </td>
+             
             </tr>	          
             <tr>
               <th class="th">{$_LANG_['framework.public.state']}</th>
@@ -72,7 +73,11 @@
                       {/foreach}
                   </select>
 	          </td>
-	          <td colspan="2">				
+            <th class="th">{$_LANG_['framework.public.merchant_id}</th>
+            <td>
+                <input type="text" autofocus="true" class="text" value="{$request.id}" name="id" id="id">
+            </td>
+	          <td colspan="1">				
 	          </td>
   	        </tr>
 	        <tr>
@@ -94,6 +99,7 @@
     	<thead>
 			<tr>
 				<th colspan="1" rowspan="1">{$_LANG_['framework.public.id']}</th>
+        <td>{$_LANG_['framework.public.merchant_id']}</td>
 				<th>{$_LANG_['merchant.index.type']}</th>
 				<th>{$_LANG_['merchant.index.real_name']}</th>
 				<th>{$_LANG_['merchant.index.nick_name']}</th>
@@ -120,6 +126,7 @@
 			{foreach from=$results.record item=item key=key}
 			<tr id="tr_{$item.id}">
 				<td>{$key+1}</td>
+        <td>{$item.id}</td>
 				<td>{$_LANG_[$request.TYPE_CONF[$item.type]['NAME']]}</td>
 				<td>{$item.real_name}</td>
 				<td>{$item.nick_name}</td>

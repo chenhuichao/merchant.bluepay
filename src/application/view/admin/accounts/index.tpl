@@ -12,7 +12,7 @@
 		<table class="table table-striped table-bordered bootstrap-datatable">
 	      <tbody>
 	        <tr>
-              <th class="th">{$_LANG_['transaction.index.merchant_id']}</th>
+              <th class="th">{$_LANG_['framework.public.merchant_id']}</th>
               <td>
                   <input type="text" autofocus="true" class="text" value="{$request.merchant_id}" name="merchant_id" id="merchant_id">
               </td>
@@ -37,7 +37,7 @@
     	<thead>
 			<tr>
 				<th colspan="1" rowspan="1">{$_LANG_['framework.public.id']}</th>
-				<th>{$_LANG_['accounts.index.merchant_id']}</th>
+				<th>{$_LANG_['framework.public.merchant_id']}</th>
         <th>{$_LANG_['merchant.index.company_name']}</th>
         <th>{$_LANG_['merchant.index.real_name']}</th>
 				<th>{$_LANG_['accounts.index.balance']}</th>
