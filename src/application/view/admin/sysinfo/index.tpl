@@ -11,33 +11,33 @@
 	</style>
     <!-- 数据列表 -->
     <div class="data-table table-striped">
-	<table class="">
-    <thead>
-					<tr>
-						<th style="width: 5%;" colspan="1" rowspan="1">编号</th>
-						<th style="colspan="1" rowspan="1">描述</th>
-						<th style="width: 15%;" colspan="1" rowspan="1">日期</th>
-						<th style="width: 5%;" colspan="1" rowspan="1">操作</th>
+		<table class="">
+		    <thead>
+				<tr>
+					<th style="width: 5%;" colspan="1" rowspan="1">编号</th>
+					<th rowspan="1">描述</th>
+					<th style="width: 15%;" colspan="1" rowspan="1">日期</th>
+					<th style="width: 5%;" colspan="1" rowspan="1">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{foreach from=$results.record item=item}
+					<tr id="tr_{$item.id}">
+						<td class="center">{$item.id}</td>
+						<td style="text-align: left;">{$item.desc}</td>
+						<td class="center">{$item.uptime}</td>
+						<td class="center">
+							<a title="" data-rel="tooltip" href="javascript:delById({$item.id});" data-method="delete" class="ajax-action btn btn-danger">移除</a>
+						</td>
 					</tr>
-				</thead>
-				<tbody>
-					{foreach from=$results.record item=item}
-						<tr id="tr_{$item.id}">
-							<td class="center">{$item.id}</td>
-							<td style="text-align: left;">{$item.desc}</td>
-							<td class="center">{$item.uptime}</td>
-							<td class="center">
-								<a title="" data-rel="tooltip" href="javascript:delById({$item.id});" data-method="delete" class="ajax-action btn btn-danger">移除</a>
-							</td>
-						</tr>
-					{/foreach}
-				</tbody>
-			</table>
+				{/foreach}
+			</tbody>
+		</table>
+	</div>
+	<div class="page">
+		<div>  
+		{$results.pages} 
+		<span class="rows">共 {$results.total} 条记录</span>
 		</div>
-		<div class="page">
-			<div>  
-			{$results.pages} 
-			<span class="rows">共 {$results.total} 条记录</span>
-			</div>
-		</div>
+	</div>
 {include file="footer.tpl"}
