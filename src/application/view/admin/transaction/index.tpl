@@ -101,7 +101,7 @@
         <th>{$_LANG_['transaction.index.tradeno']}</th>
         <th>{$_LANG_['transaction.index.amount']}</th>
         <th>{$_LANG_['transaction.index.fee']}</th>
-        <th>{$_LANG_['framework.public.merchant_id}</td>
+        <th>{$_LANG_['framework.public.merchant_id']}</th>
         <th>{$_LANG_['transaction.index.user_id']}</th>
         <th>{$_LANG_['framework.public.sn']}</th>
         <th>{$_LANG_['framework.public.state']}</th>

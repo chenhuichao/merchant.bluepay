@@ -99,7 +99,7 @@
     	<thead>
 			<tr>
 				<th colspan="1" rowspan="1">{$_LANG_['framework.public.id']}</th>
-        <td>{$_LANG_['framework.public.merchant_id']}</td>
+        <th>{$_LANG_['framework.public.merchant_id']}</th>
 				<th>{$_LANG_['merchant.index.type']}</th>
 				<th>{$_LANG_['merchant.index.real_name']}</th>
 				<th>{$_LANG_['merchant.index.nick_name']}</th>
