@@ -28,7 +28,7 @@ class Transaction extends Entity
 	
 
 	static $BTYPE_CONF = array(
-		self::BTYPE_UNKNOWN =>array('NAME'=>'transaction.entity.btype.unknown'),
+		//self::BTYPE_UNKNOWN =>array('NAME'=>'transaction.entity.btype.unknown'),
 		self::BTYPE_REFUND =>array('NAME'=>'transaction.entity.btype.refund'),
 		self::BTYPE_CASH =>array('NAME'=>'transaction.entity.btype.cash'),
 		self::BTYPE_RECHARGE =>array('NAME'=>'transaction.entity.btype.recharge'),	

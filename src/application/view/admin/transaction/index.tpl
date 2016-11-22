@@ -97,6 +97,8 @@
         <th>{$_LANG_['transaction.index.tradeno']}</th>
         <th>{$_LANG_['transaction.index.amount']}</th>
         <th>{$_LANG_['transaction.index.fee']}</th>
+        <th>{$_LANG_['transaction.index.user_id']}</th>
+        <th>{$_LANG_['transaction.index.sn']}</th>
         <th>{$_LANG_['framework.public.state']}</th>
 				<th>{$_LANG_['framework.public.create_time']}</th>
 				<th>{$_LANG_['framework.public.update_time']}</th>
@@ -106,16 +108,16 @@
 		<tbody>
 			{foreach from=$results.record item=item key=key}
 			<tr id="tr_{$item.id}">
-                <input type="hidden" class="lib_id" value="{$item.id}">
 				<td>{$key+1}</td>
 				<td>{$_LANG_[$request.TYPE_CONF[$item.type]['NAME']]}</td>
-        <td>{$_LANG_[$request.TYPE_CONF[$item.btype]['NAME']]}</td>
+        <td>{$_LANG_[$request.BTYPE_CONF[$item.btype]['NAME']]}</td>
 				<td>{$item.orderid}</td>
 				<td>{$item.tradeno}</td>
         <td>{if $item.type eq 1}{$item.tin}{else}{$item.tout}{/if}</td>
         <td>{$item.fee}</td>
-
-        <td>{$_LANG_[$request.TYPE_CONF[$item.state]['NAME']]}</td>
+        <td>{$item.user_id}</td>
+        <td>{$item.sn}</td>
+        <td>{$_LANG_[$request.STATE_CONF[$item.state]['NAME']]}</td>
 				<td>{$item.ctime}</td>
 				<td>{$item.utime}</td>
         <td>-</td>

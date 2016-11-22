@@ -119,7 +119,6 @@
 		<tbody>
 			{foreach from=$results.record item=item key=key}
 			<tr id="tr_{$item.id}">
-                <input type="hidden" class="lib_id" value="{$item.id}">
 				<td>{$key+1}</td>
 				<td>{$_LANG_[$request.TYPE_CONF[$item.type]['NAME']]}</td>
 				<td>{$item.real_name}</td>
