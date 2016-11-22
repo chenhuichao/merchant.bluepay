@@ -18,7 +18,7 @@ class AccountsDao extends BaseDao
 		if($options['orderby']){
 			$sql.= " order by ".$options['orderby']." ";
 		}else{
-			$sql.= " order by `A.id` desc ";
+			$sql.= " order by A.id desc ";
 		}
 		
 		if($options['offset'] >=0 && $options['len'] > 0){
