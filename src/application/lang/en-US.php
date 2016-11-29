@@ -89,7 +89,7 @@ $_LANG_['merchant.index.business_license_no'] = 'Corporate License Number';
 $_LANG_['merchant.index.business_license_pic'] = 'Corporate License (Scan) Photo';
 $_LANG_['merchant.index.add_merchant'] = 'Add Merchant'; 
 $_LANG_['merchant.index.user']= 'Sub-Account'; 
-$_LANG_['merchant.index.add_user'] = 'Add Operator';
+$_LANG_['merchant.index.add_user'] = 'Add';
 
 $_LANG_['merchant.entity.type.company'] = 'Company'; 
 $_LANG_['merchant.entity.type.personal'] = 'Personal'; 
@@ -126,7 +126,7 @@ $_LANG_['admin_user.user_exists'] = 'Admin User Exists';
 $_LANG_['permission.deny'] = 'Permission Deny';
 
 $_LANG_['role.index.title'] = 'Role List';
-$_LANG_['role.index.add_role'] = 'Add Role';
+$_LANG_['role.index.add_role'] = 'Add';
 $_LANG_['role.index.role_name'] = 'Role';
 $_LANG_['role.index.desc'] = 'Role Remark';
 $_LANG_['role.index.list'] = 'List';
