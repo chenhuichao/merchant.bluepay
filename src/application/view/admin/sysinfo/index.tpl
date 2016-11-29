@@ -10,9 +10,8 @@
 			border: 0px solid #ccc;background-color: #f5f5f5;
 		}
 	</style>
-    <!-- 数据列表 -->
     <div class="data-table table-striped">
-		<table class="">
+		<table>
 		    <thead>
 				<tr>
 					<th style="width: 5%;" colspan="1" rowspan="1">编号</th>
