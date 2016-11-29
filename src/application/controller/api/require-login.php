@@ -5,4 +5,4 @@ if(empty($_SESS) || $_SESS['logined'] != 1){
 	);
 	outPut($_RESULT);
 }
-$uid = $_SESS['uid'];
+$uid = $_SESS['user_id'];
