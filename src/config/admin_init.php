@@ -6,8 +6,10 @@ define('ROOT_PATH','/home/liuweidong/project/merchant.bluepay');
 define('APP_NAME','admin');
 define('APP_DOMAIN','admin.merchant.bluepay.com');
 
-define('ENV_ROOT_URL','http://admin.merchant.bluepay.com:9100');
-define('ENV_STATIC_URL','http://admin.merchant.bluepay.com:9100/static');
+//define('ENV_ROOT_URL','http://admin.merchant.bluepay.com:9100');
+//define('ENV_STATIC_URL','http://admin.merchant.bluepay.com:9100/static');
+define('ENV_ROOT_URL','http://120.76.225.218:9100');
+define('ENV_STATIC_URL','http://120.76.225.218:9100/static');
 
 require_once ROOT_PATH.'/src/config/config.php';
 require_once ROOT_PATH.'/src/autoload/auto_load.php';
@@ -37,7 +39,7 @@ Http Referer
 */
 $_RERERE_EXCEPT = array(
 );
-
+/*
 if (isset($_SERVER['HTTP_REFERER'])){
 	if(strlen($_SERVER['HTTP_REFERER']) > 0){
 		if(stristr($_SERVER['HTTP_REFERER'],APP_DOMAIN) === false && !in_array($_SERVER['HTTP_REFERER'],$_RERERE_EXCEPT)){
@@ -45,7 +47,7 @@ if (isset($_SERVER['HTTP_REFERER'])){
 		}
 		LoaderSvc::loadSmarty()->assign('_REFER_',$_SERVER['HTTP_REFERER']);
 	}
-}
+}*/
 
 /**
 _DEBUG_
