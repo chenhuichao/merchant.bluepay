@@ -8,7 +8,7 @@ $html = '';
 if(!empty($temp)){
 	$html = getData($temp);
 }else{
-	$html = '<p style="width:200px;height:50px;text-align:center;margin-top:30px;">有效记录为空</p>';
+	$html = '<p style="width:200px;height:50px;text-align:center;margin-top:30px;">No Record</p>';
 }
 
 $data = array(
